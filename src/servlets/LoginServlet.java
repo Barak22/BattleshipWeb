@@ -12,11 +12,9 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "LoginServlet")
 public class LoginServlet extends HttpServlet {
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userName = request.getParameter("username");
         PrintWriter out = response.getWriter();
         if (userName != null && !userName.isEmpty()) {
@@ -28,5 +26,10 @@ public class LoginServlet extends HttpServlet {
         } else {
             response.sendRedirect("/pages/login.html?msg=empty");
         }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 }

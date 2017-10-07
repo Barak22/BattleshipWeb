@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Login.js"></script>
 </head>
 <body>
 <div class="container">
     <h1>Welcome to the BattleShip game!</h1>
     <br/>
     <h2>Login:</h2>
-    <form method="GET" action="login">
-        <input type="text" name="username" class=""/>
-        <input type="submit" value="login"/>
+    <form action="login">
+        <input type="text" class="" id="username"/>
+        <input type="submit" value="login" onclick="login()"/>
         <span id="error" style="color: red;display: none">User Already Exists</span>
     </form>
 </div>

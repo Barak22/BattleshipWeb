@@ -22,5 +22,14 @@
         <url-pattern>/pages/logout</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>welcome</servlet-name>
+        <servlet-class>servlets.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>welcome</servlet-name>
+        <url-pattern>/pages/welcome</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
