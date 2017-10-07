@@ -8,6 +8,14 @@
     color: white;
 }
 
+#btn-logout:hover {
+    background-color: #761c19;
+}
+
 #img-battleship {
     margin: 15% 0;
+}
+
+#hdl-uploadgame {
+    text-align: center;
 }
