@@ -1,3 +1,11 @@
+body {
+    background-color: #eaeaea;
+}
+
+.container {
+    background-color: white !important;
+}
+
 .list-group {
     max-height: 200px;
     overflow-y: scroll;
@@ -6,4 +14,8 @@
 #btn-logout {
     background-color: indianred;
     color: white;
+}
+
+#img-battleship {
+    margin: 15% 0;
 }
