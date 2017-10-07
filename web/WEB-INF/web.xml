@@ -8,10 +8,18 @@
         <servlet-name>login</servlet-name>
         <servlet-class>servlets.LoginServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>login</servlet-name>
         <url-pattern>/pages/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/pages/logout</url-pattern>
     </servlet-mapping>
 
 
