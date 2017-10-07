@@ -49,4 +49,16 @@
         <url-pattern>/onlineUsers</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>getGames</servlet-name>
+        <servlet-class>servlets.GetGamesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getGames</servlet-name>
+        <url-pattern>/getGames</url-pattern>
+    </servlet-mapping>
+
 </web-app>

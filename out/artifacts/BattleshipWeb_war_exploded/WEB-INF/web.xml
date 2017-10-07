@@ -28,14 +28,14 @@
 
     <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
 
-        <servlet>
-            <servlet-name>welcome</servlet-name>
-            <servlet-class>servlets.WelcomeServlet</servlet-class>
-        </servlet>
-        <servlet-mapping>
-            <servlet-name>welcome</servlet-name>
-            <url-pattern>/pages/welcome</url-pattern>
-        </servlet-mapping>
+    <servlet>
+        <servlet-name>welcome</servlet-name>
+        <servlet-class>servlets.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>welcome</servlet-name>
+        <url-pattern>/pages/welcome</url-pattern>
+    </servlet-mapping>
 
     <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
 
@@ -43,10 +43,22 @@
         <servlet-name>onlineUsers</servlet-name>
         <servlet-class>servlets.OnlineUsersServlet</servlet-class>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>onlineUsers</servlet-name>
         <url-pattern>/onlineUsers</url-pattern>
     </servlet-mapping>
 
-    </web-app>
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>getGames</servlet-name>
+        <servlet-class>servlets.GetGamesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getGames</servlet-name>
+        <url-pattern>/getGames</url-pattern>
+    </servlet-mapping>
+
+</web-app>
