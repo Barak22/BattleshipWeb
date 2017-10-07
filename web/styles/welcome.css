@@ -2,3 +2,8 @@
     max-height: 200px;
     overflow-y: scroll;
 }
+
+#btn-logout {
+    background-color: indianred;
+    color: white;
+}
