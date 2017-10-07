@@ -10,7 +10,7 @@ function login() {
         data: params,
         success: function (data) {
             alert("Success");
-            window.location.replace("/pages/welcome");
+            window.location.replace("/pages/welcome.html?username=" + params.username);
         },
         error: function (response) {
             if (response.status == 500) {
