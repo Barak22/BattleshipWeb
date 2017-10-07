@@ -18,6 +18,7 @@ function login() {
             } else {
                 alert("The name is already in use")
             }
+            window.location.replace("");
         }
     });
 }

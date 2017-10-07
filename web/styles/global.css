@@ -1,5 +1,10 @@
 body {
-    background-color: #eaeaea;
+    background: #eaeaea url(http://subtlepatterns.com/patterns/sativa.png);
+}
+
+html, body {
+    position: relative;
+    height: 100%;
 }
 
 .container {

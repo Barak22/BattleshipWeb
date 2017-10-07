@@ -3,19 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="../common/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/index.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="pages/js/Login.js"></script>
 </head>
 <body>
+
 <div class="container">
-    <h1>Welcome to the BattleShip game!</h1>
-    <br/>
-    <h2>Login:</h2>
-    <form action="login">
-        <input type="text" class="" id="username"/>
-        <input type="submit" value="login" onclick="login()"/>
-        <span id="error" style="color: red;display: none">User Already Exists</span>
-    </form>
+    <div class="jumbotron">
+        <h1>Battleship Game</h1>
+        <h3>Blow up the net!</h3>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 id="hd-login">Enter your nickname and start playing:</h3>
+
+            <div class="login-container">
+                <div class="form-box">
+                    <form action="login" method="">
+                        <input type="text" class="" id="username"/>
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" id="btn-login" value="Sign Up"
+                               onclick="login()"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
 </div>
 </body>
 </html>
