@@ -21,10 +21,10 @@ public class LoginServlet extends HttpServlet {
             if (SessionManager.addUser(userName) /*user name NOT already exists */) {
                 response.sendRedirect("/pages/welcome.html?username=" + userName);
             } else {
-                response.sendRedirect("/pages/login.html?msg=exists");
+                response.sendRedirect("/pages/login?msg=exists");
             }
         } else {
-            response.sendRedirect("/pages/login.html?msg=empty");
+            response.sendRedirect("/pages/login/?msg=empty");
         }
     }
 
