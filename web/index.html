@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="common/bootstrap.min.css">
     <meta charset="UTF-8">
-    <title>Battleship Game</title>
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="pages/js/Login.js"></script>
 </head>
 <body>
-<div>
-
-    <div class="container">
-        <div class="jumbotron">
-            <h1>Battleship Game</h1>
-            <h3>The most exciting game now online!</h3>
-        </div>
-        <div>
-            <a id="startButton" href="pages/login.html" class="btn active" role="button">Start Playing</a>
-        </div>
-    </div>
+<div class="container">
+    <h1>Welcome to the BattleShip game!</h1>
+    <br/>
+    <h2>Login:</h2>
+    <form action="login">
+        <input type="text" class="" id="username"/>
+        <input type="submit" value="login" onclick="login()"/>
+        <span id="error" style="color: red;display: none">User Already Exists</span>
+    </form>
 </div>
-
-<script src="scripts/login.js"></script>
 </body>
 </html>
