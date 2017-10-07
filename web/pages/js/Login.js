@@ -9,7 +9,6 @@ function login() {
         url: "/pages/login",
         data: params,
         success: function (data) {
-            alert("Success");
             window.location.replace("/pages/welcome.html?username=" + params.username);
         },
         error: function (response) {
