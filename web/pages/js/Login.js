@@ -13,7 +13,11 @@ function login() {
             window.location.replace("/pages/welcome");
         },
         error: function (response) {
-            alert("Error");
+            if (response.status == 500) {
+                alert("Invalid name")
+            } else {
+                alert("The name is already in use")
+            }
         }
     });
 }

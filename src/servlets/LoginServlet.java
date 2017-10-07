@@ -19,15 +19,14 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         if (userName != null && !userName.isEmpty()) {
             if (SessionManager.addUser(userName) /*user name NOT already exists */) {
-                //                response.sendRedirect("/pages/welcome.html?username=" + userName);
+                response.setStatus(200);
             } else {
-                //                response.sendRedirect("/pages/login.html?msg=exists");
+                response.setStatus(400);
             }
         } else {
-            //            response.sendRedirect("/pages/login.html?msg=empty");
+            response.setStatus(500);
         }
 
-        response.setStatus(200);
     }
 
     @Override
