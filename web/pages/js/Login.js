@@ -4,18 +4,16 @@ function login() {
         username: username
     };
 
-    // $.ajax({
-    //     type: "POST",
-    //     url: "/pages/login",
-    //     data: params,
-    //     success: function (data) {
-    //         alert("barak");
-    //         // window.location.replace("/pages/welcome");
-    //     },
-    //     dataType: "json"
-    // });
-
-    $.post("/pages/login", function (data) {
-        alert(username);
+    $.ajax({
+        type: "POST",
+        url: "/pages/login",
+        data: params,
+        success: function (data) {
+            alert("Success");
+            window.location.replace("/pages/welcome");
+        },
+        error: function (response) {
+            alert("Error");
+        }
     });
 }
