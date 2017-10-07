@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../styles/welcome.css">
     <meta charset="UTF-8">
     <title>Welcome!</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Lobby.js"></script>
 </head>
 <body>
 
@@ -18,11 +21,8 @@
         <div class="col-lg-4">
             <h3>Online Games:</h3>
             <div class="list-group">
+                <div id="games-list"></div>
                 <button type="button" class="list-group-item list-group-item-action">Game 1</button>
-                <button type="button" class="list-group-item list-group-item-action">Game 2</button>
-                <button type="button" class="list-group-item list-group-item-action">Game 3</button>
-                <button type="button" class="list-group-item list-group-item-action">Game 4</button>
-                <button type="button" class="list-group-item list-group-item-action">Game 5</button>
             </div>
             <button type="button" class="btn btn-primary btn-lg btn-block">Join Game</button>
         </div>
@@ -34,11 +34,7 @@
         <div class="col-lg-4">
             <h3>Online Players:</h3>
             <div class="list-group">
-                <button type="button" class="list-group-item list-group-item-action">Player 1</button>
-                <button type="button" class="list-group-item list-group-item-action">Player 2</button>
-                <button type="button" class="list-group-item list-group-item-action">Player 3</button>
-                <button type="button" class="list-group-item list-group-item-action">Player 4</button>
-                <button type="button" class="list-group-item list-group-item-action">Player 5</button>
+                <div id="users-list"></div>
             </div>
             <button type="button" class="btn btn-secondary btn-lg btn-block" id="btn-logout">Logout</button>
         </div>

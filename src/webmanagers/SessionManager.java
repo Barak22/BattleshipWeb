@@ -20,4 +20,8 @@ public final class SessionManager {
     public static boolean removeUser(String userName) {
         return NAMES.remove(userName);
     }
+
+    public static Set<String> getUsers() {
+        return NAMES;
+    }
 }

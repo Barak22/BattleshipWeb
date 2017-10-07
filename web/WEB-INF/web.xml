@@ -4,6 +4,8 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
     <servlet>
         <servlet-name>login</servlet-name>
         <servlet-class>servlets.LoginServlet</servlet-class>
@@ -12,6 +14,8 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/pages/login</url-pattern>
     </servlet-mapping>
+
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
 
     <servlet>
         <servlet-name>logout</servlet-name>
@@ -22,6 +26,8 @@
         <url-pattern>/pages/logout</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
     <servlet>
         <servlet-name>welcome</servlet-name>
         <servlet-class>servlets.WelcomeServlet</servlet-class>
@@ -31,5 +37,16 @@
         <url-pattern>/pages/welcome</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>onlineUsers</servlet-name>
+        <servlet-class>servlets.OnlineUsersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>onlineUsers</servlet-name>
+        <url-pattern>/onlineUsers</url-pattern>
+    </servlet-mapping>
 
 </web-app>
