@@ -17,6 +17,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userName = request.getParameter("username");
         PrintWriter out = response.getWriter();
+        userName = userName.trim();
         if (userName != null && !userName.isEmpty()) {
             if (SessionManager.addUser(userName) /*user name NOT already exists */) {
                 response.setStatus(200);
