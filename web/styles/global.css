@@ -1,0 +1,14 @@
+body {
+    background-color: #eaeaea;
+}
+
+.container {
+    background-color: white !important;
+    border: 1px solid #e3e3e3;
+}
+
+.jumbotron {
+    margin: 20px 0;
+    background-color: #122b40 !important;
+    color: white !important;
+}
