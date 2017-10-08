@@ -37,3 +37,8 @@
 #btn-upload:hover {
     background-color: #5bc0de;
 }
+
+#game-title {
+    max-width: 300px;
+    margin: 10px auto;
+}

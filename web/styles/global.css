@@ -18,3 +18,10 @@ html, body {
     color: white !important;
     text-align: center;
 }
+
+#footer {
+    margin: 20px 0;
+    color: #adadad;
+    font-size: 12px;
+    text-align: center;
+}
