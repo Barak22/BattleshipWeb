@@ -1,4 +1,4 @@
-package web.servlets;
+package api.servlets;
 
 import core.managers.SessionManager;
 
@@ -19,10 +19,10 @@ public class LoginServlet extends HttpServlet {
 
         if (!userName.isEmpty()) {
             if (SessionManager.addUser(userName) /*user name NOT already exists */) {
-                response.setStatus(200);
                 Cookie cookie = new Cookie("username", userName);
                 cookie.setPath("/");
                 response.addCookie(cookie);
+                response.setStatus(200);
             } else {
                 response.setStatus(400);
             }

@@ -1,4 +1,4 @@
-package web.servlets;
+package api.servlets;
 
 import core.managers.SessionManager;
 

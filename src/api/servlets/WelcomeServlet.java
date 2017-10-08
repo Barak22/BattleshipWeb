@@ -1,6 +1,4 @@
-package web.servlets;
-
-import core.managers.SessionManager;
+package api.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,14 +10,15 @@ import java.io.IOException;
 /**
  * Created by barakm on 07/10/2017
  */
-@WebServlet(name = "LogoutServlet")
-public class LogoutServlet extends HttpServlet {
+@WebServlet(name = "WelcomeServlet", urlPatterns = "/game/newGame")
+public class WelcomeServlet extends HttpServlet {
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        //        GameManager.createNewGame();
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SessionManager.removeUser(request.getParameter("username"));
     }
 }
