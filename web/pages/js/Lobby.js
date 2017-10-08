@@ -111,8 +111,6 @@ function upload(file, fileName, username) {
 function uploadFile() {
     var gameTitle = $("#game-title").val();
     var file = document.getElementById('uploaded-file').files[0];
-    // var file = $("#uploaded-file").val();
-    alert(file);
     if (file !== "" && gameTitle.trim() !== "") {
         upload(file, gameTitle, "MeandMe");
     } else if (file === "") {
