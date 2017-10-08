@@ -46,7 +46,7 @@ public class UploadFileServlet extends HttpServlet {
             response.setCharacterEncoding("UTF-8");
 
             try {
-                placeFile(fileName, actualFile, username);
+                placeFile(fileName, partFilename, actualFile, username);
                 response.getWriter().write("<span style=\"color:green;\">File " + fileName + " file has been uploaded successfully!</span>");
             } catch (Exception e) {
                 response.getWriter().write(e.getMessage());
@@ -66,14 +66,13 @@ public class UploadFileServlet extends HttpServlet {
     //-------------------------------------------------//
     // Creates and saves a GameFile object
     //-------------------------------------------------//
-    private static void placeFile(String fileName, File actualFile, String username) throws Exception {
+    private static void placeFile(String fileName, String theName, File actualFile, String username) throws Exception {
         GameFile gameFile = new GameFile(fileName, actualFile);
-        String filePath = (UPLOADS_DIR_NAME + "\\" + fileName);
         TheGame gameManager = new TheGame();
         IInputVerifier inputVerifier = new XmlFileVerifier();
         ErrorCollector errorCollector = new ErrorCollector();
-
-        if (!inputVerifier.isFileOk(filePath, errorCollector) || !gameManager.loadFile(filePath, errorCollector)) {
+        String bla = actualFile.getPath();
+        if (!inputVerifier.isFileOk("uploads\\" + theName, errorCollector) || !gameManager.loadFile("uploads\\" + theName, errorCollector)) {
             if (!errorCollector.getMessages().isEmpty()) {
                 StringBuilder errors = new StringBuilder();
                 errorCollector.getMessages().forEach(errors::append);
@@ -93,6 +92,7 @@ public class UploadFileServlet extends HttpServlet {
 
     private static String getPartFilename(Part part) {
         for (String cd : part.getHeader("content-disposition").split(";")) {
+            String bla = cd.trim();
             if (cd.trim().startsWith("filename")) {
                 String filename = cd.substring(cd.indexOf('=') + 1).trim().replace("\"", "");
                 return filename.substring(filename.lastIndexOf('/') + 1).substring(filename.lastIndexOf('\\') + 1);

@@ -92,8 +92,9 @@ $(function () {
 //-------------------------------------------------//
 // Send file and file details to servlet
 //-------------------------------------------------//
+
+
 function upload(file, fileName, username) {
-    alert(username);
     var formData = new FormData();
     formData.append("username", username);
     formData.append("fileName", fileName);
@@ -102,13 +103,16 @@ function upload(file, fileName, username) {
     var xhr = new XMLHttpRequest();
     xhr.upload.addEventListener("progress", uploadProgress, false);
     xhr.addEventListener("load", uploadComplete, false);
+
     xhr.open("POST", "/uploadFile", true);
     xhr.send(formData);
 }
 
 function uploadFile() {
     var gameTitle = $("#game-title").val();
-    var file = $("#uploaded-file").val();
+    var file = document.getElementById('uploaded-file').files[0];
+    // var file = $("#uploaded-file").val();
+    alert(file);
     if (file !== "" && gameTitle.trim() !== "") {
         upload(file, gameTitle, "MeandMe");
     } else if (file === "") {
@@ -133,10 +137,14 @@ function ajaxUploadFile(params) {
     });
 }
 
-function uploadProgress() {
+function uploadProgress(event) {
 
 }
 
-function uploadComplete() {
-
+function uploadComplete(event) {
+    alert(event.target.responseText);
 }
+
+$("form").submit(function (e) {
+    e.preventDefault();
+});
