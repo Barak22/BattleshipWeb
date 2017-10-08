@@ -25,3 +25,15 @@
     text-align: center;
     color: #122b40;
 }
+
+#btn-upload {
+    font-size: 18px;
+    text-align: center;
+    background-color: #31708f;
+    width: 320px;
+    height: 45px;
+}
+
+#btn-upload:hover {
+    background-color: #5bc0de;
+}

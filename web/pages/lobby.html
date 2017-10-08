@@ -44,7 +44,7 @@
             <h2 id="hdl-uploadgame">Upload Your Game</h2>
 
             <form method="POST" action="#" enctype="multipart/form-data">
-                <!-- COMPONENT START -->
+                <!-- Upload file START -->
                 <div class="form-group">
                     <div class="input-group input-file" name="Fichier1">
 			<span class="input-group-btn">
@@ -56,13 +56,19 @@
     		</span>
                     </div>
                 </div>
-                <!-- COMPONENT END -->
+
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary pull-right" disabled>Submit</button>
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4">
+                            <button type="submit" class="btn btn-primary pull-right" id="btn-upload">Upload
+                            </button>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
                 </div>
             </form>
-
-
+            <!-- Upload File END -->
         </div>
     </div>
 </div>
