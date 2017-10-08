@@ -1,6 +1,7 @@
 package api.servlets;
 
-import core.managers.SessionManager;
+import api.components.User;
+import api.managers.SessionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,9 +20,9 @@ public class GetGamesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         if (false) {
-            for (String user : SessionManager.getUsers()) {
+            for (User user : SessionManager.getUsers()) {
                 out.write("<button type=\"button\" class=\"list-group-item list-group-item-action\">");
-                out.write(user);
+                out.write(user.getName());
                 out.write("</button>");
             }
         } else {

@@ -10,8 +10,9 @@ public class User {
     private final String name;
     private WebStatus status;
 
-    public User(String name) {
+    public User(String name, WebStatus status) {
         this.name = name;
+        this.status = status;
     }
 
     public WebStatus getStatus() {

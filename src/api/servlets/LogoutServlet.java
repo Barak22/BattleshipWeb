@@ -1,6 +1,8 @@
 package api.servlets;
 
-import core.managers.SessionManager;
+import api.components.User;
+import api.enums.WebStatus;
+import api.managers.SessionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +22,6 @@ public class LogoutServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SessionManager.removeUser(request.getParameter("username"));
+        SessionManager.removeUser(new User(request.getParameter("username"), WebStatus.LOBBY));
     }
 }

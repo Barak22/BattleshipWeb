@@ -1,6 +1,7 @@
 package api.servlets;
 
-import core.managers.SessionManager;
+import api.components.User;
+import api.managers.SessionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,10 +19,10 @@ public class OnlineUsersServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        if (SessionManager.getUsers().size() != 0) {
-            for (String user : SessionManager.getUsers()) {
+        if (!SessionManager.getUsers().isEmpty()) {
+            for (User user : SessionManager.getUsers()) {
                 out.write("<button type=\"button\" class=\"list-group-item list-group-item-action\">");
-                out.write(user);
+                out.write(user.getName());
                 out.write("</button>");
             }
         } else {
