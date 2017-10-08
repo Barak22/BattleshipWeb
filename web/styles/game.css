@@ -2,10 +2,13 @@
     width: 25px !important;
     height: 25px !important;
     font-size: 10px;
-    text-align: center;
-!important;
 }
 
 .btn-board {
     background-color: #31b0d5;
+}
+
+.column-sm {
+    width: 25px;
+    padding: 10px;
 }
