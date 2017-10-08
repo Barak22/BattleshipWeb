@@ -1,5 +1,7 @@
 package api.components;
 
+import core.logic.TheGame;
+
 import java.io.File;
 
 public class GameFile {
@@ -7,6 +9,7 @@ public class GameFile {
     private String author;
     private String fileName;
     private File file;
+    private TheGame gameManager;
 
     public GameFile(String fileName, File file) {
         this.fileName = fileName;
@@ -35,5 +38,13 @@ public class GameFile {
 
     public void setFile(File file) {
         this.file = file;
+    }
+
+    public TheGame getGameManager() {
+        return gameManager;
+    }
+
+    public void setGameManager(TheGame gameManager) {
+        this.gameManager = gameManager;
     }
 }

@@ -93,6 +93,7 @@ $(function () {
 // Send file and file details to servlet
 //-------------------------------------------------//
 function upload(file, fileName, username) {
+    alert(username);
     var formData = new FormData();
     formData.append("username", username);
     formData.append("fileName", fileName);
@@ -108,25 +109,34 @@ function upload(file, fileName, username) {
 function uploadFile() {
     var gameTitle = $("#game-title").val();
     var file = $("#uploaded-file").val();
-    var params = {
-        gameTitle: gameTitle,
-        file: file
-    };
-    if (file != "") {
-        alert(file);
-    } else {
+    if (file !== "" && gameTitle.trim() !== "") {
+        upload(file, gameTitle, "MeandMe");
+    } else if (file === "") {
         alert("Please select a file to upload")
+    } else {
+        alert("Please add a game title")
     }
+}
 
-    // $.ajax({
-    //     type: "POST",
-    //     url: "/uploadFile",
-    //     data: params,
-    //     success: function (result) {
-    //         alert("success");
-    //     },
-    //     error: function (error) {
-    //         alert(error);
-    //     }
-    // });
+function ajaxUploadFile(params) {
+    alert('in ajax');
+    $.ajax({
+        type: "POST",
+        url: "/uploadFile",
+        data: params,
+        success: function (result) {
+            alert("File has been uploaded successfully!");
+        },
+        error: function (error) {
+            alert(error);
+        }
+    });
+}
+
+function uploadProgress() {
+
+}
+
+function uploadComplete() {
+
 }
