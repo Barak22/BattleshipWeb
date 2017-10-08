@@ -88,3 +88,40 @@ function checkIfUserLoogedOut() {
 $(function () {
     bs_input_file();
 });
+
+//-------------------------------------------------//
+// Send file and file details to servlet
+//-------------------------------------------------//
+function upload(file, fileName, username) {
+    var formData = new FormData();
+    formData.append("username", username);
+    formData.append("fileName", fileName);
+    formData.append("file", file);
+
+    var xhr = new XMLHttpRequest();
+    xhr.upload.addEventListener("progress", uploadProgress, false);
+    xhr.addEventListener("load", uploadComplete, false);
+    xhr.open("POST", "/uploadFile", true);
+    xhr.send(formData);
+}
+
+function formUploadSubmit() {
+    var gameTitle = $("#game-title").val();
+    var file = $("#uploaded-file").val();
+    var params = {
+        gameTitle: gameTitle,
+        file: file
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "/uploadFile",
+        data: params,
+        success: function (result) {
+            alert("success");
+        },
+        error: function (error) {
+            alert(error);
+        }
+    });
+}

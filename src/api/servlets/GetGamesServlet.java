@@ -26,7 +26,7 @@ public class GetGamesServlet extends HttpServlet {
                 out.write("</button>");
             }
         } else {
-            out.write("<button type=\"button\" class=\"list-group-item list-group-item-action\">");
+            out.write("<button type=\"button\" class=\"list-group-item list-group-item-action no-display\">");
             out.write("There are no available games to show");
             out.write("</button>");
         }

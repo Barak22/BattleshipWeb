@@ -25,3 +25,7 @@ html, body {
     font-size: 12px;
     text-align: center;
 }
+
+.no-display {
+    color: #d43f3a;
+}
