@@ -1,5 +1,6 @@
 package api.servlets;
 
+import api.enums.CookieTypes;
 import api.managers.SessionManager;
 
 import javax.servlet.ServletException;
@@ -20,7 +21,7 @@ public class LogoutServlet extends HttpServlet {
         String username = null;
         Cookie[] cookies = request.getCookies();
         for (Cookie cookie : cookies) {
-            if (cookie.getName().equals("username")) {
+            if (cookie.getName().equals(CookieTypes.USER_NAME.getValue())) {
                 username = cookie.getValue();
                 cookie.setValue(null);
                 cookie.setMaxAge(0);

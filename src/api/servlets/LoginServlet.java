@@ -1,6 +1,7 @@
 package api.servlets;
 
 import api.components.User;
+import api.enums.CookieTypes;
 import api.enums.WebStatus;
 import api.managers.SessionManager;
 
@@ -21,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 
         if (!userName.isEmpty()) {
             if (SessionManager.addUser(new User(userName, WebStatus.LOBBY)) == null /*user name NOT already exists */) {
-                Cookie cookie = new Cookie("username", userName);
+                Cookie cookie = new Cookie(CookieTypes.USER_NAME.getValue(), userName);
                 cookie.setPath("/");
                 response.addCookie(cookie);
 
@@ -39,7 +40,7 @@ public class LoginServlet extends HttpServlet {
         Cookie[] cookies = request.getCookies();
         boolean hasCookie = false;
         for (Cookie cookie : cookies) {
-            if (cookie.getName().equals("username")) {
+            if (cookie.getName().equals(CookieTypes.USER_NAME.getValue())) {
                 response.setStatus(200);
                 hasCookie = true;
             }
