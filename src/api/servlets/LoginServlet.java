@@ -21,7 +21,6 @@ public class LoginServlet extends HttpServlet {
 
         if (!userName.isEmpty()) {
             if (SessionManager.addUser(new User(userName, WebStatus.LOBBY)) == null /*user name NOT already exists */) {
-
                 Cookie cookie = new Cookie("username", userName);
                 cookie.setPath("/");
                 response.addCookie(cookie);

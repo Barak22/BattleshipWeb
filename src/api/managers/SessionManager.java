@@ -11,20 +11,21 @@ import java.util.Map;
  */
 public final class SessionManager {
 
-    private static final Map<String, User> NAMES = new HashMap<>();
+    private static final Map<String, User> USERS = new HashMap<>();
 
     private SessionManager() {
     }
 
     public static User addUser(User user) {
-        return NAMES.putIfAbsent(user.getName(), user);
+        return USERS.putIfAbsent(user.getName(), user);
     }
 
-    public static boolean removeUser(User user) {
-        return NAMES.remove(user.getName(), user);
+    public static boolean removeUser(String userName) {
+        //        User user = USERS.get(userName);
+        return USERS.remove(userName, USERS.get(userName));
     }
 
     public static Collection<User> getUsers() {
-        return NAMES.values();
+        return USERS.values();
     }
 }

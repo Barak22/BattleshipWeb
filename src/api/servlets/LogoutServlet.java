@@ -1,11 +1,10 @@
 package api.servlets;
 
-import api.components.User;
-import api.enums.WebStatus;
 import api.managers.SessionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,10 +17,25 @@ import java.io.IOException;
 public class LogoutServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = null;
+        Cookie[] cookies = request.getCookies();
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("username")) {
+                username = cookie.getValue();
+                cookie.setValue(null);
+                cookie.setMaxAge(0);
+                cookie.setPath("/");
+                response.addCookie(cookie);
+            }
+        }
 
+        if (username == null) {
+            response.setStatus(500);
+        }
+        response.setStatus(200);
+        SessionManager.removeUser(username);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SessionManager.removeUser(new User(request.getParameter("username"), WebStatus.LOBBY));
     }
 }
