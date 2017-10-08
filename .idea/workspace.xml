@@ -27,144 +27,11 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52966e34-896b-4a36-9e19-7ceb16f444cb" name="Default" comment="Reorganized packages">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/Board$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/Board.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/Cell.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/Comp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/Coordinate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/GameStep$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/GameStep.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/Mine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/ReplayInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/TheGame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/TheGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/bases/BattleshipBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/battleships/AdvancedBattleship.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/battleships/Battleship.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/battleships/BattleshipDownRight.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/battleships/BattleshipRightDown.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/battleships/BattleshipRightUp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/battleships/BattleshipUpRight.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/builders/BattleshipBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/enums/BattleshipDirectionType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/enums/CellStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/enums/ErrorMessages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/enums/GameType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/enums/ShipCategoryType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/exceptions/XmlContentException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/interfaces/IBuildShipDetails.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/interfaces/IPlayer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/interfaces/ISerializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/logic/serializers/XmlSerializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/BattleShipGameType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/BoardType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/BoardsType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/MineType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/ObjectFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/PositionType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/ShipType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/ShipTypeType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/ShipTypesType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/battleshipx.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/module/battleshipx.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/BattleshipApp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/UserMoveInput.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/components/BoardButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/console/Assistant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/console/UiApp$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/console/UiApp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/enums/MenuItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/enums/SkinType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/javafx/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/javafx/JavaFxClass.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/javafx/SkinBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/javafx/SkinCreator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/javafx/UiXml.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/verifiers/ErrorCollector.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/verifiers/IInputVerifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/verifiers/UserMoveInputVerifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/ui/verifiers/XmlFileVerifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/webui/styles/login.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BattleshipWeb/webui/styles/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/webui/styles/login.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/webui/styles/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/webui/styles/welcome.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/Board.java" afterPath="$PROJECT_DIR$/src/core/logic/Board.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/Cell.java" afterPath="$PROJECT_DIR$/src/core/logic/Cell.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/Comp.java" afterPath="$PROJECT_DIR$/src/core/logic/Comp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/Coordinate.java" afterPath="$PROJECT_DIR$/src/core/logic/Coordinate.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/GameStep.java" afterPath="$PROJECT_DIR$/src/core/logic/GameStep.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/Mine.java" afterPath="$PROJECT_DIR$/src/core/logic/Mine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/Player.java" afterPath="$PROJECT_DIR$/src/core/logic/Player.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/ReplayInfo.java" afterPath="$PROJECT_DIR$/src/core/logic/ReplayInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/TheGame.java" afterPath="$PROJECT_DIR$/src/core/logic/TheGame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/bases/BattleshipBase.java" afterPath="$PROJECT_DIR$/src/core/logic/bases/BattleshipBase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/battleships/AdvancedBattleship.java" afterPath="$PROJECT_DIR$/src/core/logic/battleships/AdvancedBattleship.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/battleships/Battleship.java" afterPath="$PROJECT_DIR$/src/core/logic/battleships/Battleship.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/battleships/BattleshipDownRight.java" afterPath="$PROJECT_DIR$/src/core/logic/battleships/BattleshipDownRight.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/battleships/BattleshipRightDown.java" afterPath="$PROJECT_DIR$/src/core/logic/battleships/BattleshipRightDown.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/battleships/BattleshipRightUp.java" afterPath="$PROJECT_DIR$/src/core/logic/battleships/BattleshipRightUp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/battleships/BattleshipUpRight.java" afterPath="$PROJECT_DIR$/src/core/logic/battleships/BattleshipUpRight.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/builders/BattleshipBuilder.java" afterPath="$PROJECT_DIR$/src/core/logic/builders/BattleshipBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/enums/BattleshipDirectionType.java" afterPath="$PROJECT_DIR$/src/core/logic/enums/BattleshipDirectionType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/enums/CellStatus.java" afterPath="$PROJECT_DIR$/src/core/logic/enums/CellStatus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/enums/ErrorMessages.java" afterPath="$PROJECT_DIR$/src/core/logic/enums/ErrorMessages.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/enums/GameType.java" afterPath="$PROJECT_DIR$/src/core/logic/enums/GameType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/enums/ShipCategoryType.java" afterPath="$PROJECT_DIR$/src/core/logic/enums/ShipCategoryType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/exceptions/XmlContentException.java" afterPath="$PROJECT_DIR$/src/core/logic/exceptions/XmlContentException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/interfaces/IBuildShipDetails.java" afterPath="$PROJECT_DIR$/src/core/logic/interfaces/IBuildShipDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/interfaces/IPlayer.java" afterPath="$PROJECT_DIR$/src/core/logic/interfaces/IPlayer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/interfaces/ISerializer.java" afterPath="$PROJECT_DIR$/src/core/logic/interfaces/ISerializer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/logic/serializers/XmlSerializer.java" afterPath="$PROJECT_DIR$/src/core/logic/serializers/XmlSerializer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/BattleShipGameType.java" afterPath="$PROJECT_DIR$/src/core/module/BattleShipGameType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/BoardType.java" afterPath="$PROJECT_DIR$/src/core/module/BoardType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/BoardsType.java" afterPath="$PROJECT_DIR$/src/core/module/BoardsType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/MineType.java" afterPath="$PROJECT_DIR$/src/core/module/MineType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/core/module/ObjectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/PositionType.java" afterPath="$PROJECT_DIR$/src/core/module/PositionType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/ShipType.java" afterPath="$PROJECT_DIR$/src/core/module/ShipType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/ShipTypeType.java" afterPath="$PROJECT_DIR$/src/core/module/ShipTypeType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/ShipTypesType.java" afterPath="$PROJECT_DIR$/src/core/module/ShipTypesType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/battleshipx.xml" afterPath="$PROJECT_DIR$/src/core/module/battleshipx.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/module/battleshipx.xsd" afterPath="$PROJECT_DIR$/src/core/module/battleshipx.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/servlets/GetGamesServlet.java" afterPath="$PROJECT_DIR$/src/web/servlets/GetGamesServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/servlets/LoginServlet.java" afterPath="$PROJECT_DIR$/src/web/servlets/LoginServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/servlets/LogoutServlet.java" afterPath="$PROJECT_DIR$/src/web/servlets/LogoutServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/servlets/OnlineUsersServlet.java" afterPath="$PROJECT_DIR$/src/web/servlets/OnlineUsersServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/servlets/WelcomeServlet.java" afterPath="$PROJECT_DIR$/src/web/servlets/WelcomeServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/BattleshipApp.java" afterPath="$PROJECT_DIR$/src/core/ui/BattleshipApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/UserMoveInput.java" afterPath="$PROJECT_DIR$/src/core/ui/UserMoveInput.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/components/BoardButton.java" afterPath="$PROJECT_DIR$/src/core/ui/components/BoardButton.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/console/Assistant.java" afterPath="$PROJECT_DIR$/src/core/ui/console/Assistant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/console/UiApp.java" afterPath="$PROJECT_DIR$/src/core/ui/console/UiApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/enums/MenuItem.java" afterPath="$PROJECT_DIR$/src/core/ui/enums/MenuItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/enums/SkinType.java" afterPath="$PROJECT_DIR$/src/core/ui/enums/SkinType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/javafx/Controller.java" afterPath="$PROJECT_DIR$/src/core/ui/javafx/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/javafx/JavaFxClass.java" afterPath="$PROJECT_DIR$/src/core/ui/javafx/JavaFxClass.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/javafx/SkinBuilder.java" afterPath="$PROJECT_DIR$/src/core/ui/javafx/SkinBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/javafx/SkinCreator.java" afterPath="$PROJECT_DIR$/src/core/ui/javafx/SkinCreator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/javafx/UiXml.fxml" afterPath="$PROJECT_DIR$/src/core/ui/javafx/UiXml.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/verifiers/ErrorCollector.java" afterPath="$PROJECT_DIR$/src/core/ui/verifiers/ErrorCollector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/verifiers/IInputVerifier.java" afterPath="$PROJECT_DIR$/src/core/ui/verifiers/IInputVerifier.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/verifiers/UserMoveInputVerifier.java" afterPath="$PROJECT_DIR$/src/core/ui/verifiers/UserMoveInputVerifier.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ui/verifiers/XmlFileVerifier.java" afterPath="$PROJECT_DIR$/src/core/ui/verifiers/XmlFileVerifier.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/webmanagers/SessionManager.java" afterPath="$PROJECT_DIR$/src/core/managers/SessionManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/web/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/common/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/web/common/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/common/jquery-3.2.1.min.js" afterPath="$PROJECT_DIR$/src/web/common/jquery-3.2.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/images/battleship-cover.jpg" afterPath="$PROJECT_DIR$/src/web/images/battleship-cover.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/src/web/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/pages/js/Lobby.js" afterPath="$PROJECT_DIR$/src/web/pages/js/Lobby.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/pages/js/Login.js" afterPath="$PROJECT_DIR$/src/web/pages/js/Login.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/pages/lobby.html" afterPath="$PROJECT_DIR$/src/web/pages/lobby.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/styles/global.css" afterPath="$PROJECT_DIR$/src/web/styles/global.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/styles/index.css" afterPath="$PROJECT_DIR$/src/web/styles/index.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/styles/lobby.css" afterPath="$PROJECT_DIR$/src/web/styles/lobby.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/tmp.jsp" afterPath="$PROJECT_DIR$/src/web/tmp.jsp" />
+    <list default="true" id="52966e34-896b-4a36-9e19-7ceb16f444cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BattleshipWeb.iml" afterPath="$PROJECT_DIR$/BattleshipWeb.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BattleshipWeb_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/BattleshipWeb_war_exploded/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web/servlets/LoginServlet.java" afterPath="$PROJECT_DIR$/src/web/servlets/LoginServlet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -182,8 +49,8 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+            <state relative-caret-position="294">
+              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -195,37 +62,37 @@
             <state relative-caret-position="210">
               <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
               <folding>
-                <marker date="1507444640000" expanded="true" signature="95975:95992" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="95975:96010" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="95975:96023" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="95975:96038" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96073:97757" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96086:97742" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96140:96405" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96159:96390" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96192:96370" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96232:96336" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96253:96314" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96456:96721" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96475:96706" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96508:96686" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96548:96652" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96569:96630" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96764:97070" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96783:97055" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96857:97035" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96897:97001" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="96918:96979" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97105:97411" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97124:97396" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97198:97376" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97238:97342" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97259:97320" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97463:97728" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97482:97713" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97515:97693" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97555:97659" ph="..." />
-                <marker date="1507444640000" expanded="true" signature="97576:97637" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79750:79767" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79750:79785" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79750:79798" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79750:79813" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79848:81532" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79861:81517" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79915:80180" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79934:80165" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="79967:80145" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80007:80111" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80028:80089" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80231:80496" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80250:80481" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80283:80461" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80323:80427" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80344:80405" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80539:80845" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80558:80830" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80632:80810" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80672:80776" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80693:80754" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80880:81186" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80899:81171" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="80973:81151" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="81013:81117" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="81034:81095" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="81238:81503" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="81257:81488" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="81290:81468" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="81330:81434" ph="..." />
+                <marker date="1507448244000" expanded="true" signature="81351:81412" ph="..." />
               </folding>
             </state>
           </provider>
@@ -244,8 +111,8 @@
       <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/servlets/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="258">
+              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -310,11 +177,9 @@
       <file leaf-file-name="LogoutServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/servlets/LogoutServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="144">
+              <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -332,8 +197,8 @@
       <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/pages/js/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state relative-caret-position="250">
+              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -424,8 +289,8 @@
       <file leaf-file-name="OnlineUsersServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/servlets/OnlineUsersServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+            <state relative-caret-position="195">
+              <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -456,7 +321,7 @@
       <file leaf-file-name="battleshipx.xsd" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/module/battleshipx.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
+            <state relative-caret-position="480">
               <caret line="32" column="53" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
               <folding />
             </state>
@@ -476,7 +341,7 @@
       <file leaf-file-name="AdvancedBattleship.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/logic/battleships/AdvancedBattleship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
+            <state relative-caret-position="105">
               <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
               <folding />
             </state>
@@ -486,7 +351,7 @@
       <file leaf-file-name="Battleship.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/logic/battleships/Battleship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
+            <state relative-caret-position="60">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
@@ -496,18 +361,28 @@
       <file leaf-file-name="GameStep.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/logic/GameStep.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="89" column="49" lean-forward="true" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
+            <state relative-caret-position="1260">
+              <caret line="89" column="49" lean-forward="false" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ObjectFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/module/ObjectFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+            <state relative-caret-position="435">
+              <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/out/artifacts/BattleshipWeb_war_exploded/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -531,6 +406,7 @@
       <find>username</find>
       <find>output</find>
       <find>welcome</find>
+      <find>the name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -564,7 +440,6 @@
         <option value="$PROJECT_DIR$/web/pages/welcome.html" />
         <option value="$PROJECT_DIR$/web/pages/js/Login.js" />
         <option value="$PROJECT_DIR$/web/pages/js/Lobby.js" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/servlets/GetGamesServlet.java" />
         <option value="$PROJECT_DIR$/web/pages/lobby.html" />
         <option value="$PROJECT_DIR$/src/webmanagers/SessionManager.java" />
@@ -578,8 +453,12 @@
         <option value="$PROJECT_DIR$/src/core/logic/ReplayInfo.java" />
         <option value="$PROJECT_DIR$/src/core/logic/battleships/AdvancedBattleship.java" />
         <option value="$PROJECT_DIR$/src/core/logic/GameStep.java" />
-        <option value="$PROJECT_DIR$/src/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/core/module/ObjectFactory.java" />
+        <option value="$PROJECT_DIR$/web/servlets/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/web/servlets/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/web/pages/js/Login.js" />
       </list>
     </option>
   </component>
@@ -645,6 +524,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -652,6 +533,32 @@
             <path>
               <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="BattleshipWeb_war_exploded" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="BattleshipWeb_war_exploded" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
@@ -675,6 +582,21 @@
               <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -688,8 +610,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -707,6 +627,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/pages/js" />
       <recent name="$PROJECT_DIR$/src/webui/styles" />
@@ -741,7 +662,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_BattleshipWeb" />
-        <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -906,7 +826,8 @@
       <workItem from="1507352362178" duration="15455000" />
       <workItem from="1507370990823" duration="5802000" />
       <workItem from="1507388405227" duration="7523000" />
-      <workItem from="1507444232798" duration="467000" />
+      <workItem from="1507444232798" duration="2410000" />
+      <workItem from="1507446782041" duration="1258000" />
     </task>
     <task id="LOCAL-00001" summary="First push">
       <created>1507288489254</created>
@@ -1013,11 +934,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507401894747</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Reorganized packages">
+      <created>1507444739805</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1507444739805</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37956000" />
+    <option name="totallyTimeSpent" value="41157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -1033,18 +961,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39852008" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39815763" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36847493" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25274727" sideWeight="0.8314425" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25274727" sideWeight="0.16855754" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25579977" sideWeight="0.821718" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25579977" sideWeight="0.17828201" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1077,18 +1005,25 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/web/servlets/LoginServlet.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/web/servlets/LoginServlet.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/core/ui/verifiers/UserMoveInputVerifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/ui/javafx/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1177,37 +1112,37 @@
         <state relative-caret-position="210">
           <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding>
-            <marker date="1507444640000" expanded="true" signature="95975:95992" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="95975:96010" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="95975:96023" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="95975:96038" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96073:97757" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96086:97742" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96140:96405" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96159:96390" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96192:96370" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96232:96336" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96253:96314" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96456:96721" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96475:96706" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96508:96686" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96548:96652" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96569:96630" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96764:97070" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96783:97055" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96857:97035" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96897:97001" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="96918:96979" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97105:97411" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97124:97396" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97198:97376" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97238:97342" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97259:97320" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97463:97728" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97482:97713" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97515:97693" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97555:97659" ph="..." />
-            <marker date="1507444640000" expanded="true" signature="97576:97637" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79750:79767" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79750:79785" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79750:79798" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79750:79813" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79848:81532" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79861:81517" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79915:80180" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79934:80165" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="79967:80145" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80007:80111" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80028:80089" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80231:80496" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80250:80481" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80283:80461" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80323:80427" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80344:80405" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80539:80845" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80558:80830" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80632:80810" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80672:80776" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80693:80754" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80880:81186" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80899:81171" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="80973:81151" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="81013:81117" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="81034:81095" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="81238:81503" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="81257:81488" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="81290:81468" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="81330:81434" ph="..." />
+            <marker date="1507448244000" expanded="true" signature="81351:81412" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1297,7 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,7 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1321,14 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
           <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/pages/js/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1354,26 +1279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/servlets/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/servlets/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/managers/SessionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1394,8 +1299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web/servlets/OnlineUsersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        <state relative-caret-position="195">
+          <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1404,7 +1309,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/module/battleshipx.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="480">
           <caret line="32" column="53" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
           <folding />
         </state>
@@ -1430,7 +1335,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/logic/battleships/Battleship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
+        <state relative-caret-position="60">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
@@ -1438,7 +1343,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/logic/battleships/AdvancedBattleship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
+        <state relative-caret-position="105">
           <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
           <folding />
         </state>
@@ -1454,24 +1359,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/logic/GameStep.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="89" column="49" lean-forward="true" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+        <state relative-caret-position="1260">
+          <caret line="89" column="49" lean-forward="false" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/module/ObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        <state relative-caret-position="435">
+          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/servlets/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/pages/js/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/servlets/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/BattleshipWeb_war_exploded/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding />
         </state>
       </provider>
