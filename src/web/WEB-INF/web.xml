@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>web.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/pages/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>web.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/pages/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>welcome</servlet-name>
+        <servlet-class>web.servlets.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>welcome</servlet-name>
+        <url-pattern>/pages/welcome</url-pattern>
+    </servlet-mapping>
+
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>onlineUsers</servlet-name>
+        <servlet-class>web.servlets.OnlineUsersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>onlineUsers</servlet-name>
+        <url-pattern>/onlineUsers</url-pattern>
+    </servlet-mapping>
+
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>getGames</servlet-name>
+        <servlet-class>web.servlets.GetGamesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getGames</servlet-name>
+        <url-pattern>/getGames</url-pattern>
+    </servlet-mapping>
+
+</web-app>
