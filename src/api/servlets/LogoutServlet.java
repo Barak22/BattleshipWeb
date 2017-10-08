@@ -17,6 +17,7 @@ import java.io.IOException;
 @WebServlet(name = "LogoutServlet")
 public class LogoutServlet extends HttpServlet {
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = null;
         Cookie[] cookies = request.getCookies();
@@ -37,6 +38,7 @@ public class LogoutServlet extends HttpServlet {
         SessionManager.removeUser(username);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 }

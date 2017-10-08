@@ -41,6 +41,7 @@ function getGames() {
 // Ajax calls
 //-------------------------------------------------//
 function ajaxCalls() {
+    checkIfUserLoogedOut();
     getOnlineUsers();
     getGames();
 }
@@ -71,6 +72,17 @@ function bs_input_file() {
             }
         }
     );
+}
+
+function checkIfUserLoogedOut() {
+    $.ajax({
+        type: "GET",
+        url: "/pages/login",
+        error: function (response) {
+            window.location.replace("/index.html");
+
+        }
+    })
 }
 
 $(function () {
