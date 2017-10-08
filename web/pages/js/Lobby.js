@@ -105,23 +105,28 @@ function upload(file, fileName, username) {
     xhr.send(formData);
 }
 
-function formUploadSubmit() {
+function uploadFile() {
     var gameTitle = $("#game-title").val();
     var file = $("#uploaded-file").val();
     var params = {
         gameTitle: gameTitle,
         file: file
     };
+    if (file != "") {
+        alert(file);
+    } else {
+        alert("Please select a file to upload")
+    }
 
-    $.ajax({
-        type: "POST",
-        url: "/uploadFile",
-        data: params,
-        success: function (result) {
-            alert("success");
-        },
-        error: function (error) {
-            alert(error);
-        }
-    });
+    // $.ajax({
+    //     type: "POST",
+    //     url: "/uploadFile",
+    //     data: params,
+    //     success: function (result) {
+    //         alert("success");
+    //     },
+    //     error: function (error) {
+    //         alert(error);
+    //     }
+    // });
 }
