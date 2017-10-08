@@ -36,6 +36,17 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Cookie[] cookies = request.getCookies();
+        boolean hasCookie = false;
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("username")) {
+                response.setStatus(200);
+                hasCookie = true;
+            }
+        }
 
+        if (!hasCookie) {
+            response.setStatus(500);
+        }
     }
 }

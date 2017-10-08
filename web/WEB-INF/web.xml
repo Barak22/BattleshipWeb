@@ -30,7 +30,7 @@
 
     <servlet>
         <servlet-name>welcome</servlet-name>
-        <servlet-class>api.servlets.WelcomeServlet</servlet-class>
+        <servlet-class>api.servlets.LobbyServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>welcome</servlet-name>
