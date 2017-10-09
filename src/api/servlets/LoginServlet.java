@@ -25,7 +25,6 @@ public class LoginServlet extends HttpServlet {
                 Cookie cookie = new Cookie(CookieTypes.USER_NAME.getValue(), userName);
                 cookie.setPath("/");
                 response.addCookie(cookie);
-
                 response.setStatus(200);
             } else {
                 response.setStatus(400);

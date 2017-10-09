@@ -79,9 +79,25 @@ function checkIfUserLoggedOut() {
         url: "/pages/login",
         error: function (response) {
             window.location.replace("/index.html");
-
         }
     })
+}
+
+function getCookieValue(cname) {
+    alert("Barak");
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 $(function () {
@@ -117,21 +133,6 @@ function uploadFile() {
     } else {
         alert("Please add a game title")
     }
-}
-
-function ajaxUploadFile(params) {
-    alert('in ajax');
-    $.ajax({
-        type: "POST",
-        url: "/uploadFile",
-        data: params,
-        success: function (result) {
-            alert("File has been uploaded successfully!");
-        },
-        error: function (error) {
-            alert(error);
-        }
-    });
 }
 
 function uploadProgress(event) {
