@@ -126,7 +126,7 @@ function uploadFile() {
     var gameTitle = $("#game-title").val();
     var file = document.getElementById('uploaded-file').files[0];
     if (file !== "" && gameTitle.trim() !== "") {
-        upload(file, gameTitle, "MeandMe");
+        upload(file, gameTitle, getCookieValue("battleshipUserName"));
     } else if (file === "") {
         alert("Please select a file to upload")
     } else {
