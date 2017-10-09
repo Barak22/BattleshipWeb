@@ -23,11 +23,36 @@ public class GetGamesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         if (!FileManager.getGameFiles().isEmpty()) {
+            int row = 1;
+
+            out.write("<table class=\"table table-active\">");
+            out.write("<thead>");
+            out.write("<tr>");
+            out.write("<th>#</th>");
+            out.write("<th>Name</th>");
+            out.write("<th>Type</th>");
+            out.write("<th>Size</th>");
+            out.write("<th>Author</th>");
+            out.write("<th>Players</th>");
+            out.write("<th>Status</th>");
+            out.write("</tr>");
+            out.write("</thead>");
+            out.write("<tbody>");
+
             for (GameFile gameFile : FileManager.getGameFiles()) {
-                out.write("<button type=\"button\" class=\"list-group-item list-group-item-action\">");
-                out.write(gameFile.getRoomName());
-                out.write("</button>");
+                out.write("<tr>");
+                out.write("<th scope=\"row\">" + row + "</th>");
+                out.write("<td>" + gameFile.getRoomName() + "</td>");
+                out.write("<td>" + "Basic" + "</td>");
+                out.write("<td>" + 10 + "</td>");
+                out.write("<td>" + gameFile.getAuthor() + "</td>");
+                out.write("<td>" + 0 + "</td>");
+                out.write("<td>" + "Active" + "</td>");
+                out.write("</tr>");
+                row++;
             }
+            out.write("</tbody>");
+            out.write("</table>");
         } else {
             out.write("There are no available rooms to show");
         }
