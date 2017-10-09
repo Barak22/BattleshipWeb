@@ -74,17 +74,18 @@ function bs_input_file() {
 }
 
 function checkIfUserLoggedOut() {
-    $.ajax({
-        type: "GET",
-        url: "/pages/login",
-        error: function (response) {
-            window.location.replace("/index.html");
-        }
-    })
+
+
+    // $.ajax({
+    //     type: "GET",
+    //     url: "/pages/login",
+    //     error: function (response) {
+    //         window.location.replace("/index.html");
+    //     }
+    // })
 }
 
 function getCookieValue(cname) {
-    alert("Barak");
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
