@@ -44,3 +44,20 @@
     max-width: 300px;
     margin: 10px auto;
 }
+
+#upload-status {
+    text-align: center;
+}
+
+#status-success {
+    text-align: center;
+    color: #4cae4c;
+    font-weight: 400;
+}
+
+#status-fail {
+    text-align: center;
+    margin: 5px auto;
+    color: #ac2925;
+    font-weight: 400;
+}

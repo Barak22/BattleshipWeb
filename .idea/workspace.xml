@@ -36,64 +36,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52966e34-896b-4a36-9e19-7ceb16f444cb" name="Default" comment="Game page">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/Board.java" afterPath="$PROJECT_DIR$/src/logic/Board.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/Cell.java" afterPath="$PROJECT_DIR$/src/logic/Cell.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/Comp.java" afterPath="$PROJECT_DIR$/src/logic/Comp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/Coordinate.java" afterPath="$PROJECT_DIR$/src/logic/Coordinate.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/GameStep.java" afterPath="$PROJECT_DIR$/src/logic/GameStep.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/Mine.java" afterPath="$PROJECT_DIR$/src/logic/Mine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/Player.java" afterPath="$PROJECT_DIR$/src/logic/Player.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/ReplayInfo.java" afterPath="$PROJECT_DIR$/src/logic/ReplayInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/TheGame.java" afterPath="$PROJECT_DIR$/src/logic/TheGame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/bases/BattleshipBase.java" afterPath="$PROJECT_DIR$/src/logic/bases/BattleshipBase.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/battleships/AdvancedBattleship.java" afterPath="$PROJECT_DIR$/src/logic/battleships/AdvancedBattleship.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/battleships/Battleship.java" afterPath="$PROJECT_DIR$/src/logic/battleships/Battleship.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/battleships/BattleshipDownRight.java" afterPath="$PROJECT_DIR$/src/logic/battleships/BattleshipDownRight.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/battleships/BattleshipRightDown.java" afterPath="$PROJECT_DIR$/src/logic/battleships/BattleshipRightDown.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/battleships/BattleshipRightUp.java" afterPath="$PROJECT_DIR$/src/logic/battleships/BattleshipRightUp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/battleships/BattleshipUpRight.java" afterPath="$PROJECT_DIR$/src/logic/battleships/BattleshipUpRight.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/builders/BattleshipBuilder.java" afterPath="$PROJECT_DIR$/src/logic/builders/BattleshipBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/enums/BattleshipDirectionType.java" afterPath="$PROJECT_DIR$/src/logic/enums/BattleshipDirectionType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/enums/CellStatus.java" afterPath="$PROJECT_DIR$/src/logic/enums/CellStatus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/enums/ErrorMessages.java" afterPath="$PROJECT_DIR$/src/logic/enums/ErrorMessages.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/enums/GameType.java" afterPath="$PROJECT_DIR$/src/logic/enums/GameType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/enums/ShipCategoryType.java" afterPath="$PROJECT_DIR$/src/logic/enums/ShipCategoryType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/exceptions/XmlContentException.java" afterPath="$PROJECT_DIR$/src/logic/exceptions/XmlContentException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/interfaces/IBuildShipDetails.java" afterPath="$PROJECT_DIR$/src/logic/interfaces/IBuildShipDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/interfaces/IPlayer.java" afterPath="$PROJECT_DIR$/src/logic/interfaces/IPlayer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/interfaces/ISerializer.java" afterPath="$PROJECT_DIR$/src/logic/interfaces/ISerializer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/logic/serializers/XmlSerializer.java" afterPath="$PROJECT_DIR$/src/logic/serializers/XmlSerializer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/BattleShipGameType.java" afterPath="$PROJECT_DIR$/src/module/BattleShipGameType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/BoardType.java" afterPath="$PROJECT_DIR$/src/module/BoardType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/BoardsType.java" afterPath="$PROJECT_DIR$/src/module/BoardsType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/MineType.java" afterPath="$PROJECT_DIR$/src/module/MineType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/module/ObjectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/PositionType.java" afterPath="$PROJECT_DIR$/src/module/PositionType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/ShipType.java" afterPath="$PROJECT_DIR$/src/module/ShipType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/ShipTypeType.java" afterPath="$PROJECT_DIR$/src/module/ShipTypeType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/ShipTypesType.java" afterPath="$PROJECT_DIR$/src/module/ShipTypesType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/battleshipx.xml" afterPath="$PROJECT_DIR$/src/module/battleshipx.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/module/battleshipx.xsd" afterPath="$PROJECT_DIR$/src/module/battleshipx.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/BattleshipApp.java" afterPath="$PROJECT_DIR$/src/ui/BattleshipApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/UserMoveInput.java" afterPath="$PROJECT_DIR$/src/ui/UserMoveInput.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/components/BoardButton.java" afterPath="$PROJECT_DIR$/src/ui/components/BoardButton.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/console/Assistant.java" afterPath="$PROJECT_DIR$/src/ui/console/Assistant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/console/UiApp.java" afterPath="$PROJECT_DIR$/src/ui/console/UiApp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/enums/MenuItem.java" afterPath="$PROJECT_DIR$/src/ui/enums/MenuItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/enums/SkinType.java" afterPath="$PROJECT_DIR$/src/ui/enums/SkinType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/javafx/Controller.java" afterPath="$PROJECT_DIR$/src/ui/javafx/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/javafx/JavaFxClass.java" afterPath="$PROJECT_DIR$/src/ui/javafx/JavaFxClass.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/javafx/SkinBuilder.java" afterPath="$PROJECT_DIR$/src/ui/javafx/SkinBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/javafx/SkinCreator.java" afterPath="$PROJECT_DIR$/src/ui/javafx/SkinCreator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/javafx/UiXml.fxml" afterPath="$PROJECT_DIR$/src/ui/javafx/UiXml.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/verifiers/ErrorCollector.java" afterPath="$PROJECT_DIR$/src/ui/verifiers/ErrorCollector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/verifiers/IInputVerifier.java" afterPath="$PROJECT_DIR$/src/ui/verifiers/IInputVerifier.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/verifiers/UserMoveInputVerifier.java" afterPath="$PROJECT_DIR$/src/ui/verifiers/UserMoveInputVerifier.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/core/ui/verifiers/XmlFileVerifier.java" afterPath="$PROJECT_DIR$/src/ui/verifiers/XmlFileVerifier.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BattleshipWeb_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/BattleshipWeb_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/components/GameFile.java" afterPath="$PROJECT_DIR$/src/api/components/GameFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/components/Room.java" afterPath="$PROJECT_DIR$/src/api/components/Room.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/managers/FileManager.java" afterPath="$PROJECT_DIR$/src/api/managers/FileManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java" afterPath="$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/servlets/UploadFileServlet.java" afterPath="$PROJECT_DIR$/src/api/servlets/UploadFileServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/js/Lobby.js" afterPath="$PROJECT_DIR$/web/pages/js/Lobby.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/lobby.html" afterPath="$PROJECT_DIR$/web/pages/lobby.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/styles/lobby.css" afterPath="$PROJECT_DIR$/web/styles/lobby.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,12 +63,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lobby.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/lobby.html">
+      <file leaf-file-name="UploadFileServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/api/servlets/UploadFileServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="393">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,30 +78,8 @@
       <file leaf-file-name="lobby.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/styles/lobby.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lobby.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/js/Lobby.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="106" column="27" lean-forward="false" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
-              <folding>
-                <marker date="1507527893000" expanded="true" signature="1476:1503" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadFileServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/api/servlets/UploadFileServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+            <state relative-caret-position="167">
+              <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -156,9 +88,52 @@
       <file leaf-file-name="TheGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic/TheGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state relative-caret-position="54">
+              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetGamesServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lobby.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/lobby.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="53" column="53" lean-forward="true" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lobby.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/pages/js/Lobby.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2970">
+              <caret line="137" column="81" lean-forward="false" selection-start-line="137" selection-start-column="81" selection-end-line="137" selection-end-column="81" />
+              <folding>
+                <marker date="1507537095929" expanded="true" signature="1475:1502" ph="..." />
+                <marker date="1507537095929" expanded="true" signature="2570:2573" ph="//..." />
+                <marker date="1507537095929" expanded="true" signature="2608:3005" ph="{...}" />
+                <marker date="1507537095929" expanded="true" signature="2778:2988" ph="{...}" />
+                <marker date="1507537095929" expanded="true" signature="2838:2881" ph="{...}" />
+                <marker date="1507537095929" expanded="true" signature="2916:2982" ph="{...}" />
+                <marker date="1507537095929" expanded="true" signature="3049:3197" ph="//..." />
+                <marker date="1507537095929" expanded="true" signature="3242:3631" ph="{...}" />
+                <marker date="1507537095929" expanded="true" signature="3655:4000" ph="{...}" />
+                <marker date="1507537095929" expanded="true" signature="3815:3866" ph="{...}" />
+                <marker date="1507537095929" expanded="true" signature="3889:3944" ph="{...}" />
+                <marker date="1507537095929" expanded="true" signature="3950:3998" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,22 +148,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XmlFileVerifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/verifiers/XmlFileVerifier.java">
+      <file leaf-file-name="FileManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/managers/FileManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="264">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#396#397#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XmlContentException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/exceptions/XmlContentException.java">
+      <file leaf-file-name="GameFile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/components/GameFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="423">
+              <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#783#784#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -196,53 +177,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/javafx/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4590">
-              <caret line="357" column="0" lean-forward="false" selection-start-line="357" selection-start-column="0" selection-end-line="359" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/js/Login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/managers/FileManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-              <folding>
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/ObjectFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleshipx.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/battleshipx.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+            <state relative-caret-position="-1627">
+              <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -276,6 +212,10 @@
       <find>dataTransfer</find>
       <find>file</find>
       <find>errorco</find>
+      <find>auto</find>
+      <find>game`</find>
+      <find>uplod</find>
+      <find>doc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -289,8 +229,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/pages/login.html" />
-        <option value="$PROJECT_DIR$/web/styles/welcome.css" />
         <option value="$PROJECT_DIR$/web/styles/global.css" />
         <option value="$PROJECT_DIR$/web/styles/index.css" />
         <option value="$PROJECT_DIR$/src/servlets/OnlineUsersServlet.java" />
@@ -317,7 +255,6 @@
         <option value="$PROJECT_DIR$/src/web/servlets/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/api/components/Room.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java" />
         <option value="$PROJECT_DIR$/src/api/servlets/OnlineUsersServlet.java" />
         <option value="$PROJECT_DIR$/src/api/components/User.java" />
         <option value="$PROJECT_DIR$/src/api/managers/SessionManager.java" />
@@ -333,12 +270,15 @@
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/styles/game.css" />
         <option value="$PROJECT_DIR$/web/pages/game.html" />
-        <option value="$PROJECT_DIR$/web/pages/lobby.html" />
-        <option value="$PROJECT_DIR$/web/styles/lobby.css" />
         <option value="$PROJECT_DIR$/src/core/logic/serializers/XmlSerializer.java" />
-        <option value="$PROJECT_DIR$/web/pages/js/Lobby.js" />
         <option value="$PROJECT_DIR$/src/module/ObjectFactory.java" />
         <option value="$PROJECT_DIR$/src/logic/serializers/XmlSerializer.java" />
+        <option value="$PROJECT_DIR$/src/api/components/GameFile.java" />
+        <option value="$PROJECT_DIR$/src/api/managers/FileManager.java" />
+        <option value="$PROJECT_DIR$/web/pages/js/Lobby.js" />
+        <option value="$PROJECT_DIR$/web/pages/lobby.html" />
+        <option value="$PROJECT_DIR$/web/styles/lobby.css" />
+        <option value="$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java" />
         <option value="$PROJECT_DIR$/src/api/servlets/UploadFileServlet.java" />
       </list>
     </option>
@@ -363,9 +303,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -405,8 +345,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -430,6 +369,13 @@
               <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -442,15 +388,39 @@
               <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="serializers" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleshipWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleshipWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -482,6 +452,116 @@
       <recent name="web.enums" />
       <recent name="web.enum" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/pages/js/Lobby.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -705,6 +785,7 @@
       <workItem from="1507449751108" duration="2719000" />
       <workItem from="1507456851900" duration="3985000" />
       <workItem from="1507527913446" duration="3011000" />
+      <workItem from="1507533300547" duration="3787000" />
     </task>
     <task id="LOCAL-00001" summary="First push">
       <created>1507288489254</created>
@@ -892,45 +973,46 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75760000" />
+    <option name="totallyTimeSpent" value="79547000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39815763" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3558952" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36642784" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33936653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36629668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14529915" sideWeight="0.8125" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1471536" sideWeight="0.8125" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14529915" sideWeight="0.1875" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285568" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3973799" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="100" y="100" width="1480" height="850" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285568" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -985,25 +1067,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/logic/serializers/XmlSerializer.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/logic/TheGame.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/api/servlets/UploadFileServlet.java</url>
-          <line>79</line>
+          <line>32</line>
           <properties />
-          <option name="timeStamp" value="35" />
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1143,13 +1213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/styles/global.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1204,14 +1267,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/javafx/UiXml.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/BattleshipApp.java">
@@ -1232,63 +1295,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="940">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/components/GameFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="43" column="27" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/js/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="418">
           <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/styles/lobby.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/lobby.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/javafx/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4590">
-          <caret line="357" column="0" lean-forward="false" selection-start-line="357" selection-start-column="0" selection-end-line="359" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/exceptions/XmlContentException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="198">
           <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
         </state>
@@ -1296,36 +1316,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/verifiers/XmlFileVerifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="440">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/js/Lobby.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="106" column="27" lean-forward="false" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
-          <folding>
-            <marker date="1507527893000" expanded="true" signature="1476:1503" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/managers/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/module/battleshipx.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="924">
           <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
           <folding />
         </state>
@@ -1333,11 +1332,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/ObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="594">
           <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/javafx/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1627">
+          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/components/GameFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/TheGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1349,19 +1376,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/TheGame.java">
+    <entry file="file://$PROJECT_DIR$/src/api/managers/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        <state relative-caret-position="264">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#396#397#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/lobby.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="53" column="53" lean-forward="true" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/styles/lobby.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/js/Lobby.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="137" column="81" lean-forward="false" selection-start-line="137" selection-start-column="81" selection-end-line="137" selection-end-column="81" />
+          <folding>
+            <marker date="1507537095929" expanded="true" signature="1475:1502" ph="..." />
+            <marker date="1507537095929" expanded="true" signature="2570:2573" ph="//..." />
+            <marker date="1507537095929" expanded="true" signature="2608:3005" ph="{...}" />
+            <marker date="1507537095929" expanded="true" signature="2778:2988" ph="{...}" />
+            <marker date="1507537095929" expanded="true" signature="2838:2881" ph="{...}" />
+            <marker date="1507537095929" expanded="true" signature="2916:2982" ph="{...}" />
+            <marker date="1507537095929" expanded="true" signature="3049:3197" ph="//..." />
+            <marker date="1507537095929" expanded="true" signature="3242:3631" ph="{...}" />
+            <marker date="1507537095929" expanded="true" signature="3655:4000" ph="{...}" />
+            <marker date="1507537095929" expanded="true" signature="3815:3866" ph="{...}" />
+            <marker date="1507537095929" expanded="true" signature="3889:3944" ph="{...}" />
+            <marker date="1507537095929" expanded="true" signature="3950:3998" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/servlets/UploadFileServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="393">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

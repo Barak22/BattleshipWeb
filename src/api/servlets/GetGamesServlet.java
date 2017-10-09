@@ -1,8 +1,7 @@
 package api.servlets;
 
-import api.components.User;
+import api.components.GameFile;
 import api.managers.FileManager;
-import api.managers.SessionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,15 +23,13 @@ public class GetGamesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         if (!FileManager.getGameFiles().isEmpty()) {
-            for (User user : SessionManager.getUsers()) {
+            for (GameFile gameFile : FileManager.getGameFiles()) {
                 out.write("<button type=\"button\" class=\"list-group-item list-group-item-action\">");
-                out.write(user.getName());
+                out.write(gameFile.getRoomName());
                 out.write("</button>");
             }
         } else {
-            out.write("<button type=\"button\" class=\"list-group-item list-group-item-action no-display\">");
-            out.write("There are no available games to show");
-            out.write("</button>");
+            out.write("There are no available rooms to show");
         }
     }
 }

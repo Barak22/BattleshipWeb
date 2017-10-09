@@ -7,12 +7,12 @@ import java.io.File;
 public class GameFile {
 
     private String author;
-    private String fileName;
+    private String roomName;
     private File file;
     private TheGame gameManager;
 
-    public GameFile(String fileName, File file) {
-        this.fileName = fileName;
+    public GameFile(String roomName, File file) {
+        this.roomName = roomName;
         this.file = file;
     }
 
@@ -24,12 +24,12 @@ public class GameFile {
         this.author = author;
     }
 
-    public String getFileName() {
-        return fileName;
+    public String getRoomName() {
+        return roomName;
     }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+    public void setRoomName(String fileName) {
+        this.roomName = fileName;
     }
 
     public File getFile() {

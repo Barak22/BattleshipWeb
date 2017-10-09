@@ -10,6 +10,7 @@
         <servlet-name>login</servlet-name>
         <servlet-class>api.servlets.LoginServlet</servlet-class>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>login</servlet-name>
         <url-pattern>/pages/login</url-pattern>

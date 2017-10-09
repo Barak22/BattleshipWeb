@@ -135,11 +135,11 @@ function uploadFile() {
 }
 
 function uploadProgress(event) {
-
+    var file = document.getElementById('upload-status').innerHTML = 'Uploading...';
 }
 
 function uploadComplete(event) {
-    alert(event.target.responseText);
+    var file = document.getElementById('upload-status').innerHTML = event.target.responseText;
 }
 
 $("form").submit(function (e) {

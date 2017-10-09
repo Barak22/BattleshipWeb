@@ -14,11 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 @MultipartConfig
 @WebServlet(name = "UploadFileServlet")
@@ -29,11 +25,11 @@ public class UploadFileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get file details
-        String fileName = request.getParameter("fileName");
+        String roomName = request.getParameter("fileName");
         String username = request.getParameter("username");
         Part file = request.getPart("file");
         // Try to upload the file
-        if (!FileManager.isGameFileExists(fileName)) {
+        if (!FileManager.isGameFileExists(roomName)) {
             String partFilename = getPartFilename(file);
             InputStream content = file.getInputStream();
             // Reads content via buffer
@@ -51,15 +47,13 @@ public class UploadFileServlet extends HttpServlet {
             response.setCharacterEncoding("UTF-8");
 
             try {
-                placeFile(fileName, partFilename, actualFile, username);
-                response.getWriter().write("<span style=\"color:green;\">File " + fileName + " file has been uploaded successfully!</span>");
+                placeFile(roomName, partFilename, actualFile, username);
+                response.getWriter().write("<span id=\"status-success\">The Room '" + roomName + "' has been opened successfully!</span>");
             } catch (Exception e) {
-                response.getWriter().write(e.getMessage());
-                response.setStatus(500);
+                response.getWriter().write("<span id=\"status-fail\">File Error: " + e.getMessage() + "</span>");
             }
         } else {
-            response.getWriter().write("Game File is Already Exist!");
-            response.setStatus(500);
+            response.getWriter().write("<span id=\"status-fail\">Room name '" + roomName + "' is already exists!</span>");
         }
     }
 
@@ -71,8 +65,8 @@ public class UploadFileServlet extends HttpServlet {
     //-------------------------------------------------//
     // Creates and saves a GameFile object
     //-------------------------------------------------//
-    private static void placeFile(String fileName, String theName, File actualFile, String username) throws Exception {
-        GameFile gameFile = new GameFile(fileName, actualFile);
+    private static void placeFile(String roomName, String theName, File actualFile, String username) throws Exception {
+        GameFile gameFile = new GameFile(roomName, actualFile);
         TheGame gameManager = new TheGame();
         IInputVerifier inputVerifier = new XmlFileVerifier();
         ErrorCollector errorCollector = new ErrorCollector();
@@ -83,11 +77,11 @@ public class UploadFileServlet extends HttpServlet {
                 errorCollector.getMessages().forEach(errors::append);
                 throw new Exception(errors.toString());
             }
-
-            FileManager.addGameFile(gameFile);
-            gameFile.setGameManager(gameManager);
-            gameFile.setAuthor(username);
         }
+
+        gameFile.setGameManager(gameManager);
+        gameFile.setAuthor(username);
+        FileManager.addGameFile(gameFile);
     }
 
     //-------------------------------------------------//

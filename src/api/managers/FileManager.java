@@ -18,7 +18,7 @@ public final class FileManager {
     }
 
     public static GameFile addGameFile(GameFile gameFile) {
-        return GAME_FILES.putIfAbsent(gameFile.getFileName(), gameFile);
+        return GAME_FILES.putIfAbsent(gameFile.getRoomName(), gameFile);
     }
 
     public static boolean removeGameFile(String gameFile) {
