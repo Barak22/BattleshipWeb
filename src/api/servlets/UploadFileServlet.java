@@ -76,14 +76,13 @@ public class UploadFileServlet extends HttpServlet {
         TheGame gameManager = new TheGame();
         IInputVerifier inputVerifier = new XmlFileVerifier();
         ErrorCollector errorCollector = new ErrorCollector();
-        String bla = actualFile.getPath();
-        if (!inputVerifier.isFileOk("uploads\\" + theName, errorCollector) || !gameManager.loadFile("uploads\\" + theName, errorCollector)) {
+        if (!inputVerifier.isFileOk("uploads/" + theName, errorCollector)
+                || !gameManager.loadFile("uploads/" + theName, errorCollector)) {
             if (!errorCollector.getMessages().isEmpty()) {
                 StringBuilder errors = new StringBuilder();
                 errorCollector.getMessages().forEach(errors::append);
                 throw new Exception(errors.toString());
             }
-
 
             FileManager.addGameFile(gameFile);
             gameFile.setGameManager(gameManager);
@@ -102,6 +101,7 @@ public class UploadFileServlet extends HttpServlet {
                 return filename.substring(filename.lastIndexOf('/') + 1).substring(filename.lastIndexOf('\\') + 1);
             }
         }
+
         return null;
     }
 }
