@@ -24,7 +24,6 @@ function getOnlineUsers() {
 // Displays the games list
 //-------------------------------------------------//
 function getGames() {
-
     $.ajax({
         type: "GET",
         url: "/getGames",
@@ -41,7 +40,7 @@ function getGames() {
 // Ajax calls
 //-------------------------------------------------//
 function ajaxCalls() {
-    checkIfUserLoogedOut();
+    checkIfUserLoggedOut();
     getOnlineUsers();
     getGames();
 }
@@ -74,7 +73,7 @@ function bs_input_file() {
     );
 }
 
-function checkIfUserLoogedOut() {
+function checkIfUserLoggedOut() {
     $.ajax({
         type: "GET",
         url: "/pages/login",

@@ -1,6 +1,7 @@
 package api.servlets;
 
 import api.components.User;
+import api.managers.FileManager;
 import api.managers.SessionManager;
 
 import javax.servlet.ServletException;
@@ -13,13 +14,16 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "GetGamesServlet")
 public class GetGamesServlet extends HttpServlet {
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        if (false) {
+        if (!FileManager.getGameFiles().isEmpty()) {
             for (User user : SessionManager.getUsers()) {
                 out.write("<button type=\"button\" class=\"list-group-item list-group-item-action\">");
                 out.write(user.getName());

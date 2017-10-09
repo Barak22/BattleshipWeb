@@ -76,8 +76,8 @@ public class UploadFileServlet extends HttpServlet {
         TheGame gameManager = new TheGame();
         IInputVerifier inputVerifier = new XmlFileVerifier();
         ErrorCollector errorCollector = new ErrorCollector();
-        if (!inputVerifier.isFileOk("uploads/" + theName, errorCollector)
-                || !gameManager.loadFile("uploads/" + theName, errorCollector)) {
+        if (!inputVerifier.isFileOk(UPLOADS_DIR_NAME + "/" + theName, errorCollector)
+                || !gameManager.loadFile(UPLOADS_DIR_NAME + "/" + theName, errorCollector)) {
             if (!errorCollector.getMessages().isEmpty()) {
                 StringBuilder errors = new StringBuilder();
                 errorCollector.getMessages().forEach(errors::append);
