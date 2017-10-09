@@ -1,6 +1,6 @@
 package api.components;
 
-import core.logic.TheGame;
+import logic.TheGame;
 
 import java.io.File;
 

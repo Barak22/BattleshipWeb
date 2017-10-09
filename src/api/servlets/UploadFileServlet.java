@@ -2,10 +2,10 @@ package api.servlets;
 
 import api.components.GameFile;
 import api.managers.FileManager;
-import core.logic.TheGame;
-import core.ui.verifiers.ErrorCollector;
-import core.ui.verifiers.IInputVerifier;
-import core.ui.verifiers.XmlFileVerifier;
+import logic.TheGame;
+import ui.verifiers.ErrorCollector;
+import ui.verifiers.IInputVerifier;
+import ui.verifiers.XmlFileVerifier;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -14,7 +14,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 @MultipartConfig
 @WebServlet(name = "UploadFileServlet")
@@ -22,6 +26,7 @@ public class UploadFileServlet extends HttpServlet {
 
     private static final String UPLOADS_DIR_NAME = "uploads";
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get file details
         String fileName = request.getParameter("fileName");
@@ -56,9 +61,9 @@ public class UploadFileServlet extends HttpServlet {
             response.getWriter().write("Game File is Already Exist!");
             response.setStatus(500);
         }
-
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -92,7 +97,6 @@ public class UploadFileServlet extends HttpServlet {
 
     private static String getPartFilename(Part part) {
         for (String cd : part.getHeader("content-disposition").split(";")) {
-            String bla = cd.trim();
             if (cd.trim().startsWith("filename")) {
                 String filename = cd.substring(cd.indexOf('=') + 1).trim().replace("\"", "");
                 return filename.substring(filename.lastIndexOf('/') + 1).substring(filename.lastIndexOf('\\') + 1);

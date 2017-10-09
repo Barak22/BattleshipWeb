@@ -1,6 +1,6 @@
 package api.components;
 
-import core.logic.enums.GameType;
+import logic.enums.GameType;
 
 /**
  * Created by barakm on 08/10/2017
