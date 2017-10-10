@@ -3,6 +3,7 @@ package api.servlets;
 import api.components.GameRoom;
 import api.managers.FileManager;
 import logic.TheGame;
+import logic.exceptions.XmlContentException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,11 +20,18 @@ public class GetBoardsServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String roomName = request.getParameter("roomName");
+        String roomName = request.getParameter("room");
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         PrintWriter out = response.getWriter();
         if (theRoom != null) {
+            try {
+                theRoom.getGameManager().startGame();
+            } catch (XmlContentException e) {
+                out.write(e.getMessage());
+                response.setStatus(500);
+            }
             buildBoardsHTML(out, theRoom);
+            response.setStatus(200);
         } else {
             out.write("Sorry, the room is no longer exists"); // NOT SHOULD HAPPEN IN A VALID GAME LINE
             response.setStatus(500);
