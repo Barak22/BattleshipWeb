@@ -128,10 +128,22 @@ function uploadFile() {
     if (file !== "" && gameTitle.trim() !== "") {
         upload(file, gameTitle, getCookieValue("battleshipUserName"));
     } else if (file === "") {
-        alert("Please select a file to upload")
+        alert("Please select a file to upload");
     } else {
-        alert("Please add a game title")
+        alert("Please add a game title");
     }
+}
+
+function selectGame(event) {
+    var previousGame = $(".selected");
+    if (previousGame !== null) {
+        previousGame.css("background-color", "white");
+        previousGame.attr('class', 'not-selected');
+    }
+
+    var selectedGame = $(event);
+    selectedGame.attr('class', 'selected');
+    selectedGame.css("background-color", "#DFC0B9");
 }
 
 function uploadProgress(event) {

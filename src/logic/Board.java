@@ -55,6 +55,42 @@ public class Board {
     }
 
     // **************************************************** //
+    // Redo board
+    // **************************************************** //
+    public int redoMove(GameStep gameStep) {
+        int row = gameStep.getRow();
+        int col = gameStep.getCol();
+        int pointsLost = 0;
+
+        switch (gameStep.getCellStatus()) {
+            case SHIP_DOWN:
+                board[row][col].setCellStatus(CellStatus.SHIP);
+                pointsLost = board[row][col].getShipRef().getScore();
+                break;
+            case SHIP:
+                board[row][col].setCellStatus(CellStatus.SHIP);
+                break;
+            case REGULAR:
+                board[row][col].setCellStatus(CellStatus.REGULAR);
+                break;
+            case MINE_PLACED:
+                board[row][col].setCellStatus(CellStatus.REGULAR);
+                break;
+            case MINE:
+                board[row][col].setCellStatus(CellStatus.MINE);
+                break;
+        }
+        return pointsLost;
+    }
+
+    // **************************************************** //
+    // Returns board size
+    // **************************************************** //
+    int getSize() {
+        return board.length;
+    }
+
+    // **************************************************** //
     // Returns the board without MISS cells
     // **************************************************** //
     char[][] getAllieMode() {
@@ -281,41 +317,5 @@ public class Board {
             }
         }
         return allieBoard;
-    }
-
-    // **************************************************** //
-    // Returns board size
-    // **************************************************** //
-    public int getSize() {
-        return board.length;
-    }
-
-    // **************************************************** //
-    // Redo board
-    // **************************************************** //
-    public int redoMove(GameStep gameStep) {
-        int row = gameStep.getRow();
-        int col = gameStep.getCol();
-        int pointsLost = 0;
-
-        switch (gameStep.getCellStatus()) {
-            case SHIP_DOWN:
-                board[row][col].setCellStatus(CellStatus.SHIP);
-                pointsLost = board[row][col].getShipRef().getScore();
-                break;
-            case SHIP:
-                board[row][col].setCellStatus(CellStatus.SHIP);
-                break;
-            case REGULAR:
-                board[row][col].setCellStatus(CellStatus.REGULAR);
-                break;
-            case MINE_PLACED:
-                board[row][col].setCellStatus(CellStatus.REGULAR);
-                break;
-            case MINE:
-                board[row][col].setCellStatus(CellStatus.MINE);
-                break;
-        }
-        return pointsLost;
     }
 }
