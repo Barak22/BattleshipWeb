@@ -1,3 +1,5 @@
+setInterval(roomLoader, 2000);
+
 //-------------------------------------------------//
 // Draw boards
 //-------------------------------------------------//
@@ -13,7 +15,6 @@ function roomLoader() {
         data: params,
         success: function (result) {
             document.getElementById("gameBoards").innerHTML = result;
-            alert('Success!')
         },
         error: function (error) {
             alert(error.getText());
@@ -33,5 +34,3 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-
-roomLoader();

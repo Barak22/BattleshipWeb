@@ -24,6 +24,12 @@ public class GetBoardsServlet extends HttpServlet {
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         PrintWriter out = response.getWriter();
         if (theRoom != null) {
+            if (theRoom.getNumOfPlayers() == 1) {
+                buildWaitingMessage(out);
+                response.setStatus(201);
+                return;
+            }
+
             try {
                 theRoom.getGameManager().startGame();
             } catch (XmlContentException e) {
@@ -81,6 +87,19 @@ public class GetBoardsServlet extends HttpServlet {
         out.write("</tbody>");
 
         out.write("</table>");
+        out.write("</div>");
+    }
+
+    private void buildWaitingMessage(PrintWriter out) {
+        out.write("<div class=\"row\">");
+        out.write("<div class=\"col-lg-4\">");
+        out.write("</div>");
+        out.write("<div class=\"col-lg-4\">");
+        out.write("<h3 id=\"waiting-other-player\">Waiting for other player to join...</h3>");
+        out.write("<div class=\"loader\"></div>");
+        out.write("</div>");
+        out.write("<div class=\"col-lg-4\">");
+        out.write("</div>");
         out.write("</div>");
     }
 }
