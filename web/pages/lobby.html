@@ -18,27 +18,37 @@
         <h3>Blow up the net!</h3>
     </div>
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-lg-4 centerize-block">
+            <h3>Welcome <span id="hdl-welcome2"></span></h3>
+            <h5 class="text-desc">Welcome to the Battleship Game, the WEB edition. After we got our chance on the
+                console platfrom, party
+                like mads on the JavaFX, it's time to rock the bells on the net. So for what are you waiting for? Upload
+                your game and let the fun begin!</h5>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" id="btn-logout" onclick="logout()">Logout
+            </button>
+        </div>
+
+        <div class="col-lg-4 centerize-block">
+            <img src="../images/battleship-cover.jpg" class="img-thumbnail" id="img-battleship">.
+        </div>
+
+        <div class="col-lg-4 centerize-block">
+            <h3 class="hdl-scondary">Online Players:</h3>
+            <div class="list-group">
+                <div id="users-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 centerize-block">
             <h3 class="hdl-scondary">Active Rooms:</h3>
             <div class="list-group">
                 <div id="games-list"></div>
             </div>
         </div>
-
-        <div class="col-lg-2">
-            <img src="../images/battleship-cover.jpg" class="img-thumbnail" id="img-battleship">
-        </div>
-
-        <div class="col-lg-5">
-            <h3 class="hdl-scondary">Online Players:</h3>
-            <div class="list-group">
-                <div id="users-list"></div>
-            </div>
-            <button type="button" class="btn btn-secondary btn-lg btn-block" id="btn-logout" onclick="logout()">Logout
-            </button>
-        </div>
     </div>
-
+    <hr>
     <div class="row">
         <div class="col-lg-12">
             <h2 id="hdl-uploadgame">Upload Your Game</h2>

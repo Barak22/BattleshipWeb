@@ -40,7 +40,6 @@ function getGames() {
 // Ajax calls
 //-------------------------------------------------//
 function ajaxCalls() {
-    checkIfUserLoggedOut();
     getOnlineUsers();
     getGames();
 }

@@ -46,8 +46,13 @@ public class GetBoardsServlet extends HttpServlet {
 
     private void buildBoardsHTML(PrintWriter out, GameRoom theRoom) {
         TheGame gameManager = theRoom.getGameManager();
+
         out.write("<div class=\"row\">");
         buildBoardFromMatrix(out, gameManager.getOpponentBoardToPrint(), true);
+        if (gameManager.getBoardSize() > 11) {
+            out.write("</div>");
+            out.write("<div class=\"row\">");
+        }
         buildBoardFromMatrix(out, gameManager.getCurrentPlayerBoardToPrint(), false);
         out.write("</div>");
     }
@@ -76,10 +81,10 @@ public class GetBoardsServlet extends HttpServlet {
             for (int j = 1; j < board.length; j++) {
                 if (isClickable) {
                     // set play button
-                    out.print("<td><button class=\"btn btn-default\">" + board[i][j] + "</button></td>");
+                    out.print("<td><button class=\"btn btn-board btn-default\">" + board[i][j] + "</button></td>");
                 } else {
                     // set button with drag & drop
-                    out.print("<td><button class=\"btn btn-default\">" + board[i][j] + "</button></td>");
+                    out.print("<td><button class=\"btn btn-board btn-default\">" + board[i][j] + "</button></td>");
                 }
             }
             out.write("</tr>");

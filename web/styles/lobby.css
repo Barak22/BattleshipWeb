@@ -13,7 +13,7 @@
 }
 
 #img-battleship {
-    margin: 15% 0;
+
 }
 
 #hdl-uploadgame {
@@ -60,4 +60,30 @@
     margin: 5px auto;
     color: #ac2925;
     font-weight: 400;
+}
+
+.centerize-block {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.text-desc {
+    text-align: justify;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    text-justify: inter-word;
+    line-height: 150%;
+}
+
+.block-border {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    height: 180px;
+    padding: 0 10px;
+}
+
+hr.fade {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
