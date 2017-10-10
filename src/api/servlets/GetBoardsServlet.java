@@ -14,6 +14,10 @@ import java.io.PrintWriter;
 @WebServlet(name = "GetBoardsServlet")
 public class GetBoardsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String roomName = request.getParameter("roomName");
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         PrintWriter out = response.getWriter();
@@ -25,11 +29,9 @@ public class GetBoardsServlet extends HttpServlet {
         }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
     private void buildBoardsHTML(PrintWriter out, GameRoom theRoom) {
+        out.write("<div class=\"row\">");
 
+        out.write("</div>");
     }
 }
