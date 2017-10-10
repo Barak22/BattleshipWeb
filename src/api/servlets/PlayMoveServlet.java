@@ -15,20 +15,25 @@ import java.io.IOException;
 /**
  * Created by barakm on 10/10/2017
  */
-@WebServlet(name = "DragMineServlet")
-public class DragMineServlet extends HttpServlet {
+@WebServlet(name = "PlayMoveServlet")
+public class PlayMoveServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String row = request.getParameter("row");
         String col = request.getParameter("col");
         String roomName = request.getParameter("roomName");
+        String type = request.getParameter("type");
 
         UserMoveInput userMoveInput = new UserMoveInput(Integer.parseInt(row), Integer.parseInt(col));
         GameRoom gameRoom = FileManager.getRoomByName(roomName);
         String msg;
         try {
-            msg = gameRoom.getGameManager().playMove(userMoveInput, false);
+            if (type.equals("personal")) {
+                msg = gameRoom.getGameManager().playMove(userMoveInput, false);
+            } else {
+                msg = gameRoom.getGameManager().playMove(userMoveInput, true);
+            }
             response.getWriter().println(msg);
             response.setStatus(200);
         } catch (XmlContentException e) {

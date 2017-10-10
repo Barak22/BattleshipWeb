@@ -101,13 +101,13 @@
     <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
 
     <servlet>
-        <servlet-name>mine</servlet-name>
-        <servlet-class>api.servlets.DragMineServlet</servlet-class>
+        <servlet-name>playMove</servlet-name>
+        <servlet-class>api.servlets.PlayMoveServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>mine</servlet-name>
-        <url-pattern>/mine</url-pattern>
+        <servlet-name>playMove</servlet-name>
+        <url-pattern>/playMove</url-pattern>
     </servlet-mapping>
 
 </web-app>

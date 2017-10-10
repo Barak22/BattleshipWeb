@@ -84,14 +84,19 @@ public class GetBoardsServlet extends HttpServlet {
             out.write("<tr>");
             out.write("<th scope=\"row\">" + i + "</th>");
             for (int j = 1; j < board.length; j++) {
+                out.print("<td><button class=\"btn btn-board btn-default\" row=\"" + i + "\" col=\"" + j + "\" ");
                 if (isClickable) {
                     // set play button
-                    out.print("<td><button class=\"btn btn-board btn-default\">" + board[i][j] + "</button></td>");
+                    out.print("onclick=\"playMove(event)\" " +
+                                      "type=\"tracking\">" +
+                                      board[i][j] +
+                                      "</button></td>");
                 } else {
                     // set button with drag & drop
-                    out.print("<td><button class=\"btn btn-board btn-default\" ondrop=\"drop(event)\"\n" +
+                    out.print("ondrop=\"drop(event)\"\n" +
                                       "ondragover=\"allowDrop(event)\"" +
-                                      "row=\"" + i + "\" col=\"" + j + "\">" + board[i][j] + "</button></td>");
+                                      "type=\"personal\">" + board[i][j] +
+                                      "</button></td>");
                 }
             }
             out.write("</tr>");

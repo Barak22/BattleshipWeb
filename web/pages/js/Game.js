@@ -66,18 +66,29 @@ function drag(ev) {
 
 function drop(ev) {
     ev.preventDefault();
+    playMove(ev);
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function playMove(ev) {
     var row = ev.target.getAttribute('row');
     var col = ev.target.getAttribute('col');
+    var type = ev.target.getAttribute('type');
     var roomName = getParameterByName('room');
+    alert(type);
     var params = {
         row: row,
         col: col,
-        roomName: roomName
+        roomName: roomName,
+        type: type
     };
 
     $.ajax({
         type: "POST",
-        url: "/mine",
+        url: "/playMove",
         data: params,
         statusCode: {
             200: function (response) {
@@ -88,8 +99,4 @@ function drop(ev) {
             }
         }
     })
-}
-
-function allowDrop(ev) {
-    ev.preventDefault();
 }
