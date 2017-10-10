@@ -47,7 +47,6 @@ public class GetBoardsServlet extends HttpServlet {
     }
 
     private void buildBoardFromMatrix(PrintWriter out, char[][] board, boolean isClickable) {
-        out.write("<div class=\"row\">");
         out.write("<div class=\"col-lg-6\">");
         out.write("<table class=\"table table-bordered\">");
 
