@@ -40,7 +40,7 @@ public class GetGamesServlet extends HttpServlet {
             out.write("<tbody>");
 
             for (GameFile gameFile : FileManager.getGameFiles()) {
-                out.write("<tr class=\"not-selected\" onclick=\"selectGame(this)\">");
+                out.write("<tr>");
                 out.write("<th scope=\"row\">" + row + "</th>");
                 out.write("<td>" + gameFile.getRoomName() + "</td>");
                 out.write("<td>" + gameFile.getGameManager().getGameType() + "</td>");
@@ -48,6 +48,10 @@ public class GetGamesServlet extends HttpServlet {
                 out.write("<td>" + gameFile.getAuthor() + "</td>");
                 out.write("<td>" + 0 + "</td>");
                 out.write("<td>" + "Active" + "</td>");
+                out.write("<td>" + "<button type=\"button\" " +
+                                  "class=\"btn btn-primary btn-sm btn-block\" " +
+                                  "onclick=joinGame(" + gameFile.getRoomName() + ")>" +
+                                  "Join <br> Game</button> </td>");
                 out.write("</tr>");
                 row++;
             }

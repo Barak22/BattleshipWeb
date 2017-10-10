@@ -29,7 +29,7 @@ public class GameFile {
     }
 
     public void setRoomName(String fileName) {
-        this.roomName = fileName;
+        roomName = fileName;
     }
 
     public File getFile() {

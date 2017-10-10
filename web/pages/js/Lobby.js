@@ -134,18 +134,6 @@ function uploadFile() {
     }
 }
 
-function selectGame(event) {
-    var previousGame = $(".selected");
-    if (previousGame !== null) {
-        previousGame.css("background-color", "white");
-        previousGame.attr('class', 'not-selected');
-    }
-
-    var selectedGame = $(event);
-    selectedGame.attr('class', 'selected');
-    selectedGame.css("background-color", "#DFC0B9");
-}
-
 function uploadProgress(event) {
     var file = document.getElementById('upload-status').innerHTML = 'Uploading...';
 }
@@ -157,3 +145,7 @@ function uploadComplete(event) {
 $("form").submit(function (e) {
     e.preventDefault();
 });
+
+function joinGame(roomName) {
+
+}
