@@ -36,12 +36,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52966e34-896b-4a36-9e19-7ceb16f444cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/styles/spinner.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/servlets/GetBoardsServlet.java" afterPath="$PROJECT_DIR$/src/api/servlets/GetBoardsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/servlets/RoomServlet.java" afterPath="$PROJECT_DIR$/src/api/servlets/RoomServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/game.html" afterPath="$PROJECT_DIR$/web/pages/game.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/js/Game.js" afterPath="$PROJECT_DIR$/web/pages/js/Game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/styles/spinner.css" afterPath="$PROJECT_DIR$/web/styles/spinner.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spinner.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="spinner.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/styles/spinner.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="40">
+              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -111,21 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetBoardsServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetBoardsServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/servlets/GetBoardsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
+            <state relative-caret-position="374">
               <caret line="97" column="94" lean-forward="true" selection-start-line="97" selection-start-column="94" selection-end-line="97" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetGamesServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="62" lean-forward="true" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -260,9 +246,9 @@
         <option value="$PROJECT_DIR$/src/api/servlets/RoomServlet.java" />
         <option value="$PROJECT_DIR$/web/pages/js/spinner.js" />
         <option value="$PROJECT_DIR$/web/pages/js/Game.js" />
-        <option value="$PROJECT_DIR$/web/styles/spinner.css" />
         <option value="$PROJECT_DIR$/web/pages/game.html" />
         <option value="$PROJECT_DIR$/src/api/servlets/GetBoardsServlet.java" />
+        <option value="$PROJECT_DIR$/web/styles/spinner.css" />
       </list>
     </option>
   </component>
@@ -786,7 +772,7 @@
       <workItem from="1507456851900" duration="3985000" />
       <workItem from="1507527913446" duration="3011000" />
       <workItem from="1507533300547" duration="7471000" />
-      <workItem from="1507621503000" duration="12360000" />
+      <workItem from="1507621503000" duration="12532000" />
     </task>
     <task id="LOCAL-00001" summary="First push">
       <created>1507288489254</created>
@@ -1033,11 +1019,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507642329052</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Game page html fixed">
+      <created>1507644114916</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1507644114916</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97043000" />
+    <option name="totallyTimeSpent" value="97215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1229,13 +1222,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/js/CookieUtils.js" />
     <entry file="file://$PROJECT_DIR$/web/pages/js/CookiesUtils.js" />
-    <entry file="file://$PROJECT_DIR$/web/styles/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1444,14 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/styles/spinner.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/js/Game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1486,10 +1464,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/styles/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/servlets/GetBoardsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="374">
           <caret line="97" column="94" lean-forward="true" selection-start-line="97" selection-start-column="94" selection-end-line="97" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/styles/spinner.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding />
         </state>
       </provider>
