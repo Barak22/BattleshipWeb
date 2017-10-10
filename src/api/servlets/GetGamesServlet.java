@@ -43,8 +43,8 @@ public class GetGamesServlet extends HttpServlet {
                 out.write("<tr>");
                 out.write("<th scope=\"row\">" + row + "</th>");
                 out.write("<td>" + gameFile.getRoomName() + "</td>");
-                out.write("<td>" + "Basic" + "</td>");
-                out.write("<td>" + 10 + "</td>");
+                out.write("<td>" + gameFile.getGameManager().getGameType() + "</td>");
+                out.write("<td>" + gameFile.getGameManager().getBoardSize() + "</td>");
                 out.write("<td>" + gameFile.getAuthor() + "</td>");
                 out.write("<td>" + 0 + "</td>");
                 out.write("<td>" + "Active" + "</td>");

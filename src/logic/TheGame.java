@@ -56,7 +56,7 @@ public class TheGame {
     // **************************************************** //
     // Initialize game logic
     // **************************************************** //
-    public void init() throws XmlContentException {
+    private void init() throws XmlContentException {
         if (xmlContent.getGameType().equalsIgnoreCase(GameType.BASIC.getGameTypeValue())) {
             gameType = GameType.BASIC;
         } else if (xmlContent.getGameType().equalsIgnoreCase(GameType.ADVANCE.getGameTypeValue())) {
@@ -187,8 +187,8 @@ public class TheGame {
         );
         int turns = players[0].getTurns() + players[1].getTurns();
 
-        String result = ("Played Turns: " + turns + System.lineSeparator() +
-                "Total Time: " + time);
+        String result = "Played Turns: " + turns + System.lineSeparator() +
+                "Total Time: " + time;
         if (isPlayerWon) {
             result += System.lineSeparator() + "The Winner: " + players[currentPlayerIndex].getName();
         }
@@ -229,10 +229,8 @@ public class TheGame {
                 getCurrentPlayerName() + " has WON the game!" + System.lineSeparator();
     }
 
-    private String getFinishGameString(String message) {
-        return "-------------------- GAME OVER --------------------" + System.lineSeparator() +
-                "~~~~ " + players[currentPlayerIndex].getName() + message + players[opponentPlayerIndex].getName() +
-                " WON THE GAME! ~~~~";
+    public GameType getGameType() {
+        return gameType;
     }
 
     public String getSumUp() {
@@ -287,6 +285,71 @@ public class TheGame {
 
     public SortedMap<Integer, Integer> getOpponentPLayerShipsTypesAndAmount() {
         return getShipTypesAndAmount(getOpponentLogicBoard().getBattleships());
+    }
+
+    // **************************************************** //
+    // Returns boards of next step
+    // **************************************************** //
+    public boolean shouldDisableUndo() {
+        return (gameSteps.size() == 1);
+    }
+
+    // **************************************************** //
+    // Returns boards of next step
+    // **************************************************** //
+    public ReplayInfo activateUndoRedo() {
+        gameStepIndex = gameSteps.size() - 1;
+        GameStep stepToShow = gameSteps.get(gameStepIndex);
+        return stepToShow.getReplayInfo();
+    }
+
+    // **************************************************** //
+    // Returns boards of next step
+    // **************************************************** //
+    public ReplayInfo getNextStep() {
+        gameStepIndex++;
+        GameStep stepToShow = gameSteps.get(gameStepIndex);
+        return stepToShow.getReplayInfo();
+    }
+
+    // **************************************************** //
+    // Returns boards of previous step
+    // **************************************************** //
+    public ReplayInfo getPrevStep() {
+        gameStepIndex--;
+        GameStep stepToShow = gameSteps.get(gameStepIndex);
+        return stepToShow.getReplayInfo();
+    }
+
+    // **************************************************** //
+    // Returns if the current step has a previous one
+    // **************************************************** //
+    public boolean hasPrevStep() {
+        return (gameStepIndex != 0);
+    }
+
+    // **************************************************** //
+    // Returns if the current step has a next one
+    // **************************************************** //
+    public boolean hasNextStep() {
+        return (gameStepIndex < gameSteps.size() - 1);
+    }
+
+    // **************************************************** //
+    // Returns current player number of mines
+    // **************************************************** //
+    public int getCurrentPlayerNumberOfMines() {
+        return players[currentPlayerIndex].getMines();
+    }
+
+    public char[][] getBoardByIndex(int index) {
+        return players[index].getBoard().getAllieMode();
+    }
+
+    private String getFinishGameString(String message) {
+        return "-------------------- GAME OVER --------------------" + System.lineSeparator() +
+                "~~~~ " + players[currentPlayerIndex].getName() + message + players[opponentPlayerIndex].getName() +
+                " WON THE GAME! ~~~~";
     }
 
     private SortedMap<Integer, Integer> getShipTypesAndAmount(List<Battleship> battleships) {
@@ -473,65 +536,6 @@ public class TheGame {
     private String getVictoryMsg(int winnerIndex) {
         return "-------------------- GAME OVER --------------------" + System.lineSeparator() +
                 "~~~~~~~~~~~~~~ " + players[winnerIndex].getName() + " WON THE GAME! ~~~~~~~~~~~~~~";
-    }
-
-    // **************************************************** //
-    // Returns boards of next step
-    // **************************************************** //
-    public boolean shouldDisableUndo() {
-        return (gameSteps.size() == 1);
-    }
-
-    // **************************************************** //
-    // Returns boards of next step
-    // **************************************************** //
-    public ReplayInfo activateUndoRedo() {
-        gameStepIndex = gameSteps.size() - 1;
-        GameStep stepToShow = gameSteps.get(gameStepIndex);
-        return stepToShow.getReplayInfo();
-    }
-
-    // **************************************************** //
-    // Returns boards of next step
-    // **************************************************** //
-    public ReplayInfo getNextStep() {
-        gameStepIndex++;
-        GameStep stepToShow = gameSteps.get(gameStepIndex);
-        return stepToShow.getReplayInfo();
-    }
-
-    // **************************************************** //
-    // Returns boards of previous step
-    // **************************************************** //
-    public ReplayInfo getPrevStep() {
-        gameStepIndex--;
-        GameStep stepToShow = gameSteps.get(gameStepIndex);
-        return stepToShow.getReplayInfo();
-    }
-
-    // **************************************************** //
-    // Returns if the current step has a previous one
-    // **************************************************** //
-    public boolean hasPrevStep() {
-        return (gameStepIndex != 0);
-    }
-
-    // **************************************************** //
-    // Returns if the current step has a next one
-    // **************************************************** //
-    public boolean hasNextStep() {
-        return (gameStepIndex < gameSteps.size() - 1);
-    }
-
-    // **************************************************** //
-    // Returns current player number of mines
-    // **************************************************** //
-    public int getCurrentPlayerNumberOfMines() {
-        return players[currentPlayerIndex].getMines();
-    }
-
-    public char[][] getBoardByIndex(int index) {
-        return players[index].getBoard().getAllieMode();
     }
 
     // **************************************************** //
