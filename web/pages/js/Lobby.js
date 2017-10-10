@@ -146,10 +146,11 @@ $("form").submit(function (e) {
 });
 
 function joinGame(roomName) {
+    var playerName = getCookieValue("battleshipUserName");
     $.ajax({
         type: "POST",
         url: "/roomGame",
-        data: {roomName: roomName},
+        data: {roomName: roomName, playerName: playerName},
         statusCode: {
             200: function (response) {
                 window.location.replace("/pages/game.html?room=" + roomName);

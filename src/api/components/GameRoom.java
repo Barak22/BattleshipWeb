@@ -11,11 +11,13 @@ public class GameRoom {
     private File file;
     private TheGame gameManager;
     private int numOfPlayers;
+    private String[] players;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
         this.file = file;
         numOfPlayers = 0;
+        players = new String[]{null, null};
     }
 
     public String getAuthor() {
@@ -54,11 +56,23 @@ public class GameRoom {
         return numOfPlayers;
     }
 
-    public int increamentAndGet() {
+    public int incrementAndGet() {
         return ++numOfPlayers;
     }
 
-    public int decreamentAndGet() {
+    public int decrementAndGet() {
         return --numOfPlayers;
+    }
+
+    public void setPlayerName(String playerName) {
+        if (players[0] != null) {
+            players[1] = playerName;
+        } else {
+            players[0] = playerName;
+        }
+    }
+
+    public void removeFirstPlayerName() {
+        players[0] = null;
     }
 }

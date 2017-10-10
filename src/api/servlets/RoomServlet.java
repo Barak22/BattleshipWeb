@@ -22,6 +22,7 @@ public class RoomServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter writer = response.getWriter();
         String roomName = request.getParameter("roomName");
+        String playerName = request.getParameter("playerName");
         GameRoom roomGame = FileManager.getGameFiles().stream()
                                        .filter(gameFile -> gameFile.getRoomName().equals(roomName))
                                        .collect(Collectors.toList()).get(0);
@@ -31,10 +32,12 @@ public class RoomServlet extends HttpServlet {
         if (numOfPlayers == 2) {
             writer.println("The game already started");
             response.setStatus(201);
-        } else if (roomGame.increamentAndGet() <= 2) {
+        } else if (roomGame.incrementAndGet() == 2) {
             writer.println("Game stated");
+            roomGame.setPlayerName(playerName);
             response.setStatus(200);
         } else {
+            roomGame.setPlayerName(playerName);
             response.setStatus(202);
         }
     }
