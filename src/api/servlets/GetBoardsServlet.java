@@ -2,6 +2,7 @@ package api.servlets;
 
 import api.components.GameRoom;
 import api.managers.FileManager;
+import logic.TheGame;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,8 +31,49 @@ public class GetBoardsServlet extends HttpServlet {
     }
 
     private void buildBoardsHTML(PrintWriter out, GameRoom theRoom) {
+        TheGame gameManager = theRoom.getGameManager();
         out.write("<div class=\"row\">");
+        buildBoardFromMatrix(out, gameManager.getOpponentBoardToPrint(), true);
+        buildBoardFromMatrix(out, gameManager.getCurrentPlayerBoardToPrint(), false);
+        out.write("</div>");
+    }
 
+    private void buildBoardFromMatrix(PrintWriter out, char[][] board, boolean isClickable) {
+        out.write("<div class=\"row\">");
+        out.write("<div class=\"col-lg-6\">");
+        out.write("<table class=\"table table-bordered\">");
+
+        // Column characters
+        out.write("<thead>");
+        out.write("<tr>");
+        out.write("<th>#</th>");
+        char colVal = 'A';
+        for (int i = 1; i < board.length; i++) {
+            out.write("<th>" + colVal + "</th>");
+            colVal++;
+        }
+        out.write("</tr>");
+        out.write("</thead>");
+
+        // Board buttons
+        out.write("<tbody>");
+        for (int i = 1; i < board.length; i++) {
+            out.write("<tr>");
+            out.write("<th scope=\"row\">" + i + "</th>");
+            for (int j = 1; j < board.length; j++) {
+                if (isClickable) {
+                    // set play button
+                    out.print("<td><button class=\"btn btn-default\">" + board[i][j] + "</button></td>");
+                } else {
+                    // set button with drag & drop
+                    out.print("<td><button class=\"btn btn-default\">" + board[i][j] + "</button></td>");
+                }
+            }
+            out.write("</tr>");
+        }
+        out.write("</tbody>");
+
+        out.write("</table>");
         out.write("</div>");
     }
 }
