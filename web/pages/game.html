@@ -19,7 +19,9 @@
     </div>
     <div class="btn-group-lg" role="group">
         <button type="button" class="btn btn-secondary btn-primary">Start Game</button>
-        <button type="button" class="btn btn-secondary btn-primary">Drag a Mine</button>
+        <button type="button" class="btn btn-secondary btn-primary" draggable="true"
+                ondragstart="drag(event)">Drag a Mine
+        </button>
         <button type="button" class="btn btn-secondary btn-danger">Quit Match</button>
     </div>
 

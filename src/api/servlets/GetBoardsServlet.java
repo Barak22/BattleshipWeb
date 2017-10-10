@@ -15,10 +15,13 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "GetBoardsServlet")
 public class GetBoardsServlet extends HttpServlet {
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String roomName = request.getParameter("room");
         GameRoom theRoom = FileManager.getRoomByName(roomName);
@@ -31,7 +34,9 @@ public class GetBoardsServlet extends HttpServlet {
             }
 
             try {
-                theRoom.getGameManager().startGame();
+                if (!theRoom.getGameManager().isGameOn()) {
+                    theRoom.getGameManager().startGame();
+                }
             } catch (XmlContentException e) {
                 out.write(e.getMessage());
                 response.setStatus(500);
@@ -84,7 +89,9 @@ public class GetBoardsServlet extends HttpServlet {
                     out.print("<td><button class=\"btn btn-board btn-default\">" + board[i][j] + "</button></td>");
                 } else {
                     // set button with drag & drop
-                    out.print("<td><button class=\"btn btn-board btn-default\">" + board[i][j] + "</button></td>");
+                    out.print("<td><button class=\"btn btn-board btn-default\" ondrop=\"drop(event)\"\n" +
+                                      "ondragover=\"allowDrop(event)\"" +
+                                      "row=\"" + i + "\" col=\"" + j + "\">" + board[i][j] + "</button></td>");
                 }
             }
             out.write("</tr>");

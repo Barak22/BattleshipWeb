@@ -57,3 +57,39 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+// roomLoader();
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var row = ev.target.getAttribute('row');
+    var col = ev.target.getAttribute('col');
+    var roomName = getParameterByName('room');
+    var params = {
+        row: row,
+        col: col,
+        roomName: roomName
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "/mine",
+        data: params,
+        statusCode: {
+            200: function (response) {
+                alert(response);
+            },
+            201: function (response) {
+                alert(response);
+            }
+        }
+    })
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}

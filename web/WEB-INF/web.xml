@@ -98,4 +98,16 @@
         <url-pattern>/getBoards</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>mine</servlet-name>
+        <servlet-class>api.servlets.DragMineServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mine</servlet-name>
+        <url-pattern>/mine</url-pattern>
+    </servlet-mapping>
+
 </web-app>
