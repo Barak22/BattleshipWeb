@@ -46,7 +46,7 @@ public class GetGamesServlet extends HttpServlet {
                 out.write("<td>" + gameFile.getGameManager().getGameType() + "</td>");
                 out.write("<td>" + (gameFile.getGameManager().getBoardSize() - 1) + "</td>");
                 out.write("<td>" + gameFile.getAuthor() + "</td>");
-                out.write("<td>" + 0 + "</td>");
+                out.write("<td>" + gameFile.getNumOfPlayers() + "</td>");
                 out.write("<td>" + "Active" + "</td>");
                 out.write("<td>" + "<button type=\"button\" " +
                                   "class=\"btn btn-primary btn-sm btn-block\" " +

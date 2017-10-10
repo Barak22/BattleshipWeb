@@ -10,10 +10,12 @@ public class GameFile {
     private String roomName;
     private File file;
     private TheGame gameManager;
+    private int numOfPlayers;
 
     public GameFile(String roomName, File file) {
         this.roomName = roomName;
         this.file = file;
+        numOfPlayers = 0;
     }
 
     public String getAuthor() {
@@ -46,5 +48,17 @@ public class GameFile {
 
     public void setGameManager(TheGame gameManager) {
         this.gameManager = gameManager;
+    }
+
+    public int getNumOfPlayers() {
+        return numOfPlayers;
+    }
+
+    public int increamentAndGet() {
+        return ++numOfPlayers;
+    }
+
+    public int decreamentAndGet() {
+        return --numOfPlayers;
     }
 }

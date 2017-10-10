@@ -147,5 +147,15 @@ $("form").submit(function (e) {
 });
 
 function joinGame(roomName) {
-
+    alert("barak");
+    // $.ajax({
+    //     type: "POST",
+    //     url: "/roomGame",
+    //     success: function (result) {
+    //
+    //     },
+    //     error: function (error) {
+    //
+    //     }
+    // });
 }

@@ -74,4 +74,16 @@
         <url-pattern>/uploadFile</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>roomGame</servlet-name>
+        <servlet-class>api.servlets.RoomServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>roomGame</servlet-name>
+        <url-pattern>/roomGame</url-pattern>
+    </servlet-mapping>
+
 </web-app>
