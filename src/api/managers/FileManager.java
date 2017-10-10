@@ -29,4 +29,8 @@ public final class FileManager {
     public static Collection<GameFile> getGameFiles() {
         return GAME_FILES.values();
     }
+
+    public static GameFile getRoomByName(String roomName) {
+        return GAME_FILES.get(roomName);
+    }
 }

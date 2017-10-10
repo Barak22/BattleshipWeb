@@ -86,4 +86,16 @@
         <url-pattern>/roomGame</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>getBoards</servlet-name>
+        <servlet-class>api.servlets.GetBoardsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getBoards</servlet-name>
+        <url-pattern>/getBoards</url-pattern>
+    </servlet-mapping>
+
 </web-app>
