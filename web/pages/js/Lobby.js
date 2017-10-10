@@ -151,11 +151,13 @@ function joinGame(roomName) {
         type: "POST",
         url: "/roomGame",
         data: {roomName: roomName},
-        success: function (result) {
-            alert(result.getText());
-        },
-        error: function (error) {
-
+        statusCode: {
+            200: function (response) {
+                alert(response);
+            },
+            201: function (response) {
+                alert(response);
+            }
         }
     });
 }

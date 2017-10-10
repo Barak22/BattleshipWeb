@@ -27,7 +27,6 @@ function checkCookie() {
         type: "GET",
         url: "/pages/login",
         success: function (data) {
-            alert("Welcome!");
             window.location.replace("/pages/lobby.html");
         }
     })
