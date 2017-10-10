@@ -153,7 +153,7 @@ function joinGame(roomName) {
         data: {roomName: roomName},
         statusCode: {
             200: function (response) {
-                alert(response);
+                window.location.replace("/pages/room");
             },
             201: function (response) {
                 alert(response);
