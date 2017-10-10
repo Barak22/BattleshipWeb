@@ -1,14 +1,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>BattleShip</title>
-    <link rel="stylesheet" href="/styles/game.css">
+    <title>Game Room</title>
     <link rel="stylesheet" href="../common/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/game.css">
+
+    <script src="../common/jquery-3.2.1.min.js"></script>
 
 </head>
 <body>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <div class="container">
     <div class="jumbotron">
         <h1>Battleship Game</h1>
@@ -19,105 +20,392 @@
         <button type="button" class="btn btn-secondary btn-primary">Drag a Mine</button>
         <button type="button" class="btn btn-secondary btn-danger">Quit Match</button>
     </div>
-    <!--<table id="tracking" class="col-lg-6" style="width: auto">-->
-    <!--<tr class="row-sm">-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
+    <div class="row">
+        <div class="col-lg-6">
 
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
 
-    <!--</th>-->
-    <!--</tr>-->
-    <!--<tr>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>F</th>
+                    <th>G</th>
 
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--</tr>-->
-    <!--</table>-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
-    <!--<table id="personal" class="col-lg-6" style="width: auto">-->
-    <!--<tr class="row-sm">-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
 
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
+        </div>
+        <div class="col-lg-6">
 
-    <!--</th>-->
-    <!--</tr>-->
-    <!--<tr>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
 
-    <!--</th>-->
-    <!--<th class="column-sm">-->
-    <!--<button class="btn btn-sq-sm btn-board">-->
-    <!--O-->
-    <!--</button>-->
-    <!--</th>-->
-    <!--</tr>-->
-    <!--</table>-->
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>F</th>
+                    <th>G</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-default">~</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div id="footer">All rights reserved to Barak Marziano & Tal Zamir - The Academic College of Tel-Aviv Yaffo</div>
 </div>
 
 
