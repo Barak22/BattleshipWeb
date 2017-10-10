@@ -1,6 +1,6 @@
 package api.servlets;
 
-import api.components.GameFile;
+import api.components.GameRoom;
 import api.managers.FileManager;
 
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 public class GetBoardsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String roomName = request.getParameter("roomName");
-        GameFile theRoom = FileManager.getRoomByName(roomName);
+        GameRoom theRoom = FileManager.getRoomByName(roomName);
         PrintWriter out = response.getWriter();
         if (theRoom != null) {
             buildBoardsHTML(out, theRoom);
@@ -29,7 +29,7 @@ public class GetBoardsServlet extends HttpServlet {
 
     }
 
-    private void buildBoardsHTML(PrintWriter out, GameFile theRoom) {
+    private void buildBoardsHTML(PrintWriter out, GameRoom theRoom) {
 
     }
 }

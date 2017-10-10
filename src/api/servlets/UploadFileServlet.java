@@ -1,6 +1,6 @@
 package api.servlets;
 
-import api.components.GameFile;
+import api.components.GameRoom;
 import api.managers.FileManager;
 import logic.TheGame;
 import ui.verifiers.ErrorCollector;
@@ -63,10 +63,10 @@ public class UploadFileServlet extends HttpServlet {
     }
 
     //-------------------------------------------------//
-    // Creates and saves a GameFile object
+    // Creates and saves a GameRoom object
     //-------------------------------------------------//
     private static void placeFile(String roomName, String theName, File actualFile, String username) throws Exception {
-        GameFile gameFile = new GameFile(roomName, actualFile);
+        GameRoom gameRoom = new GameRoom(roomName, actualFile);
         TheGame gameManager = new TheGame();
         IInputVerifier inputVerifier = new XmlFileVerifier();
         ErrorCollector errorCollector = new ErrorCollector();
@@ -79,9 +79,9 @@ public class UploadFileServlet extends HttpServlet {
             }
         }
 
-        gameFile.setGameManager(gameManager);
-        gameFile.setAuthor(username);
-        FileManager.addGameFile(gameFile);
+        gameRoom.setGameManager(gameManager);
+        gameRoom.setAuthor(username);
+        FileManager.addGameFile(gameRoom);
     }
 
     //-------------------------------------------------//

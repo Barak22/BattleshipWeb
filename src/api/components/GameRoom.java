@@ -4,7 +4,7 @@ import logic.TheGame;
 
 import java.io.File;
 
-public class GameFile {
+public class GameRoom {
 
     private String author;
     private String roomName;
@@ -12,7 +12,7 @@ public class GameFile {
     private TheGame gameManager;
     private int numOfPlayers;
 
-    public GameFile(String roomName, File file) {
+    public GameRoom(String roomName, File file) {
         this.roomName = roomName;
         this.file = file;
         numOfPlayers = 0;

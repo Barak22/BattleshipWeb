@@ -1,6 +1,6 @@
 package api.servlets;
 
-import api.components.GameFile;
+import api.components.GameRoom;
 import api.managers.FileManager;
 
 import javax.servlet.ServletException;
@@ -20,7 +20,7 @@ public class RoomServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String roomName = request.getParameter("roomName");
-        GameFile roomGame = FileManager.getGameFiles().stream()
+        GameRoom roomGame = FileManager.getGameFiles().stream()
                                        .filter(gameFile -> gameFile.getRoomName().equals(roomName))
                                        .collect(Collectors.toList()).get(0);
 

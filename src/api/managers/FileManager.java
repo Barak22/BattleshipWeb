@@ -1,6 +1,6 @@
 package api.managers;
 
-import api.components.GameFile;
+import api.components.GameRoom;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import java.util.Map;
 
 public final class FileManager {
 
-    private static final Map<String, GameFile> GAME_FILES = new HashMap<>();
+    private static final Map<String, GameRoom> GAME_FILES = new HashMap<>();
 
     private FileManager() {
     }
@@ -17,8 +17,8 @@ public final class FileManager {
         return GAME_FILES.containsKey(gameFile);
     }
 
-    public static GameFile addGameFile(GameFile gameFile) {
-        return GAME_FILES.putIfAbsent(gameFile.getRoomName(), gameFile);
+    public static GameRoom addGameFile(GameRoom gameRoom) {
+        return GAME_FILES.putIfAbsent(gameRoom.getRoomName(), gameRoom);
     }
 
     public static boolean removeGameFile(String gameFile) {
@@ -26,11 +26,11 @@ public final class FileManager {
         return GAME_FILES.remove(gameFile, GAME_FILES.get(gameFile));
     }
 
-    public static Collection<GameFile> getGameFiles() {
+    public static Collection<GameRoom> getGameFiles() {
         return GAME_FILES.values();
     }
 
-    public static GameFile getRoomByName(String roomName) {
+    public static GameRoom getRoomByName(String roomName) {
         return GAME_FILES.get(roomName);
     }
 }

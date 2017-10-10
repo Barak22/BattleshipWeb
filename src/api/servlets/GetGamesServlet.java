@@ -1,6 +1,6 @@
 package api.servlets;
 
-import api.components.GameFile;
+import api.components.GameRoom;
 import api.managers.FileManager;
 
 import javax.servlet.ServletException;
@@ -39,18 +39,18 @@ public class GetGamesServlet extends HttpServlet {
             out.write("</thead>");
             out.write("<tbody>");
 
-            for (GameFile gameFile : FileManager.getGameFiles()) {
+            for (GameRoom gameRoom : FileManager.getGameFiles()) {
                 out.write("<tr>");
                 out.write("<th scope=\"row\">" + row + "</th>");
-                out.write("<td>" + gameFile.getRoomName() + "</td>");
-                out.write("<td>" + gameFile.getGameManager().getGameType() + "</td>");
-                out.write("<td>" + (gameFile.getGameManager().getBoardSize() - 1) + "</td>");
-                out.write("<td>" + gameFile.getAuthor() + "</td>");
-                out.write("<td>" + gameFile.getNumOfPlayers() + "</td>");
+                out.write("<td>" + gameRoom.getRoomName() + "</td>");
+                out.write("<td>" + gameRoom.getGameManager().getGameType() + "</td>");
+                out.write("<td>" + (gameRoom.getGameManager().getBoardSize() - 1) + "</td>");
+                out.write("<td>" + gameRoom.getAuthor() + "</td>");
+                out.write("<td>" + gameRoom.getNumOfPlayers() + "</td>");
                 out.write("<td>" + "Active" + "</td>");
                 out.write("<td>" + "<button type=\"button\" " +
                                   "class=\"btn btn-primary btn-sm btn-block\" " +
-                        "onclick=joinGame('" + gameFile.getRoomName() + "')>" +
+                        "onclick=joinGame('" + gameRoom.getRoomName() + "')>" +
                         "Join</button> </td>");
                 out.write("</tr>");
                 row++;
