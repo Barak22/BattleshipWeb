@@ -38,7 +38,7 @@ public class RoomServlet extends HttpServlet {
             response.setStatus(200);
         } else {
             roomGame.setPlayerName(playerName);
-            response.setStatus(202);
+            response.setStatus(200);
         }
     }
 

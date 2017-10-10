@@ -24,3 +24,11 @@ div.scrollmenu a {
 div.scrollmenu a:hover {
     background-color: #777;
 }
+
+.hdl-stats {
+    text-align: center;
+    margin: 20px auto;
+    color: #66afe9;
+    font-size: 20px;
+    font-weight: 300;
+}
