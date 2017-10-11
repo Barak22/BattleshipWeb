@@ -37,6 +37,11 @@ public class PlayMoveServlet extends HttpServlet {
 
         UserMoveInput userMoveInput = new UserMoveInput(Integer.parseInt(row), Integer.parseInt(col));
         GameRoom gameRoom = FileManager.getRoomByName(roomName);
+
+        if (!gameRoom.getCurrentPlayerName().equalsIgnoreCase(cookieUserName)) {
+            return;
+        }
+
         String msg;
         try {
             String currentPlayerName = gameRoom.getCurrentPlayerName();
