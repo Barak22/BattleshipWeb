@@ -12,12 +12,14 @@ public class GameRoom {
     private File file;
     private TheGame gameManager;
     private int numOfPlayers;
+    private String lastPlayMsg;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
         this.file = file;
         numOfPlayers = 0;
         players = new String[]{null, null};
+        lastPlayMsg = "";
     }
 
     public String getAuthor() {
@@ -82,5 +84,13 @@ public class GameRoom {
 
     public boolean isPlayerAlreadyIn(String playerName) {
         return playerName.equalsIgnoreCase(players[0]) || playerName.equalsIgnoreCase(players[1]);
+    }
+
+    public String getLastPlayMsg() {
+        return lastPlayMsg;
+    }
+
+    public void setLastPlayMsg(String lastPlayMsg) {
+        this.lastPlayMsg = lastPlayMsg;
     }
 }

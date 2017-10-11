@@ -34,7 +34,9 @@ public class PlayMoveServlet extends HttpServlet {
             } else {
                 msg = gameRoom.getGameManager().playMove(userMoveInput, true);
             }
-            response.getWriter().println(msg);
+            String editedMsg = gameRoom.getCurrentPlayerName().split(":")[0] + ": " + msg;
+            gameRoom.setLastPlayMsg(editedMsg);
+            response.getWriter().println(editedMsg);
             response.setStatus(200);
         } catch (XmlContentException e) {
             response.getWriter().println(e.getMessage());

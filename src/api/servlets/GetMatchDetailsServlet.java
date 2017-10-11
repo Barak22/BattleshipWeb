@@ -49,7 +49,7 @@ public class GetMatchDetailsServlet extends HttpServlet {
         out.write("<span class=\"stats-attriubte\">Mines: </span>" + player.getMines());
         out.write("</div>");
         out.write("<div class=\"col-lg-4\">");
-        out.write("<span class=\"stats-attriubte\">Avg. Time: </span>" + player.getTime());
+        out.write("<span class=\"stats-attriubte\">Avg. Time: </span>" + player.averageTime());
         out.write("</div>");
         out.write("</div>");
 

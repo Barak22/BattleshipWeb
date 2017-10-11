@@ -34,5 +34,15 @@ div.scrollmenu a:hover {
 }
 
 .stats-attriubte {
-    font-weight: 300;
+    font-weight: 500;
+    color: #122b40;
+}
+
+#gameStats {
+    color: #9d9d9d;
+}
+
+#gameLastMove {
+    text-align: center;
+    margin: 20px auto;
 }

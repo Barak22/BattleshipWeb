@@ -16,6 +16,8 @@ import java.io.PrintWriter;
 @WebServlet(name = "GetBoardsServlet")
 public class GetBoardsServlet extends HttpServlet {
 
+    private static final String WAITING_TO_PLAY = "Waiting for the opponent to play...";
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -29,13 +31,13 @@ public class GetBoardsServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         if (theRoom != null) {
             if (theRoom.getNumOfPlayers() == 1) {
-                buildWaitingMessage(out, "Waiting for other player to join...");
+                buildWaitingMessage(out, "Waiting for other player to join...", theRoom);
                 response.setStatus(201);
                 return;
             }
 
             if (!theRoom.getCurrentPlayerName().equalsIgnoreCase(userName)) {
-                buildWaitingMessage(out, "Waiting for the opponent to play this turn...");
+                buildWaitingMessage(out, WAITING_TO_PLAY, theRoom);
                 response.setStatus(201);
                 return;
             }
@@ -114,7 +116,14 @@ public class GetBoardsServlet extends HttpServlet {
         out.write("</div>");
     }
 
-    private void buildWaitingMessage(PrintWriter out, String msg) {
+    private void buildWaitingMessage(PrintWriter out, String msg, GameRoom gameRoom) {
+        if (msg.equals(WAITING_TO_PLAY)) {
+            out.write("<tr>");
+            out.write("<div class=\"row\">");
+            out.write(gameRoom.getLastPlayMsg());
+            out.write("</div>");
+            out.write("<tr>");
+        }
         out.write("<div class=\"row\">");
         out.write("<div class=\"col-lg-4\">");
         out.write("</div>");

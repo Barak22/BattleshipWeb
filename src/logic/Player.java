@@ -156,7 +156,7 @@ public class Player implements IPlayer {
         turnStartTime = System.currentTimeMillis();
     }
 
-    private String averageTime() {
+    public String averageTime() {
         long avg;
         if (turns != 0) {
             avg = time / turns;
