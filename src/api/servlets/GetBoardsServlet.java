@@ -29,13 +29,13 @@ public class GetBoardsServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         if (theRoom != null) {
             if (theRoom.getNumOfPlayers() == 1) {
-                buildWaitingMessage(out);
+                buildWaitingMessage(out, "Waiting for other player to join...");
                 response.setStatus(201);
                 return;
             }
 
             if (!theRoom.getCurrentPlayerName().equalsIgnoreCase(userName)) {
-                buildWaitingMessage(out);
+                buildWaitingMessage(out, "Waiting for the opponent to play this turn...");
                 response.setStatus(201);
                 return;
             }
@@ -114,12 +114,12 @@ public class GetBoardsServlet extends HttpServlet {
         out.write("</div>");
     }
 
-    private void buildWaitingMessage(PrintWriter out) {
+    private void buildWaitingMessage(PrintWriter out, String msg) {
         out.write("<div class=\"row\">");
         out.write("<div class=\"col-lg-4\">");
         out.write("</div>");
         out.write("<div class=\"col-lg-4\">");
-        out.write("<h3 id=\"waiting-other-player\">Waiting for other player to join...</h3>");
+        out.write("<h3 id=\"waiting-other-player\">" + msg + "</h3>");
         out.write("<div class=\"loader\"></div>");
         out.write("</div>");
         out.write("<div class=\"col-lg-4\">");

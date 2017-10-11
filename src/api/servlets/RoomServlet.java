@@ -35,7 +35,7 @@ public class RoomServlet extends HttpServlet {
         } else if (numOfPlayers == 2) {
             writer.println("The game already started");
             response.setStatus(201);
-        } else if (roomGame.incrementAndGet() == 2) {
+        } else if (roomGame.incrementAndGet() <= 2) {
             writer.println("Game stated");
             roomGame.setPlayerName(playerName);
             response.setStatus(200);
