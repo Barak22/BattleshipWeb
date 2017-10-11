@@ -34,7 +34,7 @@ public class PlayMoveServlet extends HttpServlet {
             } else {
                 msg = gameRoom.getGameManager().playMove(userMoveInput, true);
             }
-            String editedMsg = gameRoom.getCurrentPlayerName().split(":")[0] + ": " + msg;
+            String editedMsg = gameRoom.getCurrentPlayerName() + ": " + msg;
             gameRoom.setLastPlayMsg(editedMsg);
             response.getWriter().println(editedMsg);
             response.setStatus(200);
