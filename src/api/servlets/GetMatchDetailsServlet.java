@@ -58,25 +58,25 @@ public class GetMatchDetailsServlet extends HttpServlet {
 
         out.write("<div class=\"row\">");
         out.write("<div class=\"col-lg-4\">");
-        out.write("<span class=\"stats-attriubte\">Score: </span>" + player.getScore());
+        out.write("<span class=\"stats-attribute\">Score: </span>" + player.getScore());
         out.write("</div>");
         out.write("<div class=\"col-lg-4\">");
-        out.write("<span class=\"stats-attriubte\">Mines: </span>" + player.getMines());
+        out.write("<span class=\"stats-attribute\">Mines: </span>" + player.getMines());
         out.write("</div>");
         out.write("<div class=\"col-lg-4\">");
-        out.write("<span class=\"stats-attriubte\">Avg. Time: </span>" + player.averageTime());
+        out.write("<span class=\"stats-attribute\">Avg. Time: </span>" + player.averageTime());
         out.write("</div>");
         out.write("</div>");
 
         out.write("<div class=\"row\">");
         out.write("<div class=\"col-lg-4\">");
-        out.write("<span class=\"stats-attriubte\">Hits: </span>" + player.getHits());
+        out.write("<span class=\"stats-attribute\">Hits: </span>" + player.getHits());
         out.write("</div>");
         out.write("<div class=\"col-lg-4\">");
-        out.write("<span class=\"stats-attriubte\">Misses: </span>" + player.getMisses());
+        out.write("<span class=\"stats-attribute\">Misses: </span>" + player.getMisses());
         out.write("</div>");
         out.write("<div class=\"col-lg-4\">");
-        out.write("<span class=\"stats-attriubte\">Turns: </span>" + player.getTurns());
+        out.write("<span class=\"stats-attribute\">Turns: </span>" + player.getTurns());
         out.write("</div>");
         out.write("</div>");
 
