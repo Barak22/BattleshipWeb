@@ -29,3 +29,8 @@ html, body {
 .no-display {
     color: #d43f3a;
 }
+
+.centerize-block {
+    text-align: center;
+    margin: 20px auto;
+}

@@ -46,3 +46,7 @@ div.scrollmenu a:hover {
     text-align: center;
     margin: 20px auto;
 }
+
+#returnToLobby {
+    width: 300px;
+}

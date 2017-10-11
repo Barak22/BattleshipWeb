@@ -50,12 +50,17 @@ public class PlayMoveServlet extends HttpServlet {
             } else {
                 msg = gameRoom.getGameManager().playMove(userMoveInput, true);
             }
+
+            if (gameRoom.getGameManager().isPlayerWon()) {
+                response.setStatus(201);
+            } else {
+                response.setStatus(200);
+            }
             String editedMsg = currentPlayerName + ": " + msg;
             gameRoom.setLastPlayMsg(editedMsg);
-            response.setStatus(200);
         } catch (XmlContentException e) {
             response.getWriter().println(e.getMessage());
-            response.setStatus(201);
+            response.setStatus(202);
         }
     }
 

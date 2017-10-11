@@ -273,28 +273,6 @@ public class Controller extends JPanel implements Initializable {
                                              .withFontStyle("Tahoma")
                                              .build();
         setSkin(skinCreator);
-
-        //        SkinCreator skinCreator = skinBuilder.buildDefaultValues();
-        //
-        //        mainPane.setBackground(skinCreator.getDefaultBackground());
-        //
-        //        setSkinToBoardsButtons(trackingBoard, skinCreator.getDefaultBackground(), skinCreator.getDefaultFont(),
-        //                               skinCreator.getFontColor());
-        //        setSkinToBoardsButtons(personalBoard, skinCreator.getDefaultBackground(), skinCreator.getDefaultFont(), skinCreator.getFontColor());
-        //
-        //        menuButtonList.forEach(b -> {
-        //            b.setBackground(skinCreator.getDefaultBackground());
-        //            b.setFont(skinCreator.getDefaultFont());
-        //            b.setStyle(skinCreator.getDefaultStyle());
-        //            b.setSkin(skinCreator.getDefaultSkin());
-        //        });
-        //
-        //        buttonMine.setWrapText(true);
-        //        buttonExitGame.setLayoutY(buttonMine.getLayoutY() + 65);
-        //        if (personalBoardLabel != null) {
-        //            personalBoardLabel.setFont(skinCreator.getDefaultFont());
-        //            trackingBoardLabel.setFont(skinCreator.getDefaultFont());
-        //        }
     }
 
     private void mineOnDragDone(DragEvent event) {
@@ -425,8 +403,6 @@ public class Controller extends JPanel implements Initializable {
                 "~ Opponent Score: " + theGame.getOpponentScore() + " ~";
 
         return result;
-        // appendBattleships(stringBuilder);
-        //  return stringBuilder.toString();
     }
 
     private void appendBattleships(StringBuilder stringBuilder) {
@@ -518,19 +494,6 @@ public class Controller extends JPanel implements Initializable {
         }
     }
 
-    //    private void onPlaceMineClicked(ActionEvent event) {
-    //        if (theGame.isGameOn()) {
-    //            if (theGame.hasMines()) {
-    //                onPlayMoveClicked(event);
-    //            } else {
-    //                textFieldMessage.setText("You ran out of mines!");
-    //            }
-    //        } else {
-    //            errorAlert.setContentText("You must start a game before placing a mine.");
-    //            errorAlert.show();
-    //        }
-    //    }
-
     private void onQuitMatchClicked(ActionEvent event) {
         if (theGame.isGameOn()) {
             confirmationMassage.setContentText("Are you sure you want to quit?");
@@ -558,11 +521,10 @@ public class Controller extends JPanel implements Initializable {
         drawSpecificBoard(finalP1Board, theGame.getBoardByIndex(0));
         initCells(finalP2Board, finalBoardsP2, false);
         drawSpecificBoard(finalP2Board, theGame.getBoardByIndex(1));
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(theGame.getGeneralStatistics());
-        stringBuilder.append(System.lineSeparator() + System.lineSeparator());
-        stringBuilder.append(theGame.getSumUp());
-        textFieldMessage.setText(stringBuilder.toString());
+        String stringBuilder = theGame.getGeneralStatistics() +
+                System.lineSeparator() + System.lineSeparator() +
+                theGame.getSumUp();
+        textFieldMessage.setText(stringBuilder);
         theGame.resetGame();
         activateUndoRedo();
     }

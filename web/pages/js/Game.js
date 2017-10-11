@@ -107,10 +107,16 @@ function playMove(ev) {
         url: "/playMove",
         data: params,
         statusCode: {
+            //Regular move.
             200: function (response) {
                 // Updated last move in the logic. do nothing here.
             },
+            //Player won.
             201: function (response) {
+                //Need to unhide the 'return to lobby' button.
+            },
+            //XML exception
+            202: function (response) {
                 alert(response);
             },
             501: function (response) {
@@ -119,4 +125,8 @@ function playMove(ev) {
             }
         }
     })
+}
+
+function returnToLobby() {
+    window.location.replace("/pages/lobby.html");
 }
