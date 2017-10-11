@@ -161,7 +161,8 @@ function joinGame(roomName) {
                 alert(response);
             },
             501: function (response) {
-                alert(response);
+                alert(response.responseText);
+                window.location.replace("/index.html");
             }
         }
     });
