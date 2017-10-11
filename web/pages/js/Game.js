@@ -99,7 +99,7 @@ function playMove(ev) {
         data: params,
         statusCode: {
             200: function (response) {
-                document.getElementById("gameLastMove").innerHTML = response;
+                // Updated last move in the logic. do nothing here.
             },
             201: function (response) {
                 alert(response);

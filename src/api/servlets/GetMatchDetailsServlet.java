@@ -28,10 +28,22 @@ public class GetMatchDetailsServlet extends HttpServlet {
             buildPlayerStats(out, theRoom.getGameManager().getFirstPayer(), theRoom.getFirstPlayerName());
             buildPlayerStats(out, theRoom.getGameManager().getSecondPayer(), theRoom.getSecondPlayerName());
             out.write("</div>");
+            buildLastMoveMsg(out, theRoom);
         } else {
             // do nothing
             response.setStatus(201);
         }
+    }
+
+    private void buildLastMoveMsg(PrintWriter out, GameRoom gameRoom) {
+        out.write("<hr>");
+        out.write("<div class=\"row\" id=\"gameLastMove\">");
+        out.write("<div class=\"col-lg-12\">");
+        out.write("<h2>Last Played Move:</h2>");
+        out.write(gameRoom.getLastPlayMsg());
+        out.write("</div>");
+        out.write("</div>");
+        out.write("<hr>");
     }
 
     private void buildPlayerStats(PrintWriter out, Player player, String playerName) {

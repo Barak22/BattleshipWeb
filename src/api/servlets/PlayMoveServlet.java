@@ -46,7 +46,6 @@ public class PlayMoveServlet extends HttpServlet {
             }
             String editedMsg = gameRoom.getCurrentPlayerName() + ": " + msg;
             gameRoom.setLastPlayMsg(editedMsg);
-            response.getWriter().println(editedMsg);
             response.setStatus(200);
         } catch (XmlContentException e) {
             response.getWriter().println(e.getMessage());
