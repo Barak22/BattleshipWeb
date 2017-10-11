@@ -39,12 +39,13 @@ public class PlayMoveServlet extends HttpServlet {
         GameRoom gameRoom = FileManager.getRoomByName(roomName);
         String msg;
         try {
+            String currentPlayerName = gameRoom.getCurrentPlayerName();
             if (type.equals("personal")) {
                 msg = gameRoom.getGameManager().playMove(userMoveInput, false);
             } else {
                 msg = gameRoom.getGameManager().playMove(userMoveInput, true);
             }
-            String editedMsg = gameRoom.getCurrentPlayerName() + ": " + msg;
+            String editedMsg = currentPlayerName + ": " + msg;
             gameRoom.setLastPlayMsg(editedMsg);
             response.setStatus(200);
         } catch (XmlContentException e) {
