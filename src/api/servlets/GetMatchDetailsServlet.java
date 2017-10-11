@@ -26,6 +26,7 @@ public class GetMatchDetailsServlet extends HttpServlet {
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         PrintWriter out = response.getWriter();
         if (theRoom.getGameManager().isGameOn()) {
+            buildGeneralMatchDetails(out, theRoom);
             out.write("<div class=\"row\">");
             buildPlayerStats(out, theRoom.getGameManager().getFirstPayer(), theRoom.getFirstPlayerName());
             buildPlayerStats(out, theRoom.getGameManager().getSecondPayer(), theRoom.getSecondPlayerName());
@@ -35,6 +36,16 @@ public class GetMatchDetailsServlet extends HttpServlet {
             // do nothing
             response.setStatus(201);
         }
+    }
+
+    private void buildGeneralMatchDetails(PrintWriter out, GameRoom gameRoom) {
+        out.write("<div class=\"row\" id=\"gameLastMove\">");
+        out.write("<div class=\"col-lg-12\">");
+        out.write("<h4>Total Time: " + gameRoom.getGameManager().getTotalTime() + "</h4>");
+        out.write("<h4>Played Turns: " + gameRoom.getGameManager().getTotalTurns() + "</h4>");
+        out.write("</div>");
+        out.write("</div>");
+        out.write("<hr>");
     }
 
     private void buildLastMoveMsg(PrintWriter out, GameRoom gameRoom) {

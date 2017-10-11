@@ -1,4 +1,4 @@
-setInterval(roomLoader, 2000);
+setInterval(roomLoader, 1000);
 
 function roomLoader() {
     drawBoards();
@@ -20,11 +20,20 @@ function drawBoards() {
         type: "GET",
         url: "/getBoards",
         data: params,
-        success: function (result) {
-            document.getElementById("gameBoards").innerHTML = result;
-        },
-        error: function (error) {
-
+        statusCode: {
+            200: function (response) {
+                document.getElementById("gameBoards").innerHTML = response;
+            },
+            201: function (response) {
+                if (document.getElementById("waiting-other-player") === null) {
+                    document.getElementById("gameBoards").innerHTML = response;
+                }
+            },
+            202: function (response) {
+                if (document.getElementById("waiting-other-player") === null) {
+                    document.getElementById("gameBoards").innerHTML = response;
+                }
+            }
         }
     });
 }

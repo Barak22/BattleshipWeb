@@ -165,14 +165,34 @@ public class TheGame {
     }
 
     // **************************************************** //
+    // Returns total time
+    // **************************************************** //
+    public String getTotalTime() {
+        long millis = System.currentTimeMillis() - startingTime;
+        String time = String.format("%02d:%02d",
+                TimeUnit.MILLISECONDS.toMinutes(millis),
+                TimeUnit.MILLISECONDS.toSeconds(millis) -
+                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis))
+        );
+        return time;
+    }
+
+    // **************************************************** //
+    // Returns total time
+    // **************************************************** //
+    public int getTotalTurns() {
+        return players[0].getTurns() + players[1].getTurns();
+    }
+
+    // **************************************************** //
     // Returns game statistics
     // **************************************************** //
     public String getGeneralStatistics() {
         long millis = System.currentTimeMillis() - startingTime;
         String time = String.format("%02d:%02d",
-                                    TimeUnit.MILLISECONDS.toMinutes(millis),
-                                    TimeUnit.MILLISECONDS.toSeconds(millis) -
-                                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis))
+                TimeUnit.MILLISECONDS.toMinutes(millis),
+                TimeUnit.MILLISECONDS.toSeconds(millis) -
+                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis))
         );
         int turns = players[0].getTurns() + players[1].getTurns();
 
@@ -367,15 +387,15 @@ public class TheGame {
     private SortedMap<Integer, Integer> getShipTypesAndAmount(List<Battleship> battleships) {
         SortedMap<Integer, Integer> map = new TreeMap<>();
         battleships.stream()
-                   .filter(BattleshipBase::isAlive)
-                   .forEach(ship -> {
-                       Integer numOfShipType = 1;
-                       if (map.containsKey(ship.getLength())) {
-                           numOfShipType = map.get(ship.getLength());
-                           numOfShipType++;
-                       }
-                       map.put(ship.getLength(), numOfShipType);
-                   });
+                .filter(BattleshipBase::isAlive)
+                .forEach(ship -> {
+                    Integer numOfShipType = 1;
+                    if (map.containsKey(ship.getLength())) {
+                        numOfShipType = map.get(ship.getLength());
+                        numOfShipType++;
+                    }
+                    map.put(ship.getLength(), numOfShipType);
+                });
 
         return map;
     }
@@ -521,8 +541,8 @@ public class TheGame {
             List<Battleship> battleships = battleshipBuilder.buildUserBattleships(boardType.getShip()); // Builds player battleships
             Board board = new Board(boardSize, battleships); // Builds player board
             Player player = new Player(String.format("Player%d", playerIndex + 1),
-                                       board,
-                                       Integer.parseInt(xmlContent.getMine().getAmount()));
+                    board,
+                    Integer.parseInt(xmlContent.getMine().getAmount()));
             // Sets
             // player board
             players[playerIndex] = player; // Inserts player to players array
