@@ -124,9 +124,26 @@ function playMove(ev) {
                 window.location.replace("/index.html");
             }
         }
-    })
+    });
 }
 
 function returnToLobby() {
     window.location.replace("/pages/lobby.html");
+}
+
+function quitRoom() {
+    var wantsToQuit = confirm("Are you sure you want to quit?");
+    if (!wantsToQuit) {
+        return;
+    }
+    var roomName = getParameterByName('room');
+
+    $.ajax({
+        type: "POST",
+        url: "/quitRoom",
+        data: {roomName: roomName},
+        success: function (response) {
+            window.location.replace("/pages/lobby.html");
+        }
+    });
 }

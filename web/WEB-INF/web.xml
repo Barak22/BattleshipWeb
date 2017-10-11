@@ -111,5 +111,17 @@
         <url-pattern>/getMatchDetails</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>quitRoom</servlet-name>
+        <servlet-class>api.servlets.QuitRoomServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>quitRoom</servlet-name>
+        <url-pattern>/quitRoom</url-pattern>
+    </servlet-mapping>
+
 </web-app>
 

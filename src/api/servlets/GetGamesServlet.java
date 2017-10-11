@@ -71,7 +71,11 @@ public class GetGamesServlet extends HttpServlet {
                 out.write("<td>" + (gameRoom.getGameManager().getBoardSize() - 1) + "</td>");
                 out.write("<td>" + gameRoom.getAuthor() + "</td>");
                 out.write("<td>" + gameRoom.getNumOfPlayers() + "</td>");
-                out.write("<td>" + "Active" + "</td>");
+                if (gameRoom.getGameManager().isGameOn()) {
+                    out.write("<td>" + "Game Started" + "</td>");
+                } else {
+                    out.write("<td>" + "Active" + "</td>");
+                }
                 out.write("<td>" + "<button type=\"button\" " +
                                   "class=\"btn btn-primary btn-sm btn-block\" " +
                                   "onclick=joinGame('" + gameRoom.getRoomName() + "')>" +
