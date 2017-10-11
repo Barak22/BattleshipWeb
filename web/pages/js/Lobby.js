@@ -159,6 +159,9 @@ function joinGame(roomName) {
             },
             203: function (response) {
                 alert(response);
+            },
+            501: function (response) {
+                alert(response);
             }
         }
     });
