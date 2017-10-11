@@ -31,4 +31,8 @@ public final class SessionManager {
     public static Collection<User> getUsers() {
         return USERS.values();
     }
+
+    public static boolean isUserExists(String userName) {
+        return USERS.containsKey(userName.toLowerCase());
+    }
 }

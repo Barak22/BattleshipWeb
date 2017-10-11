@@ -93,4 +93,12 @@ public class GameRoom {
     public void setLastPlayMsg(String lastPlayMsg) {
         this.lastPlayMsg = lastPlayMsg;
     }
+
+    public String getSecondPlayerName() {
+        return players[1];
+    }
+
+    public String getFirstPlayerName() {
+        return players[0];
+    }
 }

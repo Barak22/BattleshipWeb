@@ -50,8 +50,8 @@ public class GetGamesServlet extends HttpServlet {
                 out.write("<td>" + "Active" + "</td>");
                 out.write("<td>" + "<button type=\"button\" " +
                                   "class=\"btn btn-primary btn-sm btn-block\" " +
-                        "onclick=joinGame('" + gameRoom.getRoomName() + "')>" +
-                        "Join</button> </td>");
+                                  "onclick=joinGame('" + gameRoom.getRoomName() + "')>" +
+                                  "Join</button> </td>");
                 out.write("</tr>");
                 row++;
             }

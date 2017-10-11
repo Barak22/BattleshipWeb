@@ -7,7 +7,6 @@ setInterval(ajaxCalls, 2000);
 // Displays the online users list
 //-------------------------------------------------//
 function getOnlineUsers() {
-
     $.ajax({
         type: "GET",
         url: "/onlineUsers",

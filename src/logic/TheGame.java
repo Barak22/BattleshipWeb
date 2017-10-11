@@ -388,7 +388,7 @@ public class TheGame {
         int playerHelper = currentPlayerIndex; // for the GameStep
         switch (cellStatus) {
             case SHIP:
-                messageToReturn = currentPlayerName + ": A HIT! You have another turn.";
+                messageToReturn = "A HIT! You have another turn.";
                 players[currentPlayerIndex].increaseHit();
                 break;
             case SHIP_DOWN:
@@ -407,10 +407,10 @@ public class TheGame {
                 break;
             case HIT:
             case MISS:
-                messageToReturn = currentPlayerName + ": you already attacked this cell, please choose a different one.";
+                messageToReturn = "you already attacked this cell, please choose a different one.";
                 break;
             case REGULAR:
-                messageToReturn = currentPlayerName + ": You missed...";
+                messageToReturn = "You missed...";
                 players[currentPlayerIndex].increaseMiss();
                 switchTurn();
                 break;

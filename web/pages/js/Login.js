@@ -26,10 +26,10 @@ function checkCookie() {
     $.ajax({
         type: "GET",
         url: "/pages/login",
-        success: function (data) {
-            window.location.replace("/pages/lobby.html");
-        },
-        error: function (data) {
+        statusCode: {
+            200: function () {
+                window.location.replace("/pages/lobby.html");
+            }
         }
     });
 }

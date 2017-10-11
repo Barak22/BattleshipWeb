@@ -4,6 +4,7 @@ import api.components.User;
 import api.enums.CookieTypes;
 import api.enums.WebStatus;
 import api.managers.SessionManager;
+import api.utils.CookieUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,22 +37,12 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Cookie[] cookies = request.getCookies();
-        boolean hasCookie = false;
+        String cookieValue = CookieUtils.getCookieValue(request.getCookies(), CookieTypes.USER_NAME);
 
-        if (cookies == null) {
-            cookies = new Cookie[0];
-        }
-
-        for (Cookie cookie : cookies) {
-            if (cookie.getName().equals(CookieTypes.USER_NAME.getValue())) {
-                response.setStatus(200);
-                hasCookie = true;
-            }
-        }
-
-        if (!hasCookie) {
-            response.setStatus(500);
+        if (cookieValue.isEmpty()) {
+            response.setStatus(201);
+        } else {
+            response.setStatus(200);
         }
     }
 }

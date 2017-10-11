@@ -103,6 +103,10 @@ function playMove(ev) {
             },
             201: function (response) {
                 alert(response);
+            },
+            501: function (response) {
+                alert(response.responseText);
+                window.location.replace("/index.html");
             }
         }
     })

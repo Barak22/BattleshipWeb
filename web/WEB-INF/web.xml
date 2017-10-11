@@ -30,17 +30,6 @@
     <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
 
     <servlet>
-        <servlet-name>welcome</servlet-name>
-        <servlet-class>api.servlets.LobbyServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>welcome</servlet-name>
-        <url-pattern>/pages/welcome</url-pattern>
-    </servlet-mapping>
-
-    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
-
-    <servlet>
         <servlet-name>onlineUsers</servlet-name>
         <servlet-class>api.servlets.OnlineUsersServlet</servlet-class>
     </servlet>

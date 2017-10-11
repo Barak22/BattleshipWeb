@@ -1,7 +1,10 @@
 package api.servlets;
 
 import api.components.GameRoom;
+import api.enums.CookieTypes;
 import api.managers.FileManager;
+import api.managers.SessionManager;
+import api.utils.CookieUtils;
 import logic.TheGame;
 import logic.exceptions.XmlContentException;
 
@@ -25,6 +28,13 @@ public class GetBoardsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String cookieUserName = CookieUtils.getCookieValue(request.getCookies(), CookieTypes.USER_NAME);
+        if (!SessionManager.isUserExists(cookieUserName)) {
+            response.getWriter().print("You logged out");
+            response.setStatus(501);
+            return;
+        }
+
         String roomName = request.getParameter("room");
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         String userName = request.getParameter("username");

@@ -14,6 +14,7 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "GetMatchDetailsServlet")
 public class GetMatchDetailsServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -24,8 +25,8 @@ public class GetMatchDetailsServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         if (theRoom.getGameManager().isGameOn()) {
             out.write("<div class=\"row\">");
-            buildPlayerStats(out, theRoom.getGameManager().getFirstPayer());
-            buildPlayerStats(out, theRoom.getGameManager().getSecondPayer());
+            buildPlayerStats(out, theRoom.getGameManager().getFirstPayer(), theRoom.getFirstPlayerName());
+            buildPlayerStats(out, theRoom.getGameManager().getSecondPayer(), theRoom.getSecondPlayerName());
             out.write("</div>");
         } else {
             // do nothing
@@ -33,11 +34,11 @@ public class GetMatchDetailsServlet extends HttpServlet {
         }
     }
 
-    private void buildPlayerStats(PrintWriter out, Player player) {
+    private void buildPlayerStats(PrintWriter out, Player player, String playerName) {
         out.write("<div class=\"col-lg-6\">");
         out.write("<div class=\"row\">");
         out.write("<div class=\"col-lg-12\">");
-        out.write("<div class=\"hdl-stats\" id=\"details-first-player\">" + player.getName() + "</div>");
+        out.write("<div class=\"hdl-stats\" id=\"details-first-player\">" + playerName + "</div>");
         out.write("</div>");
         out.write("</div>");
 

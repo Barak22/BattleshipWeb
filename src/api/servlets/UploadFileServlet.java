@@ -1,7 +1,10 @@
 package api.servlets;
 
 import api.components.GameRoom;
+import api.enums.CookieTypes;
 import api.managers.FileManager;
+import api.managers.SessionManager;
+import api.utils.CookieUtils;
 import logic.TheGame;
 import ui.verifiers.ErrorCollector;
 import ui.verifiers.IInputVerifier;
@@ -28,6 +31,13 @@ public class UploadFileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String cookieUserName = CookieUtils.getCookieValue(request.getCookies(), CookieTypes.USER_NAME);
+        if (!SessionManager.isUserExists(cookieUserName)) {
+            response.getWriter().print("You logged out");
+            response.setStatus(501);
+            return;
+        }
+
         // Get file details
         String roomName = request.getParameter("fileName");
         String username = request.getParameter("username");
