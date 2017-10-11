@@ -19,7 +19,7 @@ public class GameRoom {
         this.file = file;
         numOfPlayers = 0;
         players = new String[]{null, null};
-        lastPlayMsg = "";
+        lastPlayMsg = "- Waiting for the first move -";
     }
 
     public String getAuthor() {

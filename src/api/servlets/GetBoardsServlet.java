@@ -72,17 +72,18 @@ public class GetBoardsServlet extends HttpServlet {
         TheGame gameManager = theRoom.getGameManager();
 
         out.write("<div class=\"row\">");
-        buildBoardFromMatrix(out, gameManager.getOpponentBoardToPrint(), true);
+        buildBoardFromMatrix(out, gameManager.getOpponentBoardToPrint(), true, "Tracking Board");
         if (gameManager.getBoardSize() > 11) {
             out.write("</div>");
             out.write("<div class=\"row\">");
         }
-        buildBoardFromMatrix(out, gameManager.getCurrentPlayerBoardToPrint(), false);
+        buildBoardFromMatrix(out, gameManager.getCurrentPlayerBoardToPrint(), false, "Personal Board");
         out.write("</div>");
     }
 
-    private void buildBoardFromMatrix(PrintWriter out, char[][] board, boolean isClickable) {
+    private void buildBoardFromMatrix(PrintWriter out, char[][] board, boolean isClickable, String boardType) {
         out.write("<div class=\"col-lg-6\">");
+        out.write("<h3>" + boardType + "</h3>");
         out.write("<table class=\"table table-bordered\">");
 
         // Column characters
@@ -107,15 +108,15 @@ public class GetBoardsServlet extends HttpServlet {
                 if (isClickable) {
                     // set play button
                     out.print("onclick=\"playMove(event)\" " +
-                                      "type=\"tracking\">" +
-                                      board[i][j] +
-                                      "</button></td>");
+                            "type=\"tracking\">" +
+                            board[i][j] +
+                            "</button></td>");
                 } else {
                     // set button with drag & drop
                     out.print("ondrop=\"drop(event)\"\n" +
-                                      "ondragover=\"allowDrop(event)\"" +
-                                      "type=\"personal\">" + board[i][j] +
-                                      "</button></td>");
+                            "ondragover=\"allowDrop(event)\"" +
+                            "type=\"personal\">" + board[i][j] +
+                            "</button></td>");
                 }
             }
             out.write("</tr>");
