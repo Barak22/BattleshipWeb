@@ -29,7 +29,6 @@ public class TheGame {
     private static final int UNINITIALIZED = -1;
 
     private final Player[] players;
-    private final String[] playersName;
     private GameType gameType;
     private boolean isActive;
     private boolean isFileLoaded;
@@ -44,7 +43,7 @@ public class TheGame {
     private int gameStepIndex;
     private CellStatus mineHandler;
 
-    public TheGame(String firstPlayerName, String secondPlayerName) {
+    public TheGame() {
         isActive = true;
         isFileLoaded = false;
         isGameOn = false;
@@ -52,9 +51,10 @@ public class TheGame {
         isPlayerWon = false;
         currentPlayerIndex = 0;
         opponentPlayerIndex = 1;
-        playersName = new String[2];
-        playersName[0] = firstPlayerName;
-        playersName[1] = secondPlayerName;
+    }
+
+    public int getCurrentPlayerIndex() {
+        return currentPlayerIndex;
     }
 
     // **************************************************** //
@@ -520,9 +520,9 @@ public class TheGame {
         for (BoardType boardType : boards) {
             List<Battleship> battleships = battleshipBuilder.buildUserBattleships(boardType.getShip()); // Builds player battleships
             Board board = new Board(boardSize, battleships); // Builds player board
-            Player player = new Player(playersName[playerIndex],
+            Player player = new Player(String.format("Player%d", playerIndex + 1),
                                        board,
-                                       Integer.parseInt(xmlContent.getMine().getAmount())); //
+                                       Integer.parseInt(xmlContent.getMine().getAmount()));
             // Sets
             // player board
             players[playerIndex] = player; // Inserts player to players array

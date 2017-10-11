@@ -71,8 +71,7 @@ public class UploadFileServlet extends HttpServlet {
     //-------------------------------------------------//
     private static void placeFile(String roomName, String theName, File actualFile, String username) throws Exception {
         GameRoom gameRoom = new GameRoom(roomName, actualFile);
-        //TODO: Need to fix.
-        TheGame gameManager = new TheGame("player1", "player2");
+        TheGame gameManager = new TheGame();
         IInputVerifier inputVerifier = new XmlFileVerifier();
         ErrorCollector errorCollector = new ErrorCollector();
         if (!inputVerifier.isFileOk(UPLOADS_DIR_NAME + "/" + theName, errorCollector)

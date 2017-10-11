@@ -6,12 +6,12 @@ import java.io.File;
 
 public class GameRoom {
 
+    private final String[] players;
     private String author;
     private String roomName;
     private File file;
     private TheGame gameManager;
     private int numOfPlayers;
-    private final String[] players;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
@@ -77,8 +77,7 @@ public class GameRoom {
     }
 
     public String getCurrentPlayerName() {
-        //         gameManager.getCurrentPlayerName() ? ;
-        return null;
+        return players[gameManager.getCurrentPlayerIndex()];
     }
 
     public boolean isPlayerAlreadyIn(String playerName) {

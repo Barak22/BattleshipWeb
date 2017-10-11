@@ -34,7 +34,7 @@ public class GetBoardsServlet extends HttpServlet {
                 return;
             }
 
-            if (theRoom.getCurrentPlayerName().equalsIgnoreCase(theRoom.getGameManager().getCurrentPlayerName())) {
+            if (!theRoom.getCurrentPlayerName().equalsIgnoreCase(userName)) {
                 buildWaitingMessage(out);
                 response.setStatus(201);
                 return;
