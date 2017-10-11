@@ -110,4 +110,17 @@
         <url-pattern>/playMove</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>getMatchDetails</servlet-name>
+        <servlet-class>api.servlets.GetMatchDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getMatchDetails</servlet-name>
+        <url-pattern>/getMatchDetails</url-pattern>
+    </servlet-mapping>
+
 </web-app>
+

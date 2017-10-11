@@ -122,7 +122,7 @@ public class Player implements IPlayer {
         return board;
     }
 
-    int getTurns() {
+    public int getTurns() {
         return turns;
     }
 
@@ -134,11 +134,11 @@ public class Player implements IPlayer {
         this.turnStartTime = turnStartTime;
     }
 
-    int getMines() {
+    public int getMines() {
         return mines;
     }
 
-    int getScore() {
+    public int getScore() {
         return score;
     }
 
@@ -167,5 +167,25 @@ public class Player implements IPlayer {
                              TimeUnit.MILLISECONDS.toMinutes(avg),
                              TimeUnit.MILLISECONDS.toSeconds(avg) -
                                      TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(avg)));
+    }
+
+    public int getMinesAmount() {
+        return minesAmount;
+    }
+
+    public int getHits() {
+        return hits;
+    }
+
+    public int getMisses() {
+        return misses;
+    }
+
+    public long getTime() {
+        return time;
+    }
+
+    public long getTurnStartTime() {
+        return turnStartTime;
     }
 }

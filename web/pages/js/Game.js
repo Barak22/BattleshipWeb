@@ -1,9 +1,14 @@
 setInterval(roomLoader, 2000);
 
+function roomLoader() {
+    drawBoards();
+    updateMatchDetails();
+}
+
 //-------------------------------------------------//
 // Draw boards
 //-------------------------------------------------//
-function roomLoader() {
+function drawBoards() {
     var room = getParameterByName('room');
     var username = getParameterByName('username');
     var params = {
@@ -19,7 +24,31 @@ function roomLoader() {
             document.getElementById("gameBoards").innerHTML = result;
         },
         error: function (error) {
-            alert(error.getText());
+
+        }
+    });
+}
+
+//-------------------------------------------------//
+// Updates match details
+//-------------------------------------------------//
+function updateMatchDetails() {
+    var room = getParameterByName('room');
+    var params = {
+        room: room
+    };
+
+    $.ajax({
+        type: "GET",
+        url: "/getMatchDetails",
+        data: params,
+        statusCode: {
+            200: function (response) {
+                document.getElementById("gameStats").innerHTML = response;
+            },
+            201: function (response) {
+                // do nothing
+            }
         }
     });
 }
