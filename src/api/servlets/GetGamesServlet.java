@@ -82,10 +82,10 @@ public class GetGamesServlet extends HttpServlet {
                                   "Join</button> </td>");
                 if (gameRoom.getAuthor().equals(userName)) {
                     out.write("<td>" + "<button type=\"button\" " +
-                            "class=\"btn btn-primary btn-sm btn-block\" " +
-                            "id=\"btn-delete\"" +
-                            "onclick=deleteGame('" + gameRoom.getRoomName() + "')>" +
-                            "Delete</button> </td>");
+                                      "class=\"btn btn-primary btn-sm btn-block\" " +
+                                      "id=\"btn-delete\"" +
+                                      "onclick=deleteGame('" + gameRoom.getRoomName() + "')>" +
+                                      "Delete</button> </td>");
                 }
                 out.write("</tr>");
                 row++;
