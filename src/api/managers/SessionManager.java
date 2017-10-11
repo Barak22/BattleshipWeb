@@ -17,12 +17,15 @@ public final class SessionManager {
     }
 
     public static User addUser(User user) {
-        return USERS.putIfAbsent(user.getName(), user);
+        boolean isUserExist = USERS.keySet()
+                                   .stream()
+                                   .anyMatch(name -> name.equals(user.getNameForMapKey()));
+
+        return isUserExist ? USERS.get(user.getNameForMapKey()) : USERS.put(user.getNameForMapKey(), user);
     }
 
     public static boolean removeUser(String userName) {
-        //        User user = USERS.get(userName);
-        return USERS.remove(userName, USERS.get(userName));
+        return USERS.remove(userName.toLowerCase(), USERS.get(userName.toLowerCase()));
     }
 
     public static Collection<User> getUsers() {

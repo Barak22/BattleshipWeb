@@ -29,21 +29,21 @@ public class RoomServlet extends HttpServlet {
 
         int numOfPlayers = roomGame.getNumOfPlayers();
 
-        if (numOfPlayers == 2) {
+        if (roomGame.isPlayerAlreadyIn(playerName)) {
+            writer.println("You are already in the room");
+            response.setStatus(203);
+        } else if (numOfPlayers == 2) {
             writer.println("The game already started");
             response.setStatus(201);
         } else if (roomGame.incrementAndGet() == 2) {
             writer.println("Game stated");
             roomGame.setPlayerName(playerName);
             response.setStatus(200);
-        } else {
-            roomGame.setPlayerName(playerName);
-            response.setStatus(200);
         }
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
+            ServletException, IOException {
     }
 }

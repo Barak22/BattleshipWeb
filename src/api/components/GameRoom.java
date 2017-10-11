@@ -75,4 +75,12 @@ public class GameRoom {
     public void removeFirstPlayerName() {
         players[0] = null;
     }
+
+    public String getCurrentPlayerName() {
+        return gameManager.getCurrentPlayerName();
+    }
+
+    public boolean isPlayerAlreadyIn(String playerName) {
+        return playerName.equalsIgnoreCase(players[0]) || playerName.equalsIgnoreCase(players[1]);
+    }
 }

@@ -12,10 +12,10 @@ function login() {
             window.location.replace("/pages/lobby.html?username=" + params.username);
         },
         error: function (response) {
-            if (response.status == 500) {
-                alert("Invalid name")
+            if (response.status === 500) {
+                alert("Invalid name");
             } else {
-                alert("The name is already in use")
+                alert("The name is already in use");
             }
             window.location.replace("");
         }
@@ -29,5 +29,7 @@ function checkCookie() {
         success: function (data) {
             window.location.replace("/pages/lobby.html");
         }
-    })
+    });
 }
+
+checkCookie();

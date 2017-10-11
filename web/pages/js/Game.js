@@ -23,29 +23,6 @@ function roomLoader() {
 }
 
 //-------------------------------------------------//
-// Draw boards
-//-------------------------------------------------//
-function playMove(row, col) {
-    var params = {
-        row: row,
-        col: col
-    };
-
-    $.ajax({
-        type: "GET",
-        url: "/getBoards",
-        data: params,
-        success: function (result) {
-            document.getElementById("gameBoards").innerHTML = result;
-        },
-        error: function (error) {
-            alert(error.getText());
-        }
-    });
-}
-
-
-//-------------------------------------------------//
 // Extracts the room name parameter
 //-------------------------------------------------//
 function getParameterByName(name, url) {
@@ -58,7 +35,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-// roomLoader();
+roomLoader();
 
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
