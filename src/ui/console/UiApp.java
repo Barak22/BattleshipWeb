@@ -29,7 +29,7 @@ public class UiApp {
     // **************************************************** //
     public void start() throws JAXBException, FileNotFoundException {
         assistant = new Assistant();
-        theGame = new TheGame();
+        theGame = new TheGame("player1", "player2");
         while (theGame.isActive()) {
             try {
                 assistant.printMenu();

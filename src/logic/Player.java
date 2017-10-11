@@ -29,7 +29,6 @@ public class Player implements IPlayer {
         this.minesAmount = minesAmount;
     }
 
-    //TODO
     @Override
     public int getUserId() {
         return 0;

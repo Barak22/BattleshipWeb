@@ -14,7 +14,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 @MultipartConfig
 @WebServlet(name = "UploadFileServlet")
@@ -67,7 +71,8 @@ public class UploadFileServlet extends HttpServlet {
     //-------------------------------------------------//
     private static void placeFile(String roomName, String theName, File actualFile, String username) throws Exception {
         GameRoom gameRoom = new GameRoom(roomName, actualFile);
-        TheGame gameManager = new TheGame();
+        //TODO: Need to fix.
+        TheGame gameManager = new TheGame("player1", "player2");
         IInputVerifier inputVerifier = new XmlFileVerifier();
         ErrorCollector errorCollector = new ErrorCollector();
         if (!inputVerifier.isFileOk(UPLOADS_DIR_NAME + "/" + theName, errorCollector)

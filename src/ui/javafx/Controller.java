@@ -103,7 +103,7 @@ public class Controller extends JPanel implements Initializable {
     private SkinBuilder skinBuilder;
 
     public Controller() {
-        theGame = new TheGame();
+        theGame = new TheGame("player1", "player2");
         errorAlert = new Alert(Alert.AlertType.ERROR);
         informationAlert = new Alert(Alert.AlertType.INFORMATION);
         confirmationMassage = new Alert(Alert.AlertType.CONFIRMATION);

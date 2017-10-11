@@ -25,9 +25,16 @@ public class GetBoardsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String roomName = request.getParameter("room");
         GameRoom theRoom = FileManager.getRoomByName(roomName);
+        String userName = request.getParameter("username");
         PrintWriter out = response.getWriter();
         if (theRoom != null) {
             if (theRoom.getNumOfPlayers() == 1) {
+                buildWaitingMessage(out);
+                response.setStatus(201);
+                return;
+            }
+
+            if (theRoom.getCurrentPlayerName().equalsIgnoreCase(theRoom.getGameManager().getCurrentPlayerName())) {
                 buildWaitingMessage(out);
                 response.setStatus(201);
                 return;

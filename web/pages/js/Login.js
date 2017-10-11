@@ -28,6 +28,8 @@ function checkCookie() {
         url: "/pages/login",
         success: function (data) {
             window.location.replace("/pages/lobby.html");
+        },
+        error: function (data) {
         }
     });
 }

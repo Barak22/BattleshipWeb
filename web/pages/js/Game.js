@@ -5,8 +5,10 @@ setInterval(roomLoader, 2000);
 //-------------------------------------------------//
 function roomLoader() {
     var room = getParameterByName('room');
+    var username = getParameterByName('username');
     var params = {
-        room: room
+        room: room,
+        username: username
     };
 
     $.ajax({
@@ -55,7 +57,6 @@ function playMove(ev) {
     var col = ev.target.getAttribute('col');
     var type = ev.target.getAttribute('type');
     var roomName = getParameterByName('room');
-    alert(type);
     var params = {
         row: row,
         col: col,

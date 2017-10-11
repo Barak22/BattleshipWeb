@@ -11,7 +11,7 @@ public class GameRoom {
     private File file;
     private TheGame gameManager;
     private int numOfPlayers;
-    private String[] players;
+    private final String[] players;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
@@ -77,7 +77,8 @@ public class GameRoom {
     }
 
     public String getCurrentPlayerName() {
-        return gameManager.getCurrentPlayerName();
+        //         gameManager.getCurrentPlayerName() ? ;
+        return null;
     }
 
     public boolean isPlayerAlreadyIn(String playerName) {
