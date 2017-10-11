@@ -16,11 +16,33 @@ public class GetGamesServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String username = request.getParameter("username");
+        String roomName = request.getParameter("roomName");
+        PrintWriter writer = response.getWriter();
+        GameRoom gameRoom = FileManager.getRoomByName(roomName);
+        if (gameRoom != null) {
+            if (gameRoom.getAuthor().equals(username)) {
+                if (gameRoom.getNumOfPlayers() == 0) {
+                    writer.write("The room has been deleted successfully!");
+                    FileManager.removeGameFile(roomName);
+                    response.setStatus(200);
+                } else {
+                    writer.write("Sorry, You can't delete a room with registered players");
+                    response.setStatus(201);
+                }
+            } else {
+                writer.write("You can't delete a room that's not yours!");
+                response.setStatus(202);
+            }
+        } else {
+            writer.write("The room is no longer exists");
+            response.setStatus(203);
+        }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String userName = request.getParameter("username");
         PrintWriter out = response.getWriter();
         if (!FileManager.getGameFiles().isEmpty()) {
             int row = 1;
@@ -35,6 +57,8 @@ public class GetGamesServlet extends HttpServlet {
             out.write("<th>Author</th>");
             out.write("<th>Players</th>");
             out.write("<th>Status</th>");
+            out.write("<th></th>");
+            out.write("<th></th>");
             out.write("</tr>");
             out.write("</thead>");
             out.write("<tbody>");
@@ -52,6 +76,13 @@ public class GetGamesServlet extends HttpServlet {
                                   "class=\"btn btn-primary btn-sm btn-block\" " +
                                   "onclick=joinGame('" + gameRoom.getRoomName() + "')>" +
                                   "Join</button> </td>");
+                if (gameRoom.getAuthor().equals(userName)) {
+                    out.write("<td>" + "<button type=\"button\" " +
+                            "class=\"btn btn-primary btn-sm btn-block\" " +
+                            "id=\"btn-delete\"" +
+                            "onclick=deleteGame('" + gameRoom.getRoomName() + "')>" +
+                            "Delete</button> </td>");
+                }
                 out.write("</tr>");
                 row++;
             }

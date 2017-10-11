@@ -12,6 +12,16 @@
     background-color: #761c19;
 }
 
+#btn-delete {
+    background-color: indianred;
+    color: white;
+    border: 1px solid #761c19;
+}
+
+#btn-delete:hover {
+    background-color: #761c19;
+}
+
 #img-battleship {
 
 }

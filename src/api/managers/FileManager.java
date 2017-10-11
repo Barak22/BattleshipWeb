@@ -21,9 +21,8 @@ public final class FileManager {
         return GAME_FILES.putIfAbsent(gameRoom.getRoomName(), gameRoom);
     }
 
-    public static boolean removeGameFile(String gameFile) {
-        //        User user = USERS.get(userName);
-        return GAME_FILES.remove(gameFile, GAME_FILES.get(gameFile));
+    public static GameRoom removeGameFile(String gameFile) {
+        return GAME_FILES.remove(gameFile);
     }
 
     public static Collection<GameRoom> getGameFiles() {

@@ -23,14 +23,49 @@ function getOnlineUsers() {
 // Displays the games list
 //-------------------------------------------------//
 function getGames() {
+    var params = {
+        username: getCookieValue("battleshipUserName")
+    };
+
     $.ajax({
         type: "GET",
         url: "/getGames",
+        data: params,
         success: function (result) {
             document.getElementById("games-list").innerHTML = result;
         },
         error: function (error) {
             // alert(error);
+        }
+    });
+}
+
+//-------------------------------------------------//
+// Deletes a selected game
+//-------------------------------------------------//
+function deleteGame(roomName) {
+    var params = {
+        username: getCookieValue("battleshipUserName"),
+        roomName: roomName
+    };
+    alert(roomName);
+    $.ajax({
+        type: "POST",
+        url: "/getGames",
+        data: params,
+        statusCode: {
+            200: function (response) {
+                alert(response);
+            },
+            201: function (response) {
+                alert(response);
+            },
+            202: function (response) {
+                alert(response);
+            },
+            203: function (response) {
+                alert(response);
+            }
         }
     });
 }

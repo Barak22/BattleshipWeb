@@ -17,11 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 @MultipartConfig
 @WebServlet(name = "UploadFileServlet")
@@ -39,7 +35,7 @@ public class UploadFileServlet extends HttpServlet {
         }
 
         // Get file details
-        String roomName = request.getParameter("fileName");
+        String roomName = request.getParameter("fileName").replace(" ", "_");
         String username = request.getParameter("username");
         Part file = request.getPart("file");
         // Try to upload the file
