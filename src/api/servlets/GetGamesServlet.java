@@ -77,9 +77,14 @@ public class GetGamesServlet extends HttpServlet {
                     out.write("<td>" + "Active" + "</td>");
                 }
                 out.write("<td>" + "<button type=\"button\" " +
-                                  "class=\"btn btn-primary btn-sm btn-block\" " +
-                                  "onclick=joinGame('" + gameRoom.getRoomName() + "')>" +
-                                  "Join</button> </td>");
+                        "class=\"btn btn-primary btn-sm btn-block\" " +
+                        "onclick=joinGame('" + gameRoom.getRoomName() + "')>" +
+                        "Join</button> </td>");
+                out.write("<td>" + "<button type=\"button\" " +
+                        "class=\"btn btn-primary btn-sm btn-block\" " +
+                        "id=\"btn-watch\"" +
+                        "onclick=watchGame('" + gameRoom.getRoomName() + "')>" +
+                        "Watch</button> </td>");
                 if (gameRoom.getAuthor().equals(userName)) {
                     out.write("<td>" + "<button type=\"button\" " +
                                       "class=\"btn btn-primary btn-sm btn-block\" " +

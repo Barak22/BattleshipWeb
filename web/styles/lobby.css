@@ -22,6 +22,16 @@
     background-color: #761c19;
 }
 
+#btn-watch {
+    background-color: #c0a16b;
+    color: white;
+    border: 1px solid #66512c;
+}
+
+#btn-watch:hover {
+    background-color: #985f0d;
+}
+
 #img-battleship {
 
 }

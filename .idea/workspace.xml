@@ -37,8 +37,8 @@
   <component name="ChangeListManager">
     <list default="true" id="52966e34-896b-4a36-9e19-7ceb16f444cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/servlets/GetMatchDetailsServlet.java" afterPath="$PROJECT_DIR$/src/api/servlets/GetMatchDetailsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/TheGame.java" afterPath="$PROJECT_DIR$/src/logic/TheGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java" afterPath="$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/styles/lobby.css" afterPath="$PROJECT_DIR$/web/styles/lobby.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/js/Game.js">
+      <file leaf-file-name="GetGamesServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="149" column="50" lean-forward="true" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
+            <state relative-caret-position="457">
+              <caret line="87" column="60" lean-forward="true" selection-start-line="87" selection-start-column="60" selection-end-line="87" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -86,18 +86,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/servlets/RoomServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="game.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/game.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetMatchDetailsServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetMatchDetailsServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/servlets/GetMatchDetailsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -125,6 +113,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1360">
               <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lobby.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/styles/lobby.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,7 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>params</find>
       <find>dele</find>
       <find>isPlayerWon =</find>
       <find>board</find>
@@ -207,6 +204,7 @@
       <find>start</find>
       <find>left</find>
       <find>rese</find>
+      <find>btn-d</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -251,7 +249,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/http/HttpServlet.class" />
         <option value="$PROJECT_DIR$/src/api/managers/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java" />
         <option value="$PROJECT_DIR$/web/styles/game.css" />
         <option value="$PROJECT_DIR$/src/api/servlets/UploadFileServlet.java" />
         <option value="$PROJECT_DIR$/web/index.html" />
@@ -260,7 +257,6 @@
         <option value="$PROJECT_DIR$/src/api/servlets/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/web/pages/js/Logout.js" />
         <option value="$PROJECT_DIR$/web/pages/lobby.html" />
-        <option value="$PROJECT_DIR$/web/styles/lobby.css" />
         <option value="$PROJECT_DIR$/web/pages/js/Lobby.js" />
         <option value="$PROJECT_DIR$/src/api/servlets/PlayMoveServlet.java" />
         <option value="$PROJECT_DIR$/src/api/servlets/QuitRoomServlet.java" />
@@ -271,6 +267,8 @@
         <option value="$PROJECT_DIR$/src/api/servlets/GetBoardsServlet.java" />
         <option value="$PROJECT_DIR$/src/logic/TheGame.java" />
         <option value="$PROJECT_DIR$/src/api/servlets/GetMatchDetailsServlet.java" />
+        <option value="$PROJECT_DIR$/web/styles/lobby.css" />
+        <option value="$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java" />
       </list>
     </option>
   </component>
@@ -816,14 +814,7 @@
       <workItem from="1507533300547" duration="7471000" />
       <workItem from="1507621503000" duration="20882000" />
       <workItem from="1507705673155" duration="15072000" />
-      <workItem from="1507793040456" duration="21447000" />
-    </task>
-    <task id="LOCAL-00002" summary="Login service">
-      <created>1507354741533</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1507354741533</updated>
+      <workItem from="1507793040456" duration="21769000" />
     </task>
     <task id="LOCAL-00003" summary="Logout service">
       <created>1507354829758</created>
@@ -1161,11 +1152,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507819871356</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Functionality implemented fully">
+      <created>1507821243523</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1507821243524</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163255000" />
+    <option name="totallyTimeSpent" value="163577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1475,14 +1473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/servlets/OnlineUsersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1533,14 +1523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/styles/lobby.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/js/Lobby.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -1581,14 +1563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="149" column="50" lean-forward="true" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/servlets/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -1653,6 +1627,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/servlets/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/servlets/GetGamesServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="87" column="60" lean-forward="true" selection-start-line="87" selection-start-column="60" selection-end-line="87" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/servlets/GetMatchDetailsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1660,6 +1650,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/styles/lobby.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
