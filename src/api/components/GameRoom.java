@@ -15,6 +15,7 @@ public class GameRoom {
     private int numOfPlayers;
     private String lastPlayMsg;
     private boolean isReadyToHardReset;
+    private String winnerName;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
@@ -23,6 +24,7 @@ public class GameRoom {
         players = new String[]{null, null};
         lastPlayMsg = "- Waiting for the first move -";
         isReadyToHardReset = false;
+        winnerName = "";
     }
 
     public String getAuthor() {
@@ -113,6 +115,14 @@ public class GameRoom {
         return !isReadyToHardReset;
     }
 
+    public String getWinnerName() {
+        return winnerName;
+    }
+
+    public void setWinnerName(String winnerName) {
+        this.winnerName = winnerName;
+    }
+
     public void reset() {
         numOfPlayers = 0;
         isReadyToHardReset = true;
@@ -125,6 +135,7 @@ public class GameRoom {
             players[0] = null;
             players[1] = null;
             lastPlayMsg = "- Waiting for the first move -";
+            winnerName = "";
             try {
                 getGameManager().resetGame();
             } catch (XmlContentException e) {

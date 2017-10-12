@@ -27,6 +27,7 @@ public class QuitRoomServlet extends HttpServlet {
         if (gameRoom.getGameManager().isGameOn()) {
             String currentPlayerName = gameRoom.getCurrentPlayerName();
             gameRoom.getGameManager().quitMatch();
+            gameRoom.setWinnerName(gameRoom.getCurrentPlayerName().equals(gameRoom.getFirstPlayerName()) ? gameRoom.getSecondPlayerName() : gameRoom.getFirstPlayerName());
             String msg = currentPlayerName + " has quit from the match";
             gameRoom.setLastPlayMsg(msg);
             gameRoom.reset();

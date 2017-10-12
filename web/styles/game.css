@@ -91,3 +91,7 @@ div.scrollmenu a:hover {
     background: transparent url(../images/icon_mine.png) no-repeat left;
     border: 0;
 }
+
+#winner-tag {
+    color: #4cae4c;
+}

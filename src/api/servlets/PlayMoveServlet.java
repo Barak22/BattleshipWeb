@@ -44,6 +44,7 @@ public class PlayMoveServlet extends HttpServlet {
             }
 
             if (gameRoom.getGameManager().isPlayerWon()) {
+                gameRoom.setWinnerName(currentPlayerName);
                 gameRoom.getGameManager().playerWonMatchMessage();
                 gameRoom.reset();
                 editedMsg = currentPlayerName + " WON The Game!";

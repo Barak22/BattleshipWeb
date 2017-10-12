@@ -197,13 +197,21 @@ public class GetBoardsServlet extends HttpServlet {
         TheGame gameManager = theRoom.getGameManager();
 
         out.write("<div class=\"row\" id=\"final-boards\">");
-        buildBoardFromMatrix(out, gameManager.getBoardByIndex(0), false, theRoom.getFirstPlayerName());
+        buildBoardFromMatrix(out, gameManager.getBoardByIndex(0), false, tryAddWinnerTag(out, theRoom, theRoom.getFirstPlayerName()));
         if (gameManager.getBoardSize() > 11) {
             out.write("</div>");
             out.write("<div class=\"row\">");
         }
-        buildBoardFromMatrix(out, gameManager.getBoardByIndex(1), false, theRoom.getSecondPlayerName());
+        buildBoardFromMatrix(out, gameManager.getBoardByIndex(1), false, tryAddWinnerTag(out, theRoom, theRoom.getSecondPlayerName()));
         out.write("</div>");
+    }
+
+    private String tryAddWinnerTag(PrintWriter out, GameRoom theRoom, String playerName) {
+        if (theRoom.getWinnerName().equals(playerName)) {
+            return ("<span id=\"winner-tag\">(Winner) " + playerName + "</span>");
+        } else {
+            return playerName;
+        }
     }
 
     private void buildButtonsHTML(PrintWriter out) {
