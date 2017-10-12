@@ -9,6 +9,11 @@ function roomLoader() {
 // Draw boards
 //-------------------------------------------------//
 function drawBoards() {
+
+    if (document.getElementById("final-boards") !== null) {
+        return; // Game is over - render no more
+    }
+
     var room = getParameterByName('room');
     var username = getParameterByName('username');
     var params = {
@@ -34,7 +39,7 @@ function drawBoards() {
                     document.getElementById("gameBoards").innerHTML = response;
                 }
             },
-            204: function (response) {
+            203: function (response) {
                 alert('Game Over!');
                 document.getElementById("gameBoards").innerHTML = response;
             }
@@ -138,7 +143,7 @@ function playMove(ev) {
 }
 
 function returnToLobby() {
-    window.location.replace("/pages/lobby.html");
+    window.location.replace("/pages/lobby.html?username=" + getParameterByName('username'));
 }
 
 function quitRoom() {
@@ -156,13 +161,9 @@ function quitRoom() {
         statusCode: {
             //Regular move.
             200: function (response) {
-                window.location.replace("/pages/lobby.html");
-                // Updated last move in the logic. do nothing here.
             },
-            //Player won.
+
             201: function (response) {
-                //Need to unhide the 'return to lobby' button.
-                document.getElementById("gameStats").innerHTML = response;
             }
         }
     });

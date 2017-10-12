@@ -2,7 +2,6 @@ package api.servlets;
 
 import api.components.GameRoom;
 import api.managers.FileManager;
-import logic.exceptions.XmlContentException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,32 +25,20 @@ public class QuitRoomServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
 
         if (gameRoom.getGameManager().isGameOn()) {
+            String currentPlayerName = gameRoom.getCurrentPlayerName();
             gameRoom.getGameManager().quitMatch();
-            String msg = getRelevantMessage(gameRoom.isMyTurn(userName));
-            writer.print(msg);
-            try {
-                gameRoom.reset();
-            } catch (XmlContentException e) {
-                e.printStackTrace();
-            }
+            String msg = currentPlayerName + " has quit from the match";
+            gameRoom.setLastPlayMsg(msg);
+            gameRoom.reset();
             response.setStatus(201);
         } else {
-            gameRoom.removeFirstPlayerName();
-            gameRoom.decrementAndGet();
-            response.setStatus(200);
+            // Game is already over - do nothing
+            response.setStatus(202);
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
-
-    private String getRelevantMessage(boolean myTurn) {
-        if (myTurn) {
-            return "You quit";
-        } else {
-            return "You won!";
-        }
     }
 }

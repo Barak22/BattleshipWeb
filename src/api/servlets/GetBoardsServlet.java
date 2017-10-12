@@ -38,7 +38,8 @@ public class GetBoardsServlet extends HttpServlet {
 
             if (theRoom.getGameManager().isPlayerWon()) {
                 buildGameOverBoardsHTML(out, theRoom);
-                response.setStatus(204);
+                buildReturnToLobbyButton(out);
+                response.setStatus(203);
                 return;
             }
 
@@ -50,7 +51,6 @@ public class GetBoardsServlet extends HttpServlet {
 
             try {
                 if (!theRoom.getGameManager().isGameOn()) {
-                    theRoom.getGameManager().resetGame();
                     theRoom.getGameManager().startGame();
                 }
             } catch (XmlContentException e) {
@@ -58,6 +58,7 @@ public class GetBoardsServlet extends HttpServlet {
                 response.setStatus(500);
             }
 
+            buildButtonsHTML(out);
             buildBoardsHTML(out, theRoom);
             response.setStatus(200);
 
@@ -164,13 +165,30 @@ public class GetBoardsServlet extends HttpServlet {
     private void buildGameOverBoardsHTML(PrintWriter out, GameRoom theRoom) {
         TheGame gameManager = theRoom.getGameManager();
 
-        out.write("<div class=\"row\">");
+        out.write("<div class=\"row\" id=\"final-boards\">");
         buildBoardFromMatrix(out, gameManager.getBoardByIndex(0), false, theRoom.getFirstPlayerName());
         if (gameManager.getBoardSize() > 11) {
             out.write("</div>");
             out.write("<div class=\"row\">");
         }
         buildBoardFromMatrix(out, gameManager.getBoardByIndex(1), false, theRoom.getSecondPlayerName());
+        out.write("</div>");
+    }
+
+    private void buildButtonsHTML(PrintWriter out) {
+        out.write("<div class=\"btn-group-lg\" role=\"group\">");
+        out.write("<button type=\"button\" class=\"btn btn-secondary btn-primary\" draggable=\"true\"");
+        out.write("ondragstart=\"drag(event)\">Drag a Mine");
+        out.write("</button>");
+        out.write("<button type=\"button\" class=\"btn btn-secondary btn-danger\" onclick=\"quitRoom()\">Quit Match</button>\n");
+        out.write("</div>");
+    }
+
+    private void buildReturnToLobbyButton(PrintWriter out) {
+        out.write("<div class=\"row centerize-block\">\n");
+        out.write("<button id=\"returnToLobby\" type=\"button\" class=\"btn btn-secondary btn-primary\"");
+        out.write("onclick=\"returnToLobby()\">Return To The Lobby");
+        out.write("</button>");
         out.write("</div>");
     }
 }

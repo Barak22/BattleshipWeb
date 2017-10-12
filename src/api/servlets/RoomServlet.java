@@ -37,10 +37,11 @@ public class RoomServlet extends HttpServlet {
             writer.println("The game already started");
             response.setStatus(201);
         } else if (roomGame.incrementAndGet() == 2) {
-            writer.println("Game stated");
+            writer.println("Game started");
             roomGame.setPlayerName(playerName);
             response.setStatus(200);
         } else {
+            roomGame.hardReset();
             roomGame.setPlayerName(playerName);
             response.setStatus(200);
         }

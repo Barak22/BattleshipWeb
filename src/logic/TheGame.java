@@ -226,6 +226,7 @@ public class TheGame {
     // **************************************************** //
     public String quitMatch() {
         isGameOn = false;
+        isPlayerWon = true;
         players[currentPlayerIndex].setTurns(players[currentPlayerIndex].getTurns() + 1); // Quiting counts as a turn
         gameSteps.add(new GameStep(QUIT_MATCH, UNINITIALIZED, UNINITIALIZED, players[currentPlayerIndex], players[opponentPlayerIndex]));
         return getFinishGameString(" quit... ");

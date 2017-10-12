@@ -14,6 +14,7 @@ public class GameRoom {
     private TheGame gameManager;
     private int numOfPlayers;
     private String lastPlayMsg;
+    private boolean isReadyToHardReset;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
@@ -21,6 +22,7 @@ public class GameRoom {
         numOfPlayers = 0;
         players = new String[]{null, null};
         lastPlayMsg = "- Waiting for the first move -";
+        isReadyToHardReset = false;
     }
 
     public String getAuthor() {
@@ -107,11 +109,23 @@ public class GameRoom {
         return getCurrentPlayerName().equalsIgnoreCase(userName);
     }
 
-    public void reset() throws XmlContentException {
-        players[0] = null;
-        players[1] = null;
-        gameManager.resetGame();
+    public void reset() {
         numOfPlayers = 0;
-        lastPlayMsg = "- Waiting for the first move -";
+        isReadyToHardReset = true;
+    }
+
+    public void hardReset() {
+        if (isReadyToHardReset) {
+            isReadyToHardReset = false;
+            numOfPlayers = 1;
+            players[0] = null;
+            players[1] = null;
+            lastPlayMsg = "- Waiting for the first move -";
+            try {
+                getGameManager().resetGame();
+            } catch (XmlContentException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

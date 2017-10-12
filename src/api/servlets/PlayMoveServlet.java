@@ -45,6 +45,7 @@ public class PlayMoveServlet extends HttpServlet {
 
             if (gameRoom.getGameManager().isPlayerWon()) {
                 gameRoom.getGameManager().playerWonMatchMessage();
+                gameRoom.reset();
                 editedMsg = currentPlayerName + " WON The Game!";
                 response.setStatus(201);
             } else {
