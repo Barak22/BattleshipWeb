@@ -104,18 +104,17 @@ public class GetBoardsServlet extends HttpServlet {
             out.write("<tr>");
             out.write("<th scope=\"row\">" + i + "</th>");
             for (int j = 1; j < board.length; j++) {
-                out.print("<td><button class=\"btn btn-board btn-default\" row=\"" + i + "\" col=\"" + j + "\" ");
+                out.print("<td><button class=\"btn btn-board btn-default " + getCellPictureHtmlClassName(board[i][j]) + "\" row=\"" + i + "\" col=\"" + j + "\" ");
                 if (isClickable) {
                     // set play button
                     out.print("onclick=\"playMove(event)\" " +
                             "type=\"tracking\">" +
-                            board[i][j] +
                             "</button></td>");
                 } else {
                     // set button with drag & drop
                     out.print("ondrop=\"drop(event)\"\n" +
                             "ondragover=\"allowDrop(event)\"" +
-                            "type=\"personal\">" + board[i][j] +
+                            "type=\"personal\">" +
                             "</button></td>");
                 }
             }
@@ -138,5 +137,28 @@ public class GetBoardsServlet extends HttpServlet {
         out.write("<div class=\"col-lg-4\">");
         out.write("</div>");
         out.write("</div>");
+    }
+
+    private String getCellPictureHtmlClassName(char sign) {
+        String iconName = "";
+        switch (sign) {
+            case '~':
+                iconName = "cell-regular";
+                break;
+            case '@':
+                iconName = "cell-battleship";
+                break;
+            case '*':
+                iconName = "cell-hit";
+                break;
+            case 'O':
+                iconName = "cell-miss";
+                break;
+            case '+':
+                iconName = "cell-mine";
+                break;
+        }
+
+        return iconName;
     }
 }

@@ -50,3 +50,38 @@ div.scrollmenu a:hover {
 #returnToLobby {
     width: 300px;
 }
+
+.cell-regular {
+    width: 25px;
+    height: 25px;
+    background: transparent url(../images/icon_regular.png) no-repeat left;
+    border: 0;
+}
+
+.cell-battleship {
+    width: 25px;
+    height: 25px;
+    background: transparent url(../images/icon_battleship.png) no-repeat left;
+    border: 0;
+}
+
+.cell-hit {
+    width: 25px;
+    height: 25px;
+    background: transparent url(../images/icon_hit.png) no-repeat left;
+    border: 0;
+}
+
+.cell-miss {
+    width: 25px;
+    height: 25px;
+    background: transparent url(../images/icon_miss.png) no-repeat left;
+    border: 0;
+}
+
+.cell-mine {
+    width: 25px;
+    height: 25px;
+    background: transparent url(../images/icon_mine.png) no-repeat left;
+    border: 0;
+}
