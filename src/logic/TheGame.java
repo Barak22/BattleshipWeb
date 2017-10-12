@@ -234,8 +234,9 @@ public class TheGame {
     public String playerWonMatchMessage() {
         isGameOn = false;
         players[currentPlayerIndex].setTurns(players[currentPlayerIndex].getTurns() + 1);
-        return "-------------------- GAME OVER --------------------" + System.lineSeparator() +
-                getCurrentPlayerName() + " has WON the game!" + System.lineSeparator();
+        return String.valueOf(currentPlayerIndex);
+//        return "-------------------- GAME OVER --------------------" + System.lineSeparator() +
+//                getCurrentPlayerName() + " has WON the game!" + System.lineSeparator();
     }
 
     public GameType getGameType() {

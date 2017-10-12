@@ -33,6 +33,10 @@ function drawBoards() {
                 if (document.getElementById("waiting-other-player") === null) {
                     document.getElementById("gameBoards").innerHTML = response;
                 }
+            },
+            204: function (response) {
+                alert('Game Over!');
+                document.getElementById("gameBoards").innerHTML = response;
             }
         }
     });
@@ -57,6 +61,11 @@ function updateMatchDetails() {
             },
             201: function (response) {
                 // do nothing
+            },
+            202: function (response) {
+                if (document.getElementById("gameOver") === null) {
+                    document.getElementById("gameStats").innerHTML = response;
+                }
             }
         }
     });
@@ -99,7 +108,8 @@ function playMove(ev) {
         row: row,
         col: col,
         roomName: roomName,
-        type: type
+        type: type,
+        username: getParameterByName('username')
     };
 
     $.ajax({

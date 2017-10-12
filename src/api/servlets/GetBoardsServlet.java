@@ -1,10 +1,7 @@
 package api.servlets;
 
 import api.components.GameRoom;
-import api.enums.CookieTypes;
 import api.managers.FileManager;
-import api.managers.SessionManager;
-import api.utils.CookieUtils;
 import logic.TheGame;
 import logic.exceptions.XmlContentException;
 
@@ -28,13 +25,6 @@ public class GetBoardsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cookieUserName = CookieUtils.getCookieValue(request.getCookies(), CookieTypes.USER_NAME);
-        if (!SessionManager.isUserExists(cookieUserName)) {
-            response.getWriter().print("You logged out");
-            response.setStatus(501);
-            return;
-        }
-
         String roomName = request.getParameter("room");
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         String userName = request.getParameter("username");
@@ -46,6 +36,12 @@ public class GetBoardsServlet extends HttpServlet {
                 return;
             }
 
+            if (theRoom.getGameManager().isPlayerWon()) {
+                buildGameOverBoardsHTML(out, theRoom);
+                response.setStatus(204);
+                return;
+            }
+
             if (!theRoom.getCurrentPlayerName().equalsIgnoreCase(userName)) {
                 buildWaitingMessage(out, WAITING_TO_PLAY);
                 response.setStatus(201);
@@ -54,14 +50,17 @@ public class GetBoardsServlet extends HttpServlet {
 
             try {
                 if (!theRoom.getGameManager().isGameOn()) {
+                    theRoom.getGameManager().resetGame();
                     theRoom.getGameManager().startGame();
                 }
             } catch (XmlContentException e) {
                 out.write(e.getMessage());
                 response.setStatus(500);
             }
+
             buildBoardsHTML(out, theRoom);
             response.setStatus(200);
+
         } else {
             out.write("Sorry, the room is no longer exists"); // NOT SHOULD HAPPEN IN A VALID GAME LINE
             response.setStatus(500);
@@ -160,5 +159,18 @@ public class GetBoardsServlet extends HttpServlet {
         }
 
         return iconName;
+    }
+
+    private void buildGameOverBoardsHTML(PrintWriter out, GameRoom theRoom) {
+        TheGame gameManager = theRoom.getGameManager();
+
+        out.write("<div class=\"row\">");
+        buildBoardFromMatrix(out, gameManager.getBoardByIndex(0), false, theRoom.getFirstPlayerName());
+        if (gameManager.getBoardSize() > 11) {
+            out.write("</div>");
+            out.write("<div class=\"row\">");
+        }
+        buildBoardFromMatrix(out, gameManager.getBoardByIndex(1), false, theRoom.getSecondPlayerName());
+        out.write("</div>");
     }
 }

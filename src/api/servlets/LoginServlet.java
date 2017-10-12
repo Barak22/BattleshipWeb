@@ -1,17 +1,15 @@
 package api.servlets;
 
 import api.components.User;
-import api.enums.CookieTypes;
 import api.enums.WebStatus;
 import api.managers.SessionManager;
-import api.utils.CookieUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "LoginServlet")
@@ -19,30 +17,30 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String userName = request.getParameter("username").trim();
+        String username = request.getParameter("username").trim();
 
-        if (!userName.isEmpty()) {
-            if (SessionManager.addUser(new User(userName, WebStatus.LOBBY)) == null /*user name NOT already exists */) {
-                Cookie cookie = new Cookie(CookieTypes.USER_NAME.getValue(), userName);
-                cookie.setPath("/");
-                response.addCookie(cookie);
+        if (!username.isEmpty()) {
+            if (SessionManager.addUser(new User(username, WebStatus.LOBBY)) == null /*user name NOT already exists */) {
+                HttpSession session = request.getSession();
+                session.setAttribute("LoggedInUsername", username);
                 response.setStatus(200);
             } else {
                 response.setStatus(400);
             }
         } else {
-            response.setStatus(500);
+            response.setStatus(202);
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cookieValue = CookieUtils.getCookieValue(request.getCookies(), CookieTypes.USER_NAME);
-
-        if (cookieValue.isEmpty()) {
-            response.setStatus(201);
-        } else {
+        HttpSession session = request.getSession();
+        Object username = session.getAttribute("LoggedInUsername");
+        if (username != null) {
+            response.getWriter().write(username.toString());
             response.setStatus(200);
+        } else {
+            response.setStatus(201);
         }
     }
 }

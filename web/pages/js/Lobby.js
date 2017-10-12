@@ -1,6 +1,7 @@
 //-------------------------------------------------//
 // Refreshes users and board list every 2 seconds
 //-------------------------------------------------//
+
 setInterval(ajaxCalls, 2000);
 
 //-------------------------------------------------//
@@ -24,7 +25,7 @@ function getOnlineUsers() {
 //-------------------------------------------------//
 function getGames() {
     var params = {
-        username: getCookieValue("battleshipUserName")
+        username: getParameterByName('username')
     };
 
     $.ajax({
@@ -45,10 +46,10 @@ function getGames() {
 //-------------------------------------------------//
 function deleteGame(roomName) {
     var params = {
-        username: getCookieValue("battleshipUserName"),
+        username: getParameterByName('username'),
         roomName: roomName
     };
-    alert(roomName);
+
     $.ajax({
         type: "POST",
         url: "/getGames",
@@ -76,6 +77,8 @@ function deleteGame(roomName) {
 function ajaxCalls() {
     getOnlineUsers();
     getGames();
+    checkLoggedIn();
+    welcomeUserText();
 }
 
 
@@ -106,22 +109,6 @@ function bs_input_file() {
     );
 }
 
-function getCookieValue(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
 $(function () {
     bs_input_file();
 });
@@ -149,7 +136,7 @@ function uploadFile() {
     var gameTitle = $("#game-title").val();
     var file = document.getElementById('uploaded-file').files[0];
     if (file !== "" && gameTitle.trim() !== "") {
-        upload(file, gameTitle, getCookieValue("battleshipUserName"));
+        upload(file, gameTitle, getParameterByName('username'));
     } else if (file === "") {
         alert("Please select a file to upload");
     } else {
@@ -170,7 +157,7 @@ $("form").submit(function (e) {
 });
 
 function joinGame(roomName) {
-    var playerName = getCookieValue("battleshipUserName");
+    var playerName = getParameterByName('username');
     $.ajax({
         type: "POST",
         url: "/roomGame",
@@ -187,6 +174,38 @@ function joinGame(roomName) {
             },
             501: function (response) {
                 alert(response.responseText);
+                window.location.replace("/index.html");
+            }
+        }
+    });
+}
+
+//-------------------------------------------------//
+// Extracts the username parameter
+//-------------------------------------------------//
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function welcomeUserText() {
+    document.getElementById('hdl-welcome2').innerHTML = getParameterByName('username');
+}
+
+function checkLoggedIn() {
+    $.ajax({
+        type: "GET",
+        url: "/pages/login",
+        statusCode: {
+            200: function (response) {
+            },
+            201: function (response) {
+                alert("The system recognized a logged out action from other tab")
                 window.location.replace("/index.html");
             }
         }

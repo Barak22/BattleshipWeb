@@ -1,10 +1,7 @@
 package api.servlets;
 
 import api.components.GameRoom;
-import api.enums.CookieTypes;
 import api.managers.FileManager;
-import api.managers.SessionManager;
-import api.utils.CookieUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,19 +20,13 @@ public class RoomServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cookieUserName = CookieUtils.getCookieValue(request.getCookies(), CookieTypes.USER_NAME);
-        if (!SessionManager.isUserExists(cookieUserName)) {
-            response.getWriter().print("You logged out");
-            response.setStatus(501);
-            return;
-        }
 
         PrintWriter writer = response.getWriter();
         String roomName = request.getParameter("roomName");
         String playerName = request.getParameter("playerName");
         GameRoom roomGame = FileManager.getGameFiles().stream()
-                                       .filter(gameFile -> gameFile.getRoomName().equals(roomName))
-                                       .collect(Collectors.toList()).get(0);
+                .filter(gameFile -> gameFile.getRoomName().equals(roomName))
+                .collect(Collectors.toList()).get(0);
 
         int numOfPlayers = roomGame.getNumOfPlayers();
 
