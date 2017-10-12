@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.SortedMap;
+
+import static java.lang.System.lineSeparator;
 
 @WebServlet(name = "GetMatchDetailsServlet")
 public class GetMatchDetailsServlet extends HttpServlet {
@@ -28,16 +31,16 @@ public class GetMatchDetailsServlet extends HttpServlet {
         if (theRoom.getGameManager().isGameOn()) {
             buildGeneralMatchDetails(out, theRoom);
             out.write("<div class=\"row\">");
-            buildPlayerStats(out, theRoom.getGameManager().getFirstPayer(), theRoom.getFirstPlayerName());
-            buildPlayerStats(out, theRoom.getGameManager().getSecondPayer(), theRoom.getSecondPlayerName());
+            buildPlayerStats(out, theRoom.getGameManager().getFirstPayer(), theRoom.getFirstPlayerName(), theRoom.getGameManager().getFirstPlayerBattleships());
+            buildPlayerStats(out, theRoom.getGameManager().getSecondPayer(), theRoom.getSecondPlayerName(), theRoom.getGameManager().getSecondPlayerBattleships());
             out.write("</div>");
             buildLastMoveMsg(out, theRoom);
             response.setStatus(200);
         } else if (theRoom.getGameManager().isPlayerWon()) {
             buildGameOverMatchDetails(out, theRoom);
             out.write("<div class=\"row\">");
-            buildPlayerStats(out, theRoom.getGameManager().getFirstPayer(), theRoom.getFirstPlayerName());
-            buildPlayerStats(out, theRoom.getGameManager().getSecondPayer(), theRoom.getSecondPlayerName());
+            buildPlayerStats(out, theRoom.getGameManager().getFirstPayer(), theRoom.getFirstPlayerName(), theRoom.getGameManager().getFirstPlayerBattleships());
+            buildPlayerStats(out, theRoom.getGameManager().getSecondPayer(), theRoom.getSecondPlayerName(), theRoom.getGameManager().getSecondPlayerBattleships());
             out.write("</div>");
             buildLastMoveMsg(out, theRoom);
             response.setStatus(202);
@@ -52,6 +55,7 @@ public class GetMatchDetailsServlet extends HttpServlet {
         out.write("<div class=\"col-lg-12\">");
         out.write("<h4>Total Time: " + gameRoom.getGameManager().getTotalTime() + "</h4>");
         out.write("<h4>Played Turns: " + gameRoom.getGameManager().getTotalTurns() + "</h4>");
+        out.write("<h4>Game Type: " + gameRoom.getGameManager().getGameType() + "</h4>");
         out.write("</div>");
         out.write("</div>");
         out.write("<hr>");
@@ -62,6 +66,7 @@ public class GetMatchDetailsServlet extends HttpServlet {
         out.write("<div class=\"col-lg-12\">");
         out.write("<h4>Total Time: " + gameRoom.getGameManager().getTotalTime() + "</h4>");
         out.write("<h4>Played Turns: " + gameRoom.getGameManager().getTotalTurns() + "</h4>");
+        out.write("<h4>Game Type: " + gameRoom.getGameManager().getGameType() + "</h4>");
         out.write("</div>");
         out.write("</div>");
         out.write("<hr>");
@@ -78,7 +83,7 @@ public class GetMatchDetailsServlet extends HttpServlet {
         out.write("<hr>");
     }
 
-    private void buildPlayerStats(PrintWriter out, Player player, String playerName) {
+    private void buildPlayerStats(PrintWriter out, Player player, String playerName, SortedMap<Integer, Integer> shipsType) {
         out.write("<div class=\"col-lg-6\">");
         out.write("<div class=\"row\">");
         out.write("<div class=\"col-lg-12\">");
@@ -110,6 +115,27 @@ public class GetMatchDetailsServlet extends HttpServlet {
         out.write("</div>");
         out.write("</div>");
 
+        out.write("<div class=\"row\">");
+        out.write("<div class=\"col-lg-12\">");
+        StringBuilder stringBuilder = new StringBuilder();
+        appendBattleshipsList(stringBuilder, shipsType);
+        out.write(stringBuilder.toString());
         out.write("</div>");
+        out.write("</div>");
+
+        out.write("</div>");
+    }
+
+
+    private void appendBattleshipsList(StringBuilder stringBuilder, SortedMap<Integer, Integer> shipsType) {
+        stringBuilder.append(lineSeparator());
+        stringBuilder.append("<ul>");
+        shipsType.forEach((k, v) -> stringBuilder.append("<li>")
+                .append("Length Type: ")
+                .append(k)
+                .append("  Amount Left:")
+                .append(v)
+                .append("</li>"));
+        stringBuilder.append("</ul>");
     }
 }

@@ -290,6 +290,14 @@ public class TheGame {
         return players[0].getBoard().getSize();
     }
 
+    public SortedMap<Integer, Integer> getFirstPlayerBattleships() {
+        return getShipTypesAndAmount(players[0].getBoard().getBattleships());
+    }
+
+    public SortedMap<Integer, Integer> getSecondPlayerBattleships() {
+        return getShipTypesAndAmount(players[1].getBoard().getBattleships());
+    }
+
     public SortedMap<Integer, Integer> getCurrentPlayerShipsTypesAndAmount() {
         return getShipTypesAndAmount(getCurrentPlayerLogicBoard().getBattleships());
     }
