@@ -1,6 +1,7 @@
 package api.components;
 
 import logic.TheGame;
+import logic.exceptions.XmlContentException;
 
 import java.io.File;
 
@@ -63,7 +64,7 @@ public class GameRoom {
     }
 
     public int decrementAndGet() {
-        return --numOfPlayers;
+        return numOfPlayers == 0 ? numOfPlayers : --numOfPlayers;
     }
 
     public void setPlayerName(String playerName) {
@@ -100,5 +101,17 @@ public class GameRoom {
 
     public String getFirstPlayerName() {
         return players[0];
+    }
+
+    public boolean isMyTurn(String userName) {
+        return getCurrentPlayerName().equalsIgnoreCase(userName);
+    }
+
+    public void reset() throws XmlContentException {
+        players[0] = null;
+        players[1] = null;
+        gameManager.resetGame();
+        numOfPlayers = 0;
+        lastPlayMsg = "- Waiting for the first move -";
     }
 }

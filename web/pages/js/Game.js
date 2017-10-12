@@ -137,13 +137,23 @@ function quitRoom() {
         return;
     }
     var roomName = getParameterByName('room');
+    var userName = getParameterByName('username');
 
     $.ajax({
         type: "POST",
         url: "/quitRoom",
-        data: {roomName: roomName},
-        success: function (response) {
-            window.location.replace("/pages/lobby.html");
+        data: {roomName: roomName, userName: userName},
+        statusCode: {
+            //Regular move.
+            200: function (response) {
+                window.location.replace("/pages/lobby.html");
+                // Updated last move in the logic. do nothing here.
+            },
+            //Player won.
+            201: function (response) {
+                //Need to unhide the 'return to lobby' button.
+                document.getElementById("gameStats").innerHTML = response;
+            }
         }
     });
 }
