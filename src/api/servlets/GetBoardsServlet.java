@@ -31,6 +31,8 @@ public class GetBoardsServlet extends HttpServlet {
                 buildWaitingMessage(out, "Waiting for players in order to start the game...");
                 response.setStatus(201);
             }
+        } else {
+            out.write("Sorry, but it seems that the author deleted this room.");
         }
         buildReturnToLobbyButton(out);
     }
