@@ -109,6 +109,10 @@ public class GameRoom {
         return getCurrentPlayerName().equalsIgnoreCase(userName);
     }
 
+    public boolean isPlayersDataAccurate() {
+        return !isReadyToHardReset;
+    }
+
     public void reset() {
         numOfPlayers = 0;
         isReadyToHardReset = true;

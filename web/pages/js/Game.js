@@ -10,7 +10,7 @@ function roomLoader() {
 //-------------------------------------------------//
 function drawBoards() {
 
-    if (document.getElementById("final-boards") !== null) {
+    if (document.getElementById("final-boards") !== null || document.getElementById("watch-boards-final") !== null) {
         return; // Game is over - render no more
     }
 
@@ -21,30 +21,48 @@ function drawBoards() {
         username: username
     };
 
-    $.ajax({
-        type: "GET",
-        url: "/getBoards",
-        data: params,
-        statusCode: {
-            200: function (response) {
-                document.getElementById("gameBoards").innerHTML = response;
-            },
-            201: function (response) {
-                if (document.getElementById("waiting-other-player") === null) {
+    if (getParameterByName("mode") === null) {
+        $.ajax({
+            type: "GET",
+            url: "/getBoards",
+            data: params,
+            statusCode: {
+                200: function (response) {
+                    document.getElementById("gameBoards").innerHTML = response;
+                },
+                201: function (response) {
+                    if (document.getElementById("waiting-other-player") === null) {
+                        document.getElementById("gameBoards").innerHTML = response;
+                    }
+                },
+                202: function (response) {
+                    if (document.getElementById("waiting-other-player") === null) {
+                        document.getElementById("gameBoards").innerHTML = response;
+                    }
+                },
+                203: function (response) {
+                    alert('Game Over!');
                     document.getElementById("gameBoards").innerHTML = response;
                 }
-            },
-            202: function (response) {
-                if (document.getElementById("waiting-other-player") === null) {
-                    document.getElementById("gameBoards").innerHTML = response;
-                }
-            },
-            203: function (response) {
-                alert('Game Over!');
-                document.getElementById("gameBoards").innerHTML = response;
             }
-        }
-    });
+        });
+    } else {
+        $.ajax({
+            type: "POST",
+            url: "/getBoards",
+            data: params,
+            statusCode: {
+                200: function (response) {
+                    document.getElementById("gameBoards").innerHTML = response;
+                },
+                201: function (response) {
+                    document.getElementById("gameBoards").innerHTML = response;
+                }
+            }
+        });
+    }
+
+
 }
 
 //-------------------------------------------------//

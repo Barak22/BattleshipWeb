@@ -30,7 +30,7 @@ public class RoomServlet extends HttpServlet {
 
         int numOfPlayers = roomGame.getNumOfPlayers();
 
-        if (roomGame.isPlayerAlreadyIn(playerName)) {
+        if (roomGame.isPlayerAlreadyIn(playerName) && roomGame.isPlayersDataAccurate()) {
             writer.println("You are already in the room");
             response.setStatus(203);
         } else if (numOfPlayers == 2) {
@@ -48,7 +48,20 @@ public class RoomServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
-            ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String roomName = request.getParameter("roomName");
+        String playerName = request.getParameter("playerName");
+        String action = request.getParameter("action");
+        GameRoom roomGame = FileManager.getGameFiles().stream()
+                .filter(gameFile -> gameFile.getRoomName().equals(roomName))
+                .collect(Collectors.toList()).get(0);
+
+        if (action.equals("add")) {
+            // if we will want to count the watchers
+        } else {
+
+        }
+
+        response.setStatus(200);
     }
 }

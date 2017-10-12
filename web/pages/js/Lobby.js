@@ -180,6 +180,30 @@ function joinGame(roomName) {
     });
 }
 
+function watchGame(roomName) {
+    var playerName = getParameterByName('username');
+    $.ajax({
+        type: "GET",
+        url: "/roomGame",
+        data: {roomName: roomName, playerName: playerName, action: 'add'},
+        statusCode: {
+            200: function (response) {
+                window.location.replace("/pages/game.html?room=" + roomName + "&username=" + playerName + "&mode=watch");
+            },
+            201: function (response) {
+                alert(response);
+            },
+            203: function (response) {
+                alert(response);
+            },
+            501: function (response) {
+                alert(response.responseText);
+                window.location.replace("/index.html");
+            }
+        }
+    });
+}
+
 //-------------------------------------------------//
 // Extracts the username parameter
 //-------------------------------------------------//

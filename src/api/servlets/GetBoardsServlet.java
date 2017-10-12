@@ -20,7 +20,19 @@ public class GetBoardsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String roomName = request.getParameter("room");
+        GameRoom theRoom = FileManager.getRoomByName(roomName);
+        PrintWriter out = response.getWriter();
+        if (theRoom != null) {
+            if (theRoom.getNumOfPlayers() == 2) {
+                buildWatcherAtmosphere(out, theRoom);
+                response.setStatus(200);
+            } else {
+                buildWaitingMessage(out, "Waiting for players in order to start the game...");
+                response.setStatus(201);
+            }
+        }
+        buildReturnToLobbyButton(out);
     }
 
     @Override
@@ -66,6 +78,23 @@ public class GetBoardsServlet extends HttpServlet {
             out.write("Sorry, the room is no longer exists"); // NOT SHOULD HAPPEN IN A VALID GAME LINE
             response.setStatus(500);
         }
+    }
+
+    private void buildWatcherAtmosphere(PrintWriter out, GameRoom theRoom) {
+        TheGame gameManager = theRoom.getGameManager();
+
+        if (theRoom.getGameManager().isPlayerWon()) {
+            out.write("<div class=\"row\" id=\"watch-boards-final\">");
+        } else {
+            out.write("<div class=\"row\" id=\"watch-boards\">");
+        }
+        buildBoardFromMatrix(out, gameManager.getBoardByIndex(0), false, theRoom.getFirstPlayerName());
+        if (gameManager.getBoardSize() > 11) {
+            out.write("</div>");
+            out.write("<div class=\"row\">");
+        }
+        buildBoardFromMatrix(out, gameManager.getBoardByIndex(1), false, theRoom.getSecondPlayerName());
+        out.write("</div>");
     }
 
     private void buildBoardsHTML(PrintWriter out, GameRoom theRoom) {
