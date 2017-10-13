@@ -3,6 +3,7 @@ setInterval(roomLoader, 1000);
 function roomLoader() {
     drawBoards();
     updateMatchDetails();
+    printMessage();
 }
 
 //-------------------------------------------------//
@@ -46,6 +47,10 @@ function drawBoards() {
                 }
             }
         });
+
+        if (document.getElementById("chatBody") === null) {
+            buildChat();
+        }
     } else {
         $.ajax({
             type: "POST",
@@ -184,6 +189,60 @@ function quitRoom() {
             },
 
             201: function (response) {
+            }
+        }
+    });
+}
+
+function buildChat() {
+    $.ajax({
+        type: "GET",
+        url: "/chat",
+        statusCode: {
+            200: function (response) {
+                document.getElementById("chatArea").innerHTML = response;
+            }
+        }
+    });
+}
+
+function addMessage() {
+    var roomName = getParameterByName('room');
+    var userName = getParameterByName('username');
+    var message = document.getElementsByClassName("form-control")[0].value;
+
+    var params = {
+        room: roomName,
+        message: message,
+        userName: userName
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "/chat",
+        data: params,
+        statusCode: {
+            200: function (response) {
+                document.getElementsByClassName("form-control")[0].value = "";
+            }
+        }
+    });
+}
+
+function printMessage() {
+    var roomName = getParameterByName('room');
+
+    var params = {
+        room: roomName
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "/getMatchDetails",
+        data: params,
+        statusCode: {
+            200: function (response) {
+                document.getElementById("chatMessages").innerHTML = response;
             }
         }
     });

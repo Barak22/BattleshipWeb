@@ -20,7 +20,19 @@ public class GetMatchDetailsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String roomName = request.getParameter("room");
+        GameRoom theRoom = FileManager.getRoomByName(roomName);
+        PrintWriter out = response.getWriter();
 
+        theRoom.getChatMessages().forEach(message -> {
+            out.write("<div class=\"media msg \">");
+            out.write("<div class=\"media-body\">");
+            out.write("<medium class=\"pull-right time\">" + message.getRight() + "</medium>");
+            out.write("<h4 class=\"media-heading\">" + message.getLeft() + "</h4>");
+            out.write("<medium class=\"col-lg-10\">" + message.getMiddle() + "</medium>");
+            out.write("</div>");
+            out.write("</div>");
+        });
     }
 
     @Override
@@ -126,16 +138,15 @@ public class GetMatchDetailsServlet extends HttpServlet {
         out.write("</div>");
     }
 
-
     private void appendBattleshipsList(StringBuilder stringBuilder, SortedMap<Integer, Integer> shipsType) {
         stringBuilder.append(lineSeparator());
         stringBuilder.append("<ul>");
         shipsType.forEach((k, v) -> stringBuilder.append("<li>")
-                .append("Length Type: ")
-                .append(k)
-                .append("  Amount Left:")
-                .append(v)
-                .append("</li>"));
+                                                 .append("Length Type: ")
+                                                 .append(k)
+                                                 .append("  Amount Left:")
+                                                 .append(v)
+                                                 .append("</li>"));
         stringBuilder.append("</ul>");
     }
 }

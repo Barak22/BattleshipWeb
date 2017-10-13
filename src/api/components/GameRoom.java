@@ -1,9 +1,14 @@
 package api.components;
 
+import api.utils.Triple;
 import logic.TheGame;
 import logic.exceptions.XmlContentException;
 
 import java.io.File;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GameRoom {
 
@@ -16,6 +21,7 @@ public class GameRoom {
     private String lastPlayMsg;
     private boolean isReadyToHardReset;
     private String winnerName;
+    private List<Triple<String, String, String>> chatMessages;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
@@ -25,6 +31,7 @@ public class GameRoom {
         lastPlayMsg = "- Waiting for the first move -";
         isReadyToHardReset = false;
         winnerName = "";
+        chatMessages = new ArrayList<>();
     }
 
     public String getAuthor() {
@@ -136,11 +143,22 @@ public class GameRoom {
             players[1] = null;
             lastPlayMsg = "- Waiting for the first move -";
             winnerName = "";
+            chatMessages.clear();
             try {
                 getGameManager().resetGame();
             } catch (XmlContentException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void addMessage(String message, String userName) {
+        String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+        Triple<String, String, String> messageList = new Triple<>(userName, message, time);
+        chatMessages.add(messageList);
+    }
+
+    public List<Triple<String, String, String>> getChatMessages() {
+        return chatMessages;
     }
 }

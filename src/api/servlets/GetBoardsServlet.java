@@ -75,7 +75,6 @@ public class GetBoardsServlet extends HttpServlet {
             buildButtonsHTML(out);
             buildBoardsHTML(out, theRoom);
             response.setStatus(200);
-
         } else {
             out.write("Sorry, the room is no longer exists"); // NOT SHOULD HAPPEN IN A VALID GAME LINE
             response.setStatus(500);
@@ -139,14 +138,14 @@ public class GetBoardsServlet extends HttpServlet {
                 if (isClickable) {
                     // set play button
                     out.print("onclick=\"playMove(event)\" " +
-                            "type=\"tracking\">" +
-                            "</button></td>");
+                                      "type=\"tracking\">" +
+                                      "</button></td>");
                 } else {
                     // set button with drag & drop
                     out.print("ondrop=\"drop(event)\"\n" +
-                            "ondragover=\"allowDrop(event)\"" +
-                            "type=\"personal\">" +
-                            "</button></td>");
+                                      "ondragover=\"allowDrop(event)\"" +
+                                      "type=\"personal\">" +
+                                      "</button></td>");
                 }
             }
             out.write("</tr>");
@@ -197,16 +196,16 @@ public class GetBoardsServlet extends HttpServlet {
         TheGame gameManager = theRoom.getGameManager();
 
         out.write("<div class=\"row\" id=\"final-boards\">");
-        buildBoardFromMatrix(out, gameManager.getBoardByIndex(0), false, tryAddWinnerTag(out, theRoom, theRoom.getFirstPlayerName()));
+        buildBoardFromMatrix(out, gameManager.getBoardByIndex(0), false, tryAddWinnerTag(theRoom, theRoom.getFirstPlayerName()));
         if (gameManager.getBoardSize() > 11) {
             out.write("</div>");
             out.write("<div class=\"row\">");
         }
-        buildBoardFromMatrix(out, gameManager.getBoardByIndex(1), false, tryAddWinnerTag(out, theRoom, theRoom.getSecondPlayerName()));
+        buildBoardFromMatrix(out, gameManager.getBoardByIndex(1), false, tryAddWinnerTag(theRoom, theRoom.getSecondPlayerName()));
         out.write("</div>");
     }
 
-    private String tryAddWinnerTag(PrintWriter out, GameRoom theRoom, String playerName) {
+    private String tryAddWinnerTag(GameRoom theRoom, String playerName) {
         if (theRoom.getWinnerName().equals(playerName)) {
             return "<span id=\"winner-tag\">(Winner) " + playerName + "</span>";
         } else {

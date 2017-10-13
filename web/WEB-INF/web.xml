@@ -123,5 +123,17 @@
         <url-pattern>/quitRoom</url-pattern>
     </servlet-mapping>
 
+    <!-- //////////////////////////// S P A C E R  //////////////////////////// -->
+
+    <servlet>
+        <servlet-name>chat</servlet-name>
+        <servlet-class>api.servlets.ChatServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>chat</servlet-name>
+        <url-pattern>/chat</url-pattern>
+    </servlet-mapping>
+
 </web-app>
 
