@@ -56,7 +56,9 @@ function drawBoards() {
                     document.getElementById("gameBoards").innerHTML = response;
                 },
                 201: function (response) {
-                    document.getElementById("gameBoards").innerHTML = response;
+                    if (document.getElementById("waiting-other-player") === null) {
+                        document.getElementById("gameBoards").innerHTML = response;
+                    }
                 }
             }
         });

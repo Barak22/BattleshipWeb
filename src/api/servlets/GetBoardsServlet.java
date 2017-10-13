@@ -208,7 +208,7 @@ public class GetBoardsServlet extends HttpServlet {
 
     private String tryAddWinnerTag(PrintWriter out, GameRoom theRoom, String playerName) {
         if (theRoom.getWinnerName().equals(playerName)) {
-            return ("<span id=\"winner-tag\">(Winner) " + playerName + "</span>");
+            return "<span id=\"winner-tag\">(Winner) " + playerName + "</span>";
         } else {
             return playerName;
         }
