@@ -236,6 +236,11 @@ function printMessage() {
         room: roomName
     };
 
+
+    if (document.getElementById("chatEnded") !== null) {
+        return;
+    }
+
     $.ajax({
         type: "POST",
         url: "/getMatchDetails",

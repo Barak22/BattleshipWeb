@@ -13,6 +13,7 @@ import java.util.List;
 public class GameRoom {
 
     private final String[] players;
+    private final List<Triple<String, String, String>> chatMessages;
     private String author;
     private String roomName;
     private File file;
@@ -21,7 +22,7 @@ public class GameRoom {
     private String lastPlayMsg;
     private boolean isReadyToHardReset;
     private String winnerName;
-    private List<Triple<String, String, String>> chatMessages;
+    private boolean gameEnded;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
@@ -30,6 +31,7 @@ public class GameRoom {
         players = new String[]{null, null};
         lastPlayMsg = "- Waiting for the first move -";
         isReadyToHardReset = false;
+        gameEnded = false;
         winnerName = "";
         chatMessages = new ArrayList<>();
     }
@@ -74,20 +76,12 @@ public class GameRoom {
         return ++numOfPlayers;
     }
 
-    public int decrementAndGet() {
-        return numOfPlayers == 0 ? numOfPlayers : --numOfPlayers;
-    }
-
     public void setPlayerName(String playerName) {
         if (players[0] != null) {
             players[1] = playerName;
         } else {
             players[0] = playerName;
         }
-    }
-
-    public void removeFirstPlayerName() {
-        players[0] = null;
     }
 
     public String getCurrentPlayerName() {
@@ -112,10 +106,6 @@ public class GameRoom {
 
     public String getFirstPlayerName() {
         return players[0];
-    }
-
-    public boolean isMyTurn(String userName) {
-        return getCurrentPlayerName().equalsIgnoreCase(userName);
     }
 
     public boolean isPlayersDataAccurate() {
@@ -160,5 +150,13 @@ public class GameRoom {
 
     public List<Triple<String, String, String>> getChatMessages() {
         return chatMessages;
+    }
+
+    public boolean isGameEnded() {
+        return gameEnded;
+    }
+
+    public void setGameEnded(boolean gameEnded) {
+        this.gameEnded = gameEnded;
     }
 }

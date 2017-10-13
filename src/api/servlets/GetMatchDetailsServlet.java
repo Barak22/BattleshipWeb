@@ -23,13 +23,22 @@ public class GetMatchDetailsServlet extends HttpServlet {
         String roomName = request.getParameter("room");
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         PrintWriter out = response.getWriter();
+        if (!theRoom.isGameEnded() && theRoom.getGameManager().isPlayerWon()) {
+            theRoom.setGameEnded(true);
+            out.write("<div id=\"chatEnded\"></div>");
+            theRoom.addMessage("Chat is ended", "System");
+        }
 
         theRoom.getChatMessages().forEach(message -> {
             out.write("<div class=\"media msg \">");
             out.write("<div class=\"media-body\">");
             out.write("<medium class=\"pull-right time\">" + message.getRight() + "</medium>");
             out.write("<h4 class=\"media-heading\">" + message.getLeft() + "</h4>");
-            out.write("<medium class=\"col-lg-10\">" + message.getMiddle() + "</medium>");
+            if (message.getLeft().equalsIgnoreCase("System")) {
+                out.write("<medium class=\"col-lg-10 red\">" + message.getMiddle() + "</medium>");
+            } else {
+                out.write("<medium class=\"col-lg-10\">" + message.getMiddle() + "</medium>");
+            }
             out.write("</div>");
             out.write("</div>");
         });
