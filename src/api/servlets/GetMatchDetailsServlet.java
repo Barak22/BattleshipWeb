@@ -23,21 +23,20 @@ public class GetMatchDetailsServlet extends HttpServlet {
         String roomName = request.getParameter("room");
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         PrintWriter out = response.getWriter();
-        if (!theRoom.isGameEnded() && theRoom.getGameManager().isPlayerWon()) {
-            theRoom.setGameEnded(true);
+        if (theRoom.getGameManager().isPlayerWon()) {
             out.write("<div id=\"chatEnded\"></div>");
-            theRoom.addMessage("Chat is ended", "System");
+            theRoom.addFinalMessage("Chat Ended", "System");
         }
 
         theRoom.getChatMessages().forEach(message -> {
             out.write("<div class=\"media msg \">");
             out.write("<div class=\"media-body\">");
-            out.write("<medium class=\"pull-right time\">" + message.getRight() + "</medium>");
-            out.write("<h4 class=\"media-heading\">" + message.getLeft() + "</h4>");
-            if (message.getLeft().equalsIgnoreCase("System")) {
-                out.write("<medium class=\"col-lg-10 red\">" + message.getMiddle() + "</medium>");
+            out.write("<medium class=\"pull-right time\">" + message.getTime() + "</medium>");
+            out.write("<h4 class=\"media-heading\">" + message.getUserName() + "</h4>");
+            if (message.getUserName().equalsIgnoreCase("System")) {
+                out.write("<medium class=\"col-lg-10 red\">" + message.getMessage() + "</medium>");
             } else {
-                out.write("<medium class=\"col-lg-10\">" + message.getMiddle() + "</medium>");
+                out.write("<medium class=\"col-lg-10\">" + message.getMessage() + "</medium>");
             }
             out.write("</div>");
             out.write("</div>");

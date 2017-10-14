@@ -24,7 +24,7 @@ public class GameRoom {
     private String lastPlayMsg;
     private boolean isReadyToHardReset;
     private String winnerName;
-    private boolean gameEnded;
+    private boolean endMessagePrinted;
 
     public GameRoom(String roomName, File file) {
         this.roomName = roomName;
@@ -34,7 +34,7 @@ public class GameRoom {
         players = new String[]{"", ""};
         lastPlayMsg = "- Waiting for the first move -";
         isReadyToHardReset = false;
-        gameEnded = false;
+        endMessagePrinted = false;
         winnerName = "";
         chatMessages = new ArrayList<>();
     }
@@ -145,6 +145,7 @@ public class GameRoom {
     public void hardReset() {
         if (isReadyToHardReset) {
             isReadyToHardReset = false;
+            endMessagePrinted = false;
             numOfPlayers = 1;
             players[0] = "";
             players[1] = "";
@@ -160,21 +161,15 @@ public class GameRoom {
     }
 
     public void addMessage(String message, String userName) {
-        String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-        Triple<String, String, String> messageList = new Triple<>(userName, message, time);
-        chatMessages.add(messageList);
+        synchronized (this) {
+            String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+            Triple<String, String, String> messageList = new Triple<>(userName, message, time);
+            chatMessages.add(messageList);
+        }
     }
 
     public List<Triple<String, String, String>> getChatMessages() {
         return chatMessages;
-    }
-
-    public boolean isGameEnded() {
-        return gameEnded;
-    }
-
-    public void setGameEnded(boolean gameEnded) {
-        this.gameEnded = gameEnded;
     }
 
     public int getWatchersAmount() {
@@ -187,5 +182,16 @@ public class GameRoom {
 
     public void removeWatcher(String username) {
         watchers.remove(username);
+    }
+
+    public void addFinalMessage(String message, String userName) {
+        if (!endMessagePrinted) {
+            synchronized (this) {
+                if (!endMessagePrinted) {
+                    endMessagePrinted = true;
+                    addMessage(message, userName);
+                }
+            }
+        }
     }
 }

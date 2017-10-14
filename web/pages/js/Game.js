@@ -243,6 +243,10 @@ function addMessage() {
         userName: userName
     };
 
+    if (document.getElementById("chatEnded") !== null) {
+        return;
+    }
+
     $.ajax({
         type: "POST",
         url: "/chat",
@@ -272,7 +276,9 @@ function printMessage() {
         data: params,
         statusCode: {
             200: function (response) {
-                document.getElementById("chatMessages").innerHTML = response;
+                if (document.getElementById("chatMessages") !== null) {
+                    document.getElementById("chatMessages").innerHTML = response;
+                }
             }
         }
     });

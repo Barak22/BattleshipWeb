@@ -5,9 +5,9 @@ package api.utils;
  */
 public class Triple<A, B, C> {
 
-    private A left;
-    private B middle;
-    private C right;
+    private final A left;
+    private final B middle;
+    private final C right;
 
     public Triple(A left, B middle, C right) {
         this.left = left;
@@ -15,27 +15,15 @@ public class Triple<A, B, C> {
         this.middle = middle;
     }
 
-    public A getLeft() {
+    public A getUserName() {
         return left;
     }
 
-    public void setLeft(A left) {
-        this.left = left;
-    }
-
-    public B getMiddle() {
+    public B getMessage() {
         return middle;
     }
 
-    public void setMiddle(B middle) {
-        this.middle = middle;
-    }
-
-    public C getRight() {
+    public C getTime() {
         return right;
-    }
-
-    public void setRight(C right) {
-        this.right = right;
     }
 }
