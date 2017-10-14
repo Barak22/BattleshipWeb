@@ -234,7 +234,7 @@ public class GetBoardsServlet extends HttpServlet {
     private void buildReturnToLobbyButtonWatcher(PrintWriter out, String roomName) {
         out.write("<div class=\"row centerize-block\">\n");
         out.write("<button id=\"returnToLobby\" type=\"button\" class=\"btn btn-secondary btn-primary\"");
-        out.write("onclick=\"returnToLobbyWatcher(" + roomName + ")\">Return To The Lobby");
+        out.write("onclick=\"returnToLobbyWatcher('" + roomName + "')\">Return To The Lobby");
         out.write("</button>");
         out.write("</div>");
     }
