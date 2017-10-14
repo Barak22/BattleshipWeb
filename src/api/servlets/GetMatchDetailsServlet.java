@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
 import java.util.SortedMap;
 
 import static java.lang.System.lineSeparator;
@@ -49,6 +50,7 @@ public class GetMatchDetailsServlet extends HttpServlet {
         GameRoom theRoom = FileManager.getRoomByName(roomName);
         PrintWriter out = response.getWriter();
         if (theRoom.getGameManager().isGameOn()) {
+            buildWatchersList(out, theRoom);
             buildGeneralMatchDetails(out, theRoom);
             out.write("<div class=\"row\">");
             buildPlayerStats(out, theRoom.getGameManager().getFirstPayer(), theRoom.getFirstPlayerName(), theRoom.getGameManager().getFirstPlayerBattleships());
@@ -150,11 +152,28 @@ public class GetMatchDetailsServlet extends HttpServlet {
         stringBuilder.append(lineSeparator());
         stringBuilder.append("<ul>");
         shipsType.forEach((k, v) -> stringBuilder.append("<li>")
-                                                 .append("Length Type: ")
-                                                 .append(k)
-                                                 .append("  Amount Left:")
-                                                 .append(v)
-                                                 .append("</li>"));
+                .append("Length Type: ")
+                .append(k)
+                .append("  Amount Left:")
+                .append(v)
+                .append("</li>"));
         stringBuilder.append("</ul>");
+    }
+
+    private void buildWatchersList(PrintWriter out, GameRoom gameRoom) {
+        out.write("<h4 id=\"hdl-watchers\">Watchers</h4>");
+        out.write("<div class=\"content-watchers\">");
+        if (gameRoom.getWatchersAmount() != 0) {
+            HashSet<String> watchers = gameRoom.getWatchers();
+            for (String watcherName : watchers) {
+                out.write("<button type=\"button\" class=\"list-group-item list-group-item-action content-watchers\">");
+                out.write(watcherName);
+                out.write("</button>");
+            }
+        } else {
+            out.write("Nobody is watching this game at the moment");
+        }
+        out.write("</div>");
+        out.write("<hr>");
     }
 }

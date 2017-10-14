@@ -192,6 +192,9 @@ function watchGame(roomName) {
             },
             201: function (response) {
                 alert("You are one of the players of this game - Please play fair!");
+            },
+            203: function (response) {
+                alert("You already registered as a watcher to this game");
             }
         }
     });

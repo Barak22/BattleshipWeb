@@ -194,4 +194,12 @@ public class GameRoom {
             }
         }
     }
+
+    public HashSet<String> getWatchers() {
+        return watchers;
+    }
+
+    public boolean isWatcher(String username) {
+        return watchers.contains(username);
+    }
 }
