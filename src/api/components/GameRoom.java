@@ -8,6 +8,7 @@ import java.io.File;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class GameRoom {
@@ -19,6 +20,7 @@ public class GameRoom {
     private File file;
     private TheGame gameManager;
     private int numOfPlayers;
+    private HashSet<String> watchers;
     private String lastPlayMsg;
     private boolean isReadyToHardReset;
     private String winnerName;
@@ -28,6 +30,7 @@ public class GameRoom {
         this.roomName = roomName;
         this.file = file;
         numOfPlayers = 0;
+        watchers = new HashSet<>();
         players = new String[]{null, null};
         lastPlayMsg = "- Waiting for the first move -";
         isReadyToHardReset = false;
@@ -158,5 +161,17 @@ public class GameRoom {
 
     public void setGameEnded(boolean gameEnded) {
         this.gameEnded = gameEnded;
+    }
+
+    public int getWatchersAmount() {
+        return watchers.size();
+    }
+
+    public void addWatcherIfNotExists(String username) {
+        watchers.add(username);
+    }
+
+    public void removeWatcher(String username) {
+        watchers.remove(username);
     }
 }

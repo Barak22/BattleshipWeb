@@ -171,6 +171,22 @@ function returnToLobby() {
     window.location.replace("/pages/lobby.html?username=" + getParameterByName('username'));
 }
 
+function returnToLobbyWatcher(roomName) {
+    var playerName = getParameterByName('username');
+    $.ajax({
+        type: "GET",
+        url: "/roomGame",
+        data: {roomName: roomName, playerName: playerName, action: 'remove'},
+        statusCode: {
+            200: function (response) {
+                window.location.replace("/pages/lobby.html?username=" + getParameterByName('username'));
+            },
+            201: function (response) {
+            }
+        }
+    });
+}
+
 function quitRoom() {
     var wantsToQuit = confirm("Are you sure you want to quit?");
     if (!wantsToQuit) {

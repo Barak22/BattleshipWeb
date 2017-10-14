@@ -56,6 +56,7 @@ public class GetGamesServlet extends HttpServlet {
             out.write("<th>Size</th>");
             out.write("<th>Author</th>");
             out.write("<th>Players</th>");
+            out.write("<th>Watchers</th>");
             out.write("<th>Status</th>");
             out.write("<th></th>");
             out.write("<th></th>");
@@ -71,6 +72,7 @@ public class GetGamesServlet extends HttpServlet {
                 out.write("<td>" + (gameRoom.getGameManager().getBoardSize() - 1) + "</td>");
                 out.write("<td>" + gameRoom.getAuthor() + "</td>");
                 out.write("<td>" + gameRoom.getNumOfPlayers() + "</td>");
+                out.write("<td>" + gameRoom.getWatchersAmount() + "</td>");
                 if (gameRoom.getGameManager().isGameOn()) {
                     out.write("<td>" + "Game Started" + "</td>");
                 } else {

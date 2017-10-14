@@ -191,14 +191,7 @@ function watchGame(roomName) {
                 window.location.replace("/pages/game.html?room=" + roomName + "&username=" + playerName + "&mode=watch");
             },
             201: function (response) {
-                alert(response);
-            },
-            203: function (response) {
-                alert(response);
-            },
-            501: function (response) {
-                alert(response.responseText);
-                window.location.replace("/index.html");
+                alert("You are one of the players of this game - Please play fair!");
             }
         }
     });

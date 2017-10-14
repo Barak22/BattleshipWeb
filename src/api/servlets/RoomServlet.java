@@ -56,10 +56,15 @@ public class RoomServlet extends HttpServlet {
                 .filter(gameFile -> gameFile.getRoomName().equals(roomName))
                 .collect(Collectors.toList()).get(0);
 
-        if (action.equals("add")) {
-            // if we will want to count the watchers
-        } else {
+        if (roomGame.isPlayersDataAccurate() && (playerName.equals(roomGame.getFirstPlayerName()) || playerName.equals(roomGame.getSecondPlayerName()))) {
+            response.setStatus(201);
+            return;
+        }
 
+        if (action.equals("add")) {
+            roomGame.addWatcherIfNotExists(playerName);
+        } else {
+            roomGame.removeWatcher(playerName);
         }
 
         response.setStatus(200);

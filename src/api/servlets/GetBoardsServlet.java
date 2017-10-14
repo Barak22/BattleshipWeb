@@ -34,7 +34,7 @@ public class GetBoardsServlet extends HttpServlet {
         } else {
             out.write("Sorry, but it seems that the author deleted this room.");
         }
-        buildReturnToLobbyButton(out);
+        buildReturnToLobbyButtonWatcher(out, roomName);
     }
 
     @Override
@@ -227,6 +227,14 @@ public class GetBoardsServlet extends HttpServlet {
         out.write("<div class=\"row centerize-block\">\n");
         out.write("<button id=\"returnToLobby\" type=\"button\" class=\"btn btn-secondary btn-primary\"");
         out.write("onclick=\"returnToLobby()\">Return To The Lobby");
+        out.write("</button>");
+        out.write("</div>");
+    }
+
+    private void buildReturnToLobbyButtonWatcher(PrintWriter out, String roomName) {
+        out.write("<div class=\"row centerize-block\">\n");
+        out.write("<button id=\"returnToLobby\" type=\"button\" class=\"btn btn-secondary btn-primary\"");
+        out.write("onclick=\"returnToLobbyWatcher(" + roomName + ")\">Return To The Lobby");
         out.write("</button>");
         out.write("</div>");
     }
