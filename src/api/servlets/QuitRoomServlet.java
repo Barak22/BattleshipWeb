@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * Created by barakm on 11/10/2017
@@ -20,9 +19,7 @@ public class QuitRoomServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String roomName = request.getParameter("roomName");
-        String userName = request.getParameter("userName");
         GameRoom gameRoom = FileManager.getRoomByName(roomName);
-        PrintWriter writer = response.getWriter();
 
         if (gameRoom.getGameManager().isGameOn()) {
             String currentPlayerName = gameRoom.getCurrentPlayerName();
@@ -40,6 +37,10 @@ public class QuitRoomServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String roomName = request.getParameter("roomName");
+        String username = request.getParameter("userName");
+        GameRoom gameRoom = FileManager.getRoomByName(roomName);
 
+        gameRoom.removeUserName(username);
     }
 }

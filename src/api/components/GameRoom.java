@@ -31,7 +31,7 @@ public class GameRoom {
         this.file = file;
         numOfPlayers = 0;
         watchers = new HashSet<>();
-        players = new String[]{null, null};
+        players = new String[]{"", ""};
         lastPlayMsg = "- Waiting for the first move -";
         isReadyToHardReset = false;
         gameEnded = false;
@@ -80,10 +80,24 @@ public class GameRoom {
     }
 
     public void setPlayerName(String playerName) {
-        if (players[0] != null) {
+        if (!players[0].isEmpty()) {
             players[1] = playerName;
         } else {
             players[0] = playerName;
+        }
+    }
+
+    public void removeUserName(String playerName) {
+        if (players[0].equalsIgnoreCase(playerName)) {
+            players[0] = "";
+            if (numOfPlayers > 0) {
+                --numOfPlayers;
+            }
+        } else if (players[1].equalsIgnoreCase(playerName)) {
+            players[1] = "";
+            if (numOfPlayers > 0) {
+                --numOfPlayers;
+            }
         }
     }
 
@@ -132,8 +146,8 @@ public class GameRoom {
         if (isReadyToHardReset) {
             isReadyToHardReset = false;
             numOfPlayers = 1;
-            players[0] = null;
-            players[1] = null;
+            players[0] = "";
+            players[1] = "";
             lastPlayMsg = "- Waiting for the first move -";
             winnerName = "";
             chatMessages.clear();

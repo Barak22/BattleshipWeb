@@ -46,14 +46,14 @@ public class GetBoardsServlet extends HttpServlet {
         if (theRoom != null) {
             if (theRoom.getNumOfPlayers() == 1) {
                 buildWaitingMessage(out, "Waiting for other player to join...");
-                buildReturnToLobbyButton(out);
+                buildReturnToLobbyButton(out, "false");
                 response.setStatus(201);
                 return;
             }
 
             if (theRoom.getGameManager().isPlayerWon()) {
                 buildGameOverBoardsHTML(out, theRoom);
-                buildReturnToLobbyButton(out);
+                buildReturnToLobbyButton(out, "true");
                 response.setStatus(203);
                 return;
             }
@@ -223,10 +223,10 @@ public class GetBoardsServlet extends HttpServlet {
         out.write("</div>");
     }
 
-    private void buildReturnToLobbyButton(PrintWriter out) {
+    private void buildReturnToLobbyButton(PrintWriter out, String isGameEnded) {
         out.write("<div class=\"row centerize-block\">\n");
         out.write("<button id=\"returnToLobby\" type=\"button\" class=\"btn btn-secondary btn-primary\"");
-        out.write("onclick=\"returnToLobby()\">Return To The Lobby");
+        out.write("onclick=\"returnToLobby(\'" + isGameEnded + "\')\">Return To The Lobby");
         out.write("</button>");
         out.write("</div>");
     }

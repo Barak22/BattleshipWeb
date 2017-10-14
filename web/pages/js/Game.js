@@ -167,7 +167,17 @@ function playMove(ev) {
     });
 }
 
-function returnToLobby() {
+function returnToLobby(isGameEnded) {
+    var roomName = getParameterByName('room');
+    var userName = getParameterByName('username');
+
+    if (isGameEnded === "false") {
+        $.ajax({
+            type: "GET",
+            url: "/quitRoom",
+            data: {roomName: roomName, userName: userName}
+        });
+    }
     window.location.replace("/pages/lobby.html?username=" + getParameterByName('username'));
 }
 
@@ -251,7 +261,6 @@ function printMessage() {
     var params = {
         room: roomName
     };
-
 
     if (document.getElementById("chatEnded") !== null) {
         return;
