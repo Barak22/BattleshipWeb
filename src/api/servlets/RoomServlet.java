@@ -30,6 +30,12 @@ public class RoomServlet extends HttpServlet {
 
         int numOfPlayers = roomGame.getNumOfPlayers();
 
+        if (roomGame.isWatcher(playerName)) {
+            writer.write("You can't be a watcher and a player at the same time - play fair!");
+            response.setStatus(203);
+            return;
+        }
+
         if (roomGame.isPlayerAlreadyIn(playerName) && roomGame.isPlayersDataAccurate()) {
             writer.println("You are already in the room");
             response.setStatus(203);
@@ -62,6 +68,10 @@ public class RoomServlet extends HttpServlet {
         }
 
         if (action.equals("add")) {
+            if (roomGame.isWatcher(playerName)) {
+                response.setStatus(203);
+                return;
+            }
             roomGame.addWatcherIfNotExists(playerName);
         } else {
             roomGame.removeWatcher(playerName);

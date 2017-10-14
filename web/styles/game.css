@@ -95,3 +95,15 @@ div.scrollmenu a:hover {
 #winner-tag {
     color: #4cae4c;
 }
+
+#hdl-watchers {
+    text-align: center;
+    margin: 10px auto;
+    color: #c0a16b;
+}
+
+.content-watchers {
+    text-align: center;
+    margin: 5px auto;
+    color: #adadad;
+}

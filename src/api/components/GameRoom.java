@@ -188,4 +188,12 @@ public class GameRoom {
     public void removeWatcher(String username) {
         watchers.remove(username);
     }
+
+    public HashSet<String> getWatchers() {
+        return watchers;
+    }
+
+    public boolean isWatcher(String username) {
+        return watchers.contains(username);
+    }
 }
