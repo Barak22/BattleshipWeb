@@ -46,6 +46,7 @@ public class GetBoardsServlet extends HttpServlet {
         if (theRoom != null) {
             if (theRoom.getNumOfPlayers() == 1) {
                 buildWaitingMessage(out, "Waiting for other player to join...");
+                buildReturnToLobbyButton(out);
                 response.setStatus(201);
                 return;
             }
