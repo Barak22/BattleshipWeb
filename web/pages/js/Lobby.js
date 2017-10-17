@@ -10,7 +10,7 @@ setInterval(ajaxCalls, 2000);
 function getOnlineUsers() {
     $.ajax({
         type: "GET",
-        url: "/onlineUsers",
+        url: "../onlineUsers",
         success: function (result) {
             document.getElementById("users-list").innerHTML = result;
         },
@@ -30,7 +30,7 @@ function getGames() {
 
     $.ajax({
         type: "GET",
-        url: "/getGames",
+        url: "../getGames",
         data: params,
         success: function (result) {
             document.getElementById("games-list").innerHTML = result;
@@ -52,7 +52,7 @@ function deleteGame(roomName) {
 
     $.ajax({
         type: "POST",
-        url: "/getGames",
+        url: "../getGames",
         data: params,
         statusCode: {
             200: function (response) {
@@ -128,7 +128,7 @@ function upload(file, fileName, username) {
     xhr.upload.addEventListener("progress", uploadProgress, false);
     xhr.addEventListener("load", uploadComplete, false);
 
-    xhr.open("POST", "/uploadFile", true);
+    xhr.open("POST", "../uploadFile", true);
     xhr.send(formData);
 }
 
@@ -160,11 +160,11 @@ function joinGame(roomName) {
     var playerName = getParameterByName('username');
     $.ajax({
         type: "POST",
-        url: "/roomGame",
+        url: "../roomGame",
         data: {roomName: roomName, playerName: playerName},
         statusCode: {
             200: function (response) {
-                window.location.replace("/pages/game.html?room=" + roomName + "&username=" + playerName);
+                window.location.replace("../pages/game.html?room=" + roomName + "&username=" + playerName);
             },
             201: function (response) {
                 alert(response);
@@ -174,7 +174,7 @@ function joinGame(roomName) {
             },
             501: function (response) {
                 alert(response.responseText);
-                window.location.replace("/index.html");
+                window.location.replace("../index.html");
             }
         }
     });
@@ -184,11 +184,11 @@ function watchGame(roomName) {
     var playerName = getParameterByName('username');
     $.ajax({
         type: "GET",
-        url: "/roomGame",
+        url: "../roomGame",
         data: {roomName: roomName, playerName: playerName, action: 'add'},
         statusCode: {
             200: function (response) {
-                window.location.replace("/pages/game.html?room=" + roomName + "&username=" + playerName + "&mode=watch");
+                window.location.replace("../pages/game.html?room=" + roomName + "&username=" + playerName + "&mode=watch");
             },
             201: function (response) {
                 alert("You are one of the players of this game - Please play fair!");
@@ -220,13 +220,13 @@ function welcomeUserText() {
 function checkLoggedIn() {
     $.ajax({
         type: "GET",
-        url: "/pages/login",
+        url: "../pages/login",
         statusCode: {
             200: function (response) {
             },
             201: function (response) {
                 alert("The system recognized a logged out action from other tab")
-                window.location.replace("/index.html");
+                window.location.replace("../index.html");
             }
         }
     });

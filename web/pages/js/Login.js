@@ -31,11 +31,11 @@ $(document).on('submit', function (e) {
 
     $.ajax({
         type: "POST",
-        url: "/pages/login",
+        url: "./pages/login",
         data: params,
         statusCode: {
             200: function (response) {
-                window.location.replace("/pages/lobby.html?username=" + params.username);
+                window.location.replace("./pages/lobby.html?username=" + params.username);
             },
             400: function (response) {
                 alert("The name is already in use");
@@ -51,11 +51,11 @@ $(document).on('submit', function (e) {
 function checkLoggedIn() {
     $.ajax({
         type: "GET",
-        url: "/pages/login",
+        url: "./pages/login",
         statusCode: {
             200: function (response) {
                 alert("Welcome Back " + response)
-                window.location.replace("/pages/lobby.html?username=" + response);
+                window.location.replace("./pages/lobby.html?username=" + response);
             },
             201: function (response) {
 

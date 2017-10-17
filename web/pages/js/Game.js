@@ -25,7 +25,7 @@ function drawBoards() {
     if (getParameterByName("mode") === null) {
         $.ajax({
             type: "GET",
-            url: "/getBoards",
+            url: "../getBoards",
             data: params,
             statusCode: {
                 200: function (response) {
@@ -54,7 +54,7 @@ function drawBoards() {
     } else {
         $.ajax({
             type: "POST",
-            url: "/getBoards",
+            url: "../getBoards",
             data: params,
             statusCode: {
                 200: function (response) {
@@ -83,7 +83,7 @@ function updateMatchDetails() {
 
     $.ajax({
         type: "GET",
-        url: "/getMatchDetails",
+        url: "../getMatchDetails",
         data: params,
         statusCode: {
             200: function (response) {
@@ -144,7 +144,7 @@ function playMove(ev) {
 
     $.ajax({
         type: "POST",
-        url: "/playMove",
+        url: "../playMove",
         data: params,
         statusCode: {
             //Regular move.
@@ -161,7 +161,7 @@ function playMove(ev) {
             },
             501: function (response) {
                 alert(response.responseText);
-                window.location.replace("/index.html");
+                window.location.replace("../index.html");
             }
         }
     });
@@ -174,22 +174,22 @@ function returnToLobby(isGameEnded) {
     if (isGameEnded === "false") {
         $.ajax({
             type: "GET",
-            url: "/quitRoom",
+            url: "../quitRoom",
             data: {roomName: roomName, userName: userName}
         });
     }
-    window.location.replace("/pages/lobby.html?username=" + getParameterByName('username'));
+    window.location.replace("../pages/lobby.html?username=" + getParameterByName('username'));
 }
 
 function returnToLobbyWatcher(roomName) {
     var playerName = getParameterByName('username');
     $.ajax({
         type: "GET",
-        url: "/roomGame",
+        url: "../roomGame",
         data: {roomName: roomName, playerName: playerName, action: 'remove'},
         statusCode: {
             200: function (response) {
-                window.location.replace("/pages/lobby.html?username=" + getParameterByName('username'));
+                window.location.replace("../pages/lobby.html?username=" + getParameterByName('username'));
             },
             201: function (response) {
             }
@@ -207,7 +207,7 @@ function quitRoom() {
 
     $.ajax({
         type: "POST",
-        url: "/quitRoom",
+        url: "../quitRoom",
         data: {roomName: roomName, userName: userName},
         statusCode: {
             //Regular move.
@@ -223,7 +223,7 @@ function quitRoom() {
 function buildChat() {
     $.ajax({
         type: "GET",
-        url: "/chat",
+        url: "../chat",
         statusCode: {
             200: function (response) {
                 document.getElementById("chatArea").innerHTML = response;
@@ -249,7 +249,7 @@ function addMessage() {
 
     $.ajax({
         type: "POST",
-        url: "/chat",
+        url: "../chat",
         data: params,
         statusCode: {
             200: function (response) {
@@ -272,7 +272,7 @@ function printMessage() {
 
     $.ajax({
         type: "POST",
-        url: "/getMatchDetails",
+        url: "../getMatchDetails",
         data: params,
         statusCode: {
             200: function (response) {
